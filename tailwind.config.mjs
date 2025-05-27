@@ -20,7 +20,20 @@ export default {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
-        // Simplified color palette
+        // Colores EurekaArchiTech siguiendo guía de diseño
+        'eureka-black': '#0D0D0D',
+        'eureka-dark': '#1A1A1A',
+        'eureka-green': '#00E5A0',
+        'eureka-green-dark': '#00D690',
+        'eureka-blue': '#0080FF',
+        'eureka-blue-dark': '#0070E0',
+        'eureka-gray': '#4A4A4A',
+        'eureka-gray-light': '#6B6B6B',
+        'eureka-light': '#E0E0E0',
+        'eureka-white': '#FFFFFF',
+        'eureka-off-white': '#F5F5F5',
+        
+        // Colores tradicionales simplificados
         blue: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -57,32 +70,86 @@ export default {
           800: '#166534',
           900: '#14532d',
         },
-        purple: {
-          50: '#faf5ff',
-          100: '#f3e8ff',
-          200: '#e9d5ff',
-          300: '#d8b4fe',
-          400: '#c084fc',
-          500: '#a855f7',
-          600: '#9333ea',
-          700: '#7c3aed',
-          800: '#6b21a8',
-          900: '#581c87',
-        },
       },
+      // Espaciado siguiendo múltiplos de 8px de la guía
+      spacing: {
+        '8': '0.5rem',
+        '16': '1rem',
+        '24': '1.5rem',
+        '32': '2rem',
+        '48': '3rem',
+        '64': '4rem',
+        '80': '5rem',
+        '96': '6rem',
+      },
+      // Animaciones siguiendo la guía
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-out',
-        'slide-up': 'slideUp 0.3s ease-out',
+        'fade-in': 'fadeIn 0.8s ease-out',
+        'slide-up': 'slideUp 0.6s ease-out',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'float': 'float 3s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
-          from: { opacity: '0' },
-          to: { opacity: '1' },
+          from: { 
+            opacity: '0',
+            transform: 'translateY(2rem)'
+          },
+          to: { 
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
         },
         slideUp: {
-          from: { transform: 'translateY(10px)', opacity: '0' },
-          to: { transform: 'translateY(0)', opacity: '1' },
+          from: { 
+            transform: 'translateY(3rem)', 
+            opacity: '0' 
+          },
+          to: { 
+            transform: 'translateY(0)', 
+            opacity: '1' 
+          },
         },
+        glow: {
+          from: {
+            boxShadow: '0 0 20px rgba(0, 229, 160, 0.2)'
+          },
+          to: {
+            boxShadow: '0 0 30px rgba(0, 229, 160, 0.4)'
+          },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      // Tipografía siguiendo la guía
+      fontSize: {
+        'eureka-h1': ['clamp(3rem, 8vw, 4rem)', { lineHeight: '1.25', letterSpacing: '0.05em' }],
+        'eureka-h2': ['clamp(1.5rem, 4vw, 2rem)', { lineHeight: '1.25', letterSpacing: '-0.025em' }],
+        'eureka-body': ['clamp(1rem, 2vw, 1.125rem)', { lineHeight: '1.6' }],
+      },
+      // Degradados de la guía
+      backgroundImage: {
+        'gradient-eureka': 'linear-gradient(135deg, #0080FF 0%, #00E5A0 100%)',
+        'gradient-eureka-reverse': 'linear-gradient(135deg, #00E5A0 0%, #0080FF 100%)',
+      },
+      // Border radius siguiendo diseño
+      borderRadius: {
+        'eureka': '8px',
+        'eureka-large': '12px',
+        'eureka-xl': '16px',
+      },
+      // Sombras profesionales
+      boxShadow: {
+        'eureka': '0 4px 20px rgba(0, 0, 0, 0.1)',
+        'eureka-lg': '0 8px 40px rgba(0, 0, 0, 0.15)',
+        'eureka-green': '0 8px 25px rgba(0, 229, 160, 0.3)',
+        'eureka-blue': '0 8px 25px rgba(0, 128, 255, 0.3)',
+      },
+      // Backdrop blur para efectos modernos
+      backdropBlur: {
+        'eureka': '10px',
       },
     },
   },

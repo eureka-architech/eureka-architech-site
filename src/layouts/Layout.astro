@@ -11,8 +11,8 @@ export interface Props {
 
 const {
   title,
-  description = "Eureka - Productos y servicios empresariales para PyMEs mexicanas",
-  image = "/ELogo.png",
+  description = "EurekaArchiTech - Innovación estructurada para la era digital. Servicios de consultoría digital especializados que transforman empresas con soluciones tecnológicas avanzadas.",
+  image = "/favicon.svg",
   type = "website",
   noindex = false
 } = Astro.props;
@@ -24,18 +24,82 @@ const socialImageURL = new URL(image, Astro.url);
 <!doctype html>
 <html lang="es-MX" dir="ltr">
   <head>
-    <!-- Meta básicos -->
+    <!-- Critical Meta -->
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalURL} />
+    <!-- Performance & Core Web Vitals Optimizations -->
+    <meta name="theme-color" content="#00E5A0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="format-detection" content="telephone=no" />
     
-    <!-- SEO -->
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/ELogo.png" as="image" type="image/png" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://vitals.vercel-analytics.com" crossorigin />
+    
+    <!-- DNS Prefetch for Better Performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    
+    <!-- Critical CSS Inlined for LCP -->
+    <style>
+      /* Critical above-the-fold styles */
+      :root {
+        --eureka-black: #0D0D0D;
+        --eureka-dark: #1A1A1A;
+        --eureka-green: #00E5A0;
+        --eureka-blue: #0080FF;
+        --eureka-gray: #4A4A4A;
+        --eureka-light: #E0E0E0;
+      }
+      
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background-color: var(--eureka-black);
+        color: var(--eureka-light);
+        margin: 0;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Hero section critical styles for LCP */
+      .hero-critical {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--eureka-black) 0%, var(--eureka-dark) 100%);
+      }
+      
+      /* Loading state to prevent CLS */
+      .loading-placeholder {
+        background: linear-gradient(90deg, rgba(26,26,26,0.8) 0%, rgba(74,74,74,0.3) 50%, rgba(26,26,26,0.8) 100%);
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+      
+      @keyframes loading {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+      
+      /* Prevent layout shifts */
+      img[src="/ELogo.png"] {
+        width: 128px;
+        height: 128px;
+        object-fit: contain;
+      }
+    </style>
+    
+    <!-- SEO & Social -->
     <title>{title}</title>
+    <link rel="canonical" href={canonicalURL} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     
     <!-- Open Graph -->
@@ -44,72 +108,242 @@ const socialImageURL = new URL(image, Astro.url);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={socialImageURL} />
-    <meta property="og:site_name" content="Eureka" />
+    <meta property="og:site_name" content="EurekaArchiTech" />
     <meta property="og:locale" content="es_MX" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+    <meta name="twitter:creator" content="@EurekaArchiTech" />
     
-    <!-- Meta tags adicionales -->
-    <meta name="theme-color" content="#2563eb" />
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "EurekaArchiTech",
+      "url": "https://eureka-products-services.vercel.app",
+      "logo": "https://eureka-products-services.vercel.app/ELogo.png",
+      "description": "Servicios de consultoría digital especializados que transforman empresas con soluciones tecnológicas innovadoras.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MX"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hi@eureka-architech.com",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/eureka-architech"
+      ]
+    }
+    </script>
     
-    <!-- Preconnect para performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Optimized Font Loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- PWA Icons -->
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="EurekaArchiTech" />
+    
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
+    <meta name="msapplication-TileColor" content="#00E5A0" />
+    
+    <!-- Resource Hints for Better Performance -->
+    <link rel="prefetch" href="/images/hero-bg.webp" />
+    <link rel="modulepreload" href="/scripts/critical.js" />
+    <link rel="prefetch" href="/sw.js" />
+    
+    <!-- Critical Performance Script -->
+    <script>
+      // Early performance optimizations
+      if ('connection' in navigator) {
+        const connection = navigator.connection;
+        if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+          // Reduce animations for slow connections
+          document.documentElement.style.setProperty('--animation-duration', '0.1s');
+        }
+      }
+      
+      // Preload critical resources based on user interaction
+      let hasInteracted = false;
+      const preloadCritical = () => {
+        if (hasInteracted) return;
+        hasInteracted = true;
+        
+        // Preload diagnostic modal assets
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = '/diagnostic-assets.js';
+        document.head.appendChild(link);
+      };
+      
+      ['mousedown', 'touchstart', 'keydown'].forEach(event => {
+        document.addEventListener(event, preloadCritical, { once: true, passive: true });
+      });
+    </script>
   </head>
   
-  <body class="antialiased bg-white text-gray-900 font-sans">
-    <!-- Skip to content -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50">
+  <body class="antialiased bg-eureka-black text-eureka-light font-sans">
+    <!-- Skip to content - Accesibilidad -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-eureka-green text-eureka-black px-4 py-2 rounded-md z-50 font-medium">
       Ir al contenido principal
     </a>
     
-    <!-- Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-40 backdrop-blur-sm bg-white/95">
-      <nav class="container mx-auto px-4 py-4">
+    <!-- Header - Intelligent Navigation -->
+    <header class="bg-eureka-black/95 backdrop-blur-sm border-b border-eureka-gray/20 sticky top-0 z-40" id="smart-header">
+      <nav class="max-w-7xl mx-auto px-8 py-6">
         <div class="flex items-center justify-between">
-          <a href="/" class="flex items-center space-x-3">
-            <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-              <span class="text-white font-bold text-sm">E</span>
+          <!-- Brand Identity -->
+          <a href="/" class="flex items-center space-x-4 group">
+            <!-- EurekaArchiTech Logo -->
+            <div class="relative w-12 h-12 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-eureka-green/30 transition-all duration-300 overflow-hidden">
+              <img src="/ELogo.png" alt="EurekaArchiTech Logo" class="w-10 h-10 object-contain filter drop-shadow-lg" />
+              <!-- Energy Glow -->
+              <div class="absolute inset-0 bg-gradient-to-br from-eureka-green/10 to-eureka-blue/10 animate-pulse rounded-xl"></div>
             </div>
-            <span class="font-bold text-xl text-gray-900">Eureka</span>
+            <div>
+              <span class="font-light text-2xl text-white tracking-wide">EurekaArchiTech</span>
+              <div class="text-xs text-eureka-green font-medium">Innovación Estructurada</div>
+            </div>
           </a>
           
+          <!-- Intelligent Navigation -->
           <div class="hidden md:flex items-center space-x-8">
-            <a href="#productos" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
-              Productos
-            </a>
-            <a href="#servicios" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
-              Servicios
-            </a>
-            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-              Contactar
-            </button>
+            <!-- Dynamic Navigation Items -->
+            <div class="flex items-center space-x-8" id="nav-items">
+              <!-- Discovery -->
+              <div class="group relative">
+                <a href="#servicios" class="flex items-center space-x-2 text-sm font-medium text-eureka-light hover:text-eureka-green transition-colors duration-300">
+                  <div class="w-2 h-2 bg-eureka-green/60 rounded-full group-hover:bg-eureka-green transition-colors"></div>
+                  <span>¿Qué necesitas lograr?</span>
+                </a>
+                <!-- Contextual submenu -->
+                <div class="absolute top-full left-0 mt-2 w-64 bg-eureka-dark/95 backdrop-blur-sm border border-eureka-gray/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div class="space-y-3">
+                    <a href="#servicios" class="block text-sm text-eureka-light hover:text-eureka-green transition-colors">🚀 Transformación Digital</a>
+                    <a href="#servicios" class="block text-sm text-eureka-light hover:text-eureka-green transition-colors">🏗️ Arquitectura Empresarial</a>
+                    <a href="#servicios" class="block text-sm text-eureka-light hover:text-eureka-green transition-colors">👥 Desarrollo de Talento</a>
+                    <a href="#servicios" class="block text-sm text-eureka-light hover:text-eureka-green transition-colors">🎯 Liderazgo Estratégico</a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Process -->
+              <div class="group relative">
+                <a href="#metodologia" class="flex items-center space-x-2 text-sm font-medium text-eureka-light hover:text-eureka-blue transition-colors duration-300">
+                  <div class="w-2 h-2 bg-eureka-blue/60 rounded-full group-hover:bg-eureka-blue transition-colors"></div>
+                  <span>Cómo lo hacemos</span>
+                </a>
+                <!-- Contextual submenu -->
+                <div class="absolute top-full left-0 mt-2 w-64 bg-eureka-dark/95 backdrop-blur-sm border border-eureka-gray/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div class="space-y-3">
+                    <div class="text-xs text-eureka-blue font-semibold uppercase tracking-wider mb-2">Framework EUREKA</div>
+                    <a href="#metodologia" class="block text-sm text-eureka-light hover:text-eureka-blue transition-colors">⚡ Metodología comprobada</a>
+                    <a href="#metodologia" class="block text-sm text-eureka-light hover:text-eureka-blue transition-colors">🛡️ Compromiso Triple 30</a>
+                    <a href="#metodologia" class="block text-sm text-eureka-light hover:text-eureka-blue transition-colors">📈 Resultados garantizados</a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Evidence -->
+              <div class="group relative">
+                <a href="#casos" class="flex items-center space-x-2 text-sm font-medium text-eureka-light hover:text-eureka-green transition-colors duration-300">
+                  <div class="w-2 h-2 bg-eureka-green/60 rounded-full group-hover:bg-eureka-green transition-colors"></div>
+                  <span>Resultados comprobados</span>
+                </a>
+                <!-- Contextual submenu -->
+                <div class="absolute top-full left-0 mt-2 w-72 bg-eureka-dark/95 backdrop-blur-sm border border-eureka-gray/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div class="space-y-3">
+                    <div class="grid grid-cols-2 gap-4 mb-3">
+                      <div class="text-center">
+                        <div class="text-lg font-semibold text-eureka-green">847</div>
+                        <div class="text-xs text-eureka-gray">Empresas</div>
+                      </div>
+                      <div class="text-center">
+                        <div class="text-lg font-semibold text-eureka-blue">95%</div>
+                        <div class="text-xs text-eureka-gray">Éxito</div>
+                      </div>
+                    </div>
+                    <a href="#casos" class="block text-sm text-eureka-light hover:text-eureka-green transition-colors">📊 Ver casos reales</a>
+                    <a href="#casos" class="block text-sm text-eureka-light hover:text-eureka-green transition-colors">💼 Hergon: 40% mejora</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Adaptive CTA Button -->
+            <div class="relative">
+              <button id="header-cta" class="nav-cta-btn group">
+                <span class="relative z-10" id="cta-text">Comienza ahora</span>
+                <div class="nav-btn-glow"></div>
+              </button>
+            </div>
           </div>
           
           <!-- Mobile menu button -->
-          <button class="md:hidden p-2" id="mobile-menu-btn">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button class="md:hidden p-3 rounded-xl hover:bg-eureka-gray/20 transition-colors" id="mobile-menu-btn">
+            <svg class="w-6 h-6 text-eureka-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
         </div>
         
-        <!-- Mobile menu -->
+        <!-- Enhanced Mobile menu -->
         <div class="md:hidden hidden" id="mobile-menu">
-          <div class="pt-4 pb-2 space-y-2">
-            <a href="#productos" class="block px-2 py-2 text-gray-600 hover:text-blue-600">Productos</a>
-            <a href="#servicios" class="block px-2 py-2 text-gray-600 hover:text-blue-600">Servicios</a>
-            <button class="w-full text-left bg-blue-600 text-white px-2 py-2 rounded-lg">Contactar</button>
+          <div class="pt-6 pb-4 space-y-4 border-t border-eureka-gray/20 mt-6">
+            <!-- Mobile Discovery -->
+            <div>
+              <div class="px-4 py-2 text-xs text-eureka-green font-semibold uppercase tracking-wider">¿Qué necesitas lograr?</div>
+              <a href="#servicios" class="block px-4 py-3 text-eureka-light hover:text-eureka-green hover:bg-eureka-gray/10 rounded-xl transition-all duration-300">
+                🚀 Transformación Digital
+              </a>
+              <a href="#servicios" class="block px-4 py-3 text-eureka-light hover:text-eureka-green hover:bg-eureka-gray/10 rounded-xl transition-all duration-300">
+                🏗️ Arquitectura Empresarial
+              </a>
+            </div>
+            
+            <!-- Mobile Process -->
+            <div>
+              <div class="px-4 py-2 text-xs text-eureka-blue font-semibold uppercase tracking-wider">Cómo lo hacemos</div>
+              <a href="#metodologia" class="block px-4 py-3 text-eureka-light hover:text-eureka-blue hover:bg-eureka-gray/10 rounded-xl transition-all duration-300">
+                ⚡ Metodología EUREKA
+              </a>
+            </div>
+            
+            <!-- Mobile Evidence -->
+            <div>
+              <div class="px-4 py-2 text-xs text-eureka-green font-semibold uppercase tracking-wider">Resultados</div>
+              <a href="#casos" class="block px-4 py-3 text-eureka-light hover:text-eureka-green hover:bg-eureka-gray/10 rounded-xl transition-all duration-300">
+                📊 Ver casos de éxito
+              </a>
+            </div>
+            
+            <!-- Mobile CTA -->
+            <button id="mobile-header-cta" class="w-full mobile-cta-btn mt-4">
+              Diagnóstico Gratuito
+            </button>
           </div>
         </div>
       </nav>
+      
+      <!-- Progress Indicator -->
+      <div class="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-eureka-green to-eureka-blue transition-all duration-300" id="scroll-progress" style="width: 0%"></div>
     </header>
     
     <!-- Main content -->
@@ -117,70 +351,325 @@ const socialImageURL = new URL(image, Astro.url);
       <slot />
     </main>
     
-    <!-- Footer -->
-    <footer class="bg-gray-50 border-t border-gray-200">
-      <div class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="space-y-4">
-            <div class="flex items-center space-x-3">
-              <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-sm">E</span>
+    <!-- Footer - Premium Dark Design -->
+    <footer class="bg-eureka-black border-t border-eureka-gray/20 relative overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-5">
+        <div class="footer-pattern"></div>
+      </div>
+      
+      <div class="relative max-w-7xl mx-auto px-8 py-20">
+        <div class="grid md:grid-cols-4 gap-12">
+          <!-- Brand Section -->
+          <div class="space-y-6">
+            <!-- EurekaArchiTech Logo -->
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+                <img src="/ELogo.png" alt="EurekaArchiTech Logo" class="w-10 h-10 object-contain filter drop-shadow-lg" />
               </div>
-              <span class="font-bold text-xl">Eureka</span>
+              <div>
+                <span class="font-light text-xl text-white">EurekaArchiTech</span>
+                <div class="text-xs text-eureka-green font-medium">Innovación Estructurada</div>
+              </div>
             </div>
-            <p class="text-sm text-gray-600 max-w-xs">
-              Productos y servicios empresariales para PyMEs mexicanas.
+            <p class="text-eureka-gray max-w-xs leading-relaxed">
+              Transformamos empresas con soluciones tecnológicas avanzadas y estrategias de arquitectura empresarial.
             </p>
+            <!-- Tech Badges -->
+            <div class="space-y-2">
+              <div class="inline-block bg-eureka-dark/50 px-3 py-1 rounded-full border border-eureka-gray/20">
+                <span class="text-eureka-green font-medium text-xs">⚡ Transformación Digital</span>
+              </div>
+              <div class="inline-block bg-eureka-dark/50 px-3 py-1 rounded-full border border-eureka-gray/20 ml-2">
+                <span class="text-eureka-blue font-medium text-xs">🏗️ Arquitectura Empresarial</span>
+              </div>
+            </div>
           </div>
           
+          <!-- Servicios -->
           <div>
-            <h3 class="font-semibold mb-4">Productos</h3>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li><a href="#productos" class="hover:text-blue-600 transition-colors">Software Empresarial</a></li>
-              <li><a href="#productos" class="hover:text-blue-600 transition-colors">Herramientas Digitales</a></li>
-              <li><a href="#productos" class="hover:text-blue-600 transition-colors">E-commerce</a></li>
+            <h3 class="font-medium mb-6 text-eureka-green">Servicios Digitales</h3>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#servicios" class="text-eureka-gray hover:text-eureka-green transition-colors duration-300">Arquitectura Empresarial</a></li>
+              <li><a href="#servicios" class="text-eureka-gray hover:text-eureka-green transition-colors duration-300">Transformación Digital</a></li>
+              <li><a href="#servicios" class="text-eureka-gray hover:text-eureka-green transition-colors duration-300">Innovación Estratégica</a></li>
+              <li><a href="#" class="text-eureka-gray hover:text-eureka-green transition-colors duration-300">Consultoría Tecnológica</a></li>
             </ul>
           </div>
           
+          <!-- Metodología -->
           <div>
-            <h3 class="font-semibold mb-4">Servicios</h3>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li><a href="#servicios" class="hover:text-blue-600 transition-colors">Consultoría Digital</a></li>
-              <li><a href="#servicios" class="hover:text-blue-600 transition-colors">Implementación</a></li>
-              <li><a href="#servicios" class="hover:text-blue-600 transition-colors">Soporte Técnico</a></li>
+            <h3 class="font-medium mb-6 text-eureka-blue">Metodología EUREKA</h3>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#metodologia" class="text-eureka-gray hover:text-eureka-green transition-colors duration-300">Evaluación</a></li>
+              <li><a href="#metodologia" class="text-eureka-gray hover:text-eureka-green transition-colors duration-300">Unificación</a></li>
+              <li><a href="#metodologia" class="text-eureka-gray hover:text-eureka-green transition-colors duration-300">Rediseño</a></li>
+              <li><a href="#metodologia" class="text-eureka-gray hover:text-eureka-green transition-colors duration-300">Ejecución</a></li>
+              <li><a href="#metodologia" class="text-eureka-gray hover:text-eureka-green transition-colors duration-300">Knowledge Transfer</a></li>
             </ul>
           </div>
           
+          <!-- Contacto -->
           <div>
-            <h3 class="font-semibold mb-4">Contacto</h3>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li>📧 hola@eureka.mx</li>
-              <li>📱 +52 55 1234 5678</li>
-              <li>🇲🇽 Ciudad de México</li>
+            <h3 class="font-medium mb-6 text-eureka-green">Contacto</h3>
+            <ul class="space-y-3 text-sm">
+              <li class="text-eureka-gray">hi@eureka-architech.com</li>
+              <li class="text-eureka-gray">México • Líder en Innovación</li>
+              <li class="text-eureka-green font-medium">85% Tasa de Éxito</li>
+              <li class="text-eureka-blue font-medium">300% ROI Promedio</li>
             </ul>
+            
+            <!-- Footer CTA -->
+            <button class="footer-cta-btn group mt-6">
+              <span class="relative z-10">Diagnóstico Gratuito</span>
+              <div class="footer-btn-glow"></div>
+            </button>
           </div>
         </div>
         
-        <div class="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p class="text-sm text-gray-600">
-            © 2025 Eureka. Todos los derechos reservados.
-          </p>
-          <p class="text-sm text-gray-600">
-            Hecho con ❤️ en México 🇲🇽
-          </p>
+        <!-- Bottom Section -->
+        <div class="border-t border-eureka-gray/20 mt-16 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div class="text-sm text-eureka-gray">
+              © 2025 EurekaArchiTech. Todos los derechos reservados.
+            </div>
+            
+            <div class="flex items-center space-x-8 text-sm text-eureka-gray">
+              <span class="flex items-center">
+                <span class="text-eureka-green mr-2">⚡</span>
+                Powered by Innovation
+              </span>
+              <span class="flex items-center">
+                <span class="text-eureka-blue mr-2">🇲🇽</span>
+                Hecho en México
+              </span>
+              <span class="flex items-center">
+                <span class="text-eureka-green mr-2">🚀</span>
+                Transformación Digital
+              </span>
+            </div>
+          </div>
+          
+          <div class="mt-8 text-center">
+            <p class="text-eureka-green text-sm italic font-light">
+              "Innovación estructurada para la era digital"
+            </p>
+          </div>
         </div>
       </div>
     </footer>
     
-    <!-- Simple mobile menu script -->
+    <!-- Performance Monitoring -->
     <script>
+      // Performance monitoring for Core Web Vitals
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          // Initialize non-critical features when browser is idle
+          initializeNonCriticalFeatures();
+        });
+      }
+      
+      // Web Vitals monitoring
+      function reportWebVitals() {
+        if ('PerformanceObserver' in window) {
+          // Monitor FCP, LCP, FID, CLS
+          new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+              if (entry.entryType === 'largest-contentful-paint') {
+                console.log('LCP:', entry.startTime);
+              }
+              if (entry.entryType === 'first-input') {
+                console.log('FID:', entry.processingStart - entry.startTime);
+              }
+              if (entry.entryType === 'layout-shift' && !entry.hadRecentInput) {
+                console.log('CLS:', entry.value);
+              }
+            }
+          }).observe({
+            type: 'largest-contentful-paint',
+            buffered: true
+          });
+        }
+      }
+      
+      reportWebVitals();
+      
+      // Service Worker Registration
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', async () => {
+          try {
+            const registration = await navigator.serviceWorker.register('/sw.js', {
+              scope: '/'
+            });
+            
+            console.log('SW: Registered successfully', registration.scope);
+            
+            // Handle updates
+            registration.addEventListener('updatefound', () => {
+              const newWorker = registration.installing;
+              newWorker.addEventListener('statechange', () => {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  // Show update available notification
+                  showUpdateNotification();
+                }
+              });
+            });
+            
+          } catch (error) {
+            console.log('SW: Registration failed', error);
+          }
+        });
+      }
+      
+      function showUpdateNotification() {
+        const notification = document.createElement('div');
+        notification.className = 'fixed bottom-4 right-4 bg-eureka-dark border border-eureka-green/30 rounded-xl p-4 z-50 max-w-sm';
+        notification.innerHTML = `
+          <div class="flex items-center space-x-3">
+            <div class="w-3 h-3 bg-eureka-green rounded-full animate-pulse"></div>
+            <div class="flex-1">
+              <p class="text-eureka-light text-sm font-medium">Nueva versión disponible</p>
+              <p class="text-eureka-gray text-xs">Actualiza para obtener las últimas mejoras</p>
+            </div>
+            <button onclick="window.location.reload()" class="bg-eureka-green text-eureka-black text-xs px-3 py-1 rounded font-medium">
+              Actualizar
+            </button>
+          </div>
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Auto-hide after 10 seconds
+        setTimeout(() => {
+          notification.remove();
+        }, 10000);
+      }
+      
+      // Initialize non-critical features when idle
+      function initializeNonCriticalFeatures() {
+        // Intersection Observer for animations
+        if ('IntersectionObserver' in window) {
+          const animationObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                animationObserver.unobserve(entry.target);
+              }
+            });
+          }, { 
+            threshold: 0.1,
+            rootMargin: '50px 0px'
+          });
+          
+          // Observe elements that should animate
+          document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            animationObserver.observe(el);
+          });
+        }
+        
+        // Analytics and tracking
+        if (typeof gtag !== 'undefined') {
+          // Initialize Google Analytics events
+          gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: window.location.href
+          });
+        }
+        
+        // Performance monitoring
+        if ('PerformanceObserver' in window) {
+          // Monitor Long Tasks
+          new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+              if (entry.duration > 50) {
+                console.warn('Long task detected:', entry.duration);
+              }
+            }
+          }).observe({ type: 'longtask', buffered: true });
+        }
+      }
+    </script>
+    
+    <!-- Enhanced Interactive Scripts - Deferred -->
+    <script defer>
       document.addEventListener('DOMContentLoaded', () => {
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const diagnosticCTA = document.getElementById('diagnostic-cta');
+        const diagnosticModal = document.getElementById('diagnostic-modal');
+        const closeModal = document.getElementById('close-modal');
+        const diagnosticForm = document.getElementById('diagnostic-form');
+        const headerCTA = document.getElementById('header-cta');
+        const mobileHeaderCTA = document.getElementById('mobile-header-cta');
+        const ctaText = document.getElementById('cta-text');
+        const scrollProgress = document.getElementById('scroll-progress');
         
+        // Mobile menu functionality
         if (mobileMenuBtn && mobileMenu) {
           mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+          });
+        }
+        
+        // Diagnostic modal functionality
+        if (diagnosticCTA && diagnosticModal) {
+          diagnosticCTA.addEventListener('click', () => {
+            diagnosticModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          });
+        }
+        
+        if (closeModal && diagnosticModal) {
+          closeModal.addEventListener('click', () => {
+            diagnosticModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+          });
+          
+          // Close modal when clicking outside
+          diagnosticModal.addEventListener('click', (e) => {
+            if (e.target === diagnosticModal) {
+              diagnosticModal.classList.add('hidden');
+              document.body.style.overflow = 'auto';
+            }
+          });
+        }
+        
+        // Enhanced form submission
+        if (diagnosticForm) {
+          diagnosticForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = diagnosticForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            // Update button state
+            submitBtn.textContent = 'Generando diagnóstico...';
+            submitBtn.disabled = true;
+            
+            // Simulate form processing
+            setTimeout(() => {
+              // Show success message
+              const successDiv = document.createElement('div');
+              successDiv.className = 'bg-eureka-green/20 border border-eureka-green/30 rounded-xl p-6 text-center';
+              successDiv.innerHTML = `
+                <div class="w-16 h-16 bg-eureka-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8 text-eureka-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <h4 class="text-xl font-semibold text-eureka-green mb-2">¡Diagnóstico Enviado!</h4>
+                <p class="text-eureka-light mb-4">Recibirás tu diagnóstico personalizado en las próximas 24 horas.</p>
+                <p class="text-eureka-gray text-sm">Nuestro equipo de expertos analizará tu información y te contactará con recomendaciones específicas.</p>
+              `;
+              
+              diagnosticForm.replaceWith(successDiv);
+              
+              // Auto-close modal after 5 seconds
+              setTimeout(() => {
+                diagnosticModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+              }, 5000);
+            }, 2000);
           });
         }
         
@@ -202,7 +691,580 @@ const socialImageURL = new URL(image, Astro.url);
             }
           });
         });
+        
+        // Live activity simulation (social proof)
+        function showLiveActivity() {
+          const activities = [
+            'María de Retail Corp acaba de completar su diagnóstico',
+            'Carlos de Manufactura SA recibió su plan personalizado',
+            'Ana de TechStart obtuvo 45% mejora en 60 días',
+            'Roberto de FinServ redujo costos 30% con EUREKA'
+          ];
+          
+          const createNotification = (message) => {
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-6 right-6 bg-eureka-dark border border-eureka-green/30 rounded-xl p-4 max-w-sm z-40 transform translate-x-full transition-transform duration-500';
+            notification.innerHTML = `
+              <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 bg-eureka-green rounded-full animate-pulse"></div>
+                <p class="text-eureka-light text-sm">${message}</p>
+              </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+              notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Animate out
+            setTimeout(() => {
+              notification.style.transform = 'translateX(full)';
+              setTimeout(() => notification.remove(), 500);
+            }, 4000);
+          };
+          
+          // Show random activity every 15-30 seconds
+          setInterval(() => {
+            const randomActivity = activities[Math.floor(Math.random() * activities.length)];
+            createNotification(randomActivity);
+          }, Math.random() * 15000 + 15000);
+        }
+        
+        // Start live activity after 5 seconds
+        setTimeout(showLiveActivity, 5000);
+        
+        // Enhanced Social Proof System
+        initializeSocialProof();
+        
+        // Intelligent Navigation Features
+        
+        // 1. Adaptive CTA text based on scroll position
+        function updateCTAText() {
+          const scrollY = window.scrollY;
+          const windowHeight = window.innerHeight;
+          const documentHeight = document.documentElement.scrollHeight;
+          
+          if (scrollY < windowHeight * 0.5) {
+            ctaText.textContent = 'Comienza ahora';
+          } else if (scrollY < windowHeight * 1.5) {
+            ctaText.textContent = 'Diagnóstico Gratuito';
+          } else if (scrollY < windowHeight * 2.5) {
+            ctaText.textContent = 'Ver Metodología';
+          } else {
+            ctaText.textContent = 'Solicitar Consulta';
+          }
+        }
+        
+        // 2. Scroll progress indicator
+        function updateScrollProgress() {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const scrollPercent = (scrollTop / docHeight) * 100;
+          
+          if (scrollProgress) {
+            scrollProgress.style.width = scrollPercent + '%';
+          }
+        }
+        
+        // 3. Header CTA functionality
+        if (headerCTA) {
+          headerCTA.addEventListener('click', () => {
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            
+            if (scrollY < windowHeight * 0.5) {
+              // Scroll to hero CTA
+              const heroSection = document.querySelector('section');
+              if (heroSection) {
+                heroSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            } else if (scrollY < windowHeight * 1.5) {
+              // Open diagnostic modal
+              if (diagnosticModal) {
+                diagnosticModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+              }
+            } else if (scrollY < windowHeight * 2.5) {
+              // Scroll to methodology
+              const methodologySection = document.getElementById('metodologia');
+              if (methodologySection) {
+                methodologySection.scrollIntoView({ behavior: 'smooth' });
+              }
+            } else {
+              // Scroll to contact section
+              const ctaSection = document.querySelector('section:last-of-type');
+              if (ctaSection) {
+                ctaSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }
+          });
+        }
+        
+        // Mobile header CTA
+        if (mobileHeaderCTA) {
+          mobileHeaderCTA.addEventListener('click', () => {
+            if (diagnosticModal) {
+              diagnosticModal.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+              // Close mobile menu
+              if (mobileMenu) {
+                mobileMenu.classList.add('hidden');
+              }
+            }
+          });
+        }
+        
+        // 4. Section-based navigation highlighting
+        function highlightCurrentSection() {
+          const sections = document.querySelectorAll('section[id]');
+          const navLinks = document.querySelectorAll('nav a[href^="#"]');
+          
+          let currentSection = '';
+          const scrollY = window.scrollY + 100; // Offset for header
+          
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+              currentSection = section.getAttribute('id');
+            }
+          });
+          
+          // Update navigation highlighting
+          navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === '#' + currentSection) {
+              link.classList.add('text-eureka-green');
+              link.classList.remove('text-eureka-light');
+            } else {
+              link.classList.remove('text-eureka-green');
+              link.classList.add('text-eureka-light');
+            }
+          });
+        }
+        
+        // 5. Smart scroll behavior
+        let lastScrollY = 0;
+        function handleSmartScroll() {
+          const currentScrollY = window.scrollY;
+          const header = document.getElementById('smart-header');
+          
+          if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            // Scrolling down - hide header
+            header.style.transform = 'translateY(-100%)';
+          } else {
+            // Scrolling up - show header
+            header.style.transform = 'translateY(0)';
+          }
+          
+          lastScrollY = currentScrollY;
+        }
+        
+        // Event listeners for scroll-based features
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            updateCTAText();
+            updateScrollProgress();
+            highlightCurrentSection();
+            handleSmartScroll();
+          }, 10);
+        });
+        
+        // Initial calls
+        updateCTAText();
+        updateScrollProgress();
+        highlightCurrentSection();
+        
+        // Impact Calculator Functionality
+        const calculatorState = {
+          industry: null,
+          industryMultiplier: 1.0,
+          companySize: null,
+          baseRevenue: 0,
+          challenges: [],
+          totalImpact: 40
+        };
+        
+        const industryData = {
+          finanzas: {
+            improvements: [
+              'Cumplimiento automático de regulaciones',
+              'Reducción de riesgos operacionales',
+              'Optimización de procesos KYC',
+              'Mejora en reporting de compliance'
+            ]
+          },
+          retail: {
+            improvements: [
+              'Experiencia de cliente personalizada',
+              'Optimización de inventario',
+              'Integración omnicanal',
+              'Analytics predictivos de demanda'
+            ]
+          },
+          manufactura: {
+            improvements: [
+              'Automatización de líneas de producción',
+              'Mantenimiento predictivo IoT',
+              'Optimización de cadena de suministro',
+              'Control de calidad automatizado'
+            ]
+          },
+          tecnologia: {
+            improvements: [
+              'Aceleración de desarrollo de productos',
+              'Escalabilidad automática de sistemas',
+              'DevSecOps avanzado',
+              'Arquitectura cloud-native'
+            ]
+          },
+          salud: {
+            improvements: [
+              'Digitalización de expedientes',
+              'Telemedicina integrada',
+              'Compliance HIPAA automático',
+              'Analytics de salud poblacional'
+            ]
+          },
+          educacion: {
+            improvements: [
+              'Plataformas de aprendizaje adaptativo',
+              'Gestión administrativa digitalizada',
+              'Analytics de rendimiento estudiantil',
+              'Comunicación integrada'
+            ]
+          }
+        };
+        
+        // Industry Selection
+        document.querySelectorAll('.industry-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            // Remove previous selection
+            document.querySelectorAll('.industry-btn').forEach(b => b.classList.remove('selected'));
+            // Add selection to clicked button
+            btn.classList.add('selected');
+            
+            calculatorState.industry = btn.dataset.industry;
+            calculatorState.industryMultiplier = parseFloat(btn.dataset.multiplier);
+            
+            updateCalculations();
+            updateImprovementsList();
+          });
+        });
+        
+        // Company Size Selection
+        document.querySelectorAll('.size-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            
+            calculatorState.companySize = btn.dataset.size;
+            calculatorState.baseRevenue = parseInt(btn.dataset.base);
+            
+            updateCalculations();
+          });
+        });
+        
+        // Challenges Selection
+        document.querySelectorAll('.challenge-checkbox').forEach(checkbox => {
+          checkbox.addEventListener('change', () => {
+            const impact = parseInt(checkbox.dataset.impact);
+            const challenge = checkbox.dataset.challenge;
+            
+            if (checkbox.checked) {
+              calculatorState.challenges.push({ challenge, impact });
+            } else {
+              calculatorState.challenges = calculatorState.challenges.filter(c => c.challenge !== challenge);
+            }
+            
+            updateCalculations();
+          });
+        });
+        
+        function updateCalculations() {
+          // Calculate total impact percentage
+          const challengesImpact = calculatorState.challenges.reduce((sum, c) => sum + c.impact, 0);
+          const baseImpact = 40; // Base 40% improvement
+          const totalImpactPercentage = Math.min(95, baseImpact + challengesImpact); // Max 95%
+          
+          // Calculate revenue impact
+          const revenueImpact = calculatorState.baseRevenue * (totalImpactPercentage / 100) * calculatorState.industryMultiplier;
+          
+          // Calculate investment estimate (3-15% of base revenue, based on company size)
+          const investmentPercentages = {
+            startup: 0.15,
+            pyme: 0.08,
+            mediana: 0.05,
+            grande: 0.03
+          };
+          const investmentPercentage = investmentPercentages[calculatorState.companySize] || 0.08;
+          const investment = calculatorState.baseRevenue * investmentPercentage;
+          
+          // Calculate ROI
+          const roi = revenueImpact > 0 ? Math.round((revenueImpact / investment) * 100) : 400;
+          
+          // Calculate timeline (2-6 months based on size and challenges)
+          const baseTimeline = calculatorState.companySize === 'startup' ? 2 : 
+                               calculatorState.companySize === 'pyme' ? 3 :
+                               calculatorState.companySize === 'mediana' ? 4 : 5;
+          const complexityFactor = Math.min(2, calculatorState.challenges.length * 0.3);
+          const timeline = Math.ceil(baseTimeline + complexityFactor);
+          
+          // Update UI
+          document.getElementById('growth-percentage').textContent = totalImpactPercentage + '%';
+          document.getElementById('timeline-months').textContent = timeline;
+          document.getElementById('revenue-impact').textContent = formatCurrency(revenueImpact);
+          document.getElementById('investment-estimate').textContent = formatCurrency(investment);
+          document.getElementById('roi-percentage').textContent = roi + '%';
+          
+          calculatorState.totalImpact = totalImpactPercentage;
+        }
+        
+        function updateImprovementsList() {
+          const improvementsList = document.getElementById('improvement-list');
+          
+          if (!calculatorState.industry) {
+            improvementsList.innerHTML = `
+              <div class="improvement-item">
+                <div class="flex items-center space-x-3">
+                  <div class="w-2 h-2 bg-eureka-green rounded-full"></div>
+                  <span class="text-eureka-light text-sm">Selecciona tu industria para ver mejoras específicas</span>
+                </div>
+              </div>
+            `;
+            return;
+          }
+          
+          const improvements = industryData[calculatorState.industry].improvements;
+          improvementsList.innerHTML = improvements.map(improvement => `
+            <div class="improvement-item">
+              <div class="flex items-center space-x-3">
+                <div class="w-2 h-2 bg-eureka-green rounded-full"></div>
+                <span class="text-eureka-light text-sm">${improvement}</span>
+              </div>
+            </div>
+          `).join('');
+        }
+        
+        function formatCurrency(amount) {
+          if (amount === 0) return '$0';
+          if (amount >= 1000000) {
+            return '$' + (amount / 1000000).toFixed(1) + 'M';
+          } else if (amount >= 1000) {
+            return '$' + (amount / 1000).toFixed(0) + 'K';
+          } else {
+            return '$' + amount.toLocaleString();
+          }
+        }
+        
+        // Calculator CTA
+        const calculatorCTA = document.getElementById('calculator-cta');
+        if (calculatorCTA) {
+          calculatorCTA.addEventListener('click', () => {
+            if (diagnosticModal) {
+              diagnosticModal.classList.remove('hidden');
+              document.body.style.overflow = 'hidden';
+            }
+          });
+        }
+        
+        // Enhanced Social Proof System
+        function initializeSocialProof() {
+          // Success stories data
+          const successStories = [
+            { company: 'Hergon Systems', industry: 'Fintech', improvement: '40% mejora en rendimiento', icon: '🏦', time: 'hace 2 horas' },
+            { company: 'RetailMax Corp', industry: 'Retail', improvement: '35% aumento en ventas', icon: '🛍️', time: 'hace 4 horas' },
+            { company: 'IndustriaTech SA', industry: 'Manufactura', improvement: '62% reducción costos', icon: '🏭', time: 'hace 6 horas' },
+            { company: 'FinanceCorpMX', industry: 'Fintech', improvement: '55% eficiencia operacional', icon: '🏦', time: 'hace 8 horas' },
+            { company: 'TechStartup', industry: 'Tecnología', improvement: '80% aceleración desarrollo', icon: '💻', time: 'hace 12 horas' },
+            { company: 'HealthcarePlus', industry: 'Salud', improvement: '45% optimización procesos', icon: '🏥', time: 'hace 1 día' },
+            { company: 'EduTechMX', industry: 'Educación', improvement: '30% mejora engagement', icon: '🎓', time: 'hace 1 día' },
+            { company: 'ManufacturaMX', industry: 'Manufactura', improvement: '48% reducción desperdicios', icon: '🏭', time: 'hace 2 días' }
+          ];
+          
+          // Current activity data
+          const currentActivities = [
+            { name: 'María González', company: 'RetailCorp', action: 'completó su diagnóstico digital', time: 'hace 5 min', type: 'diagnostic' },
+            { name: 'Carlos Ruiz', company: 'TechSolutions', action: 'programó consulta estratégica', time: 'hace 12 min', type: 'consultation' },
+            { name: 'Ana Martínez', company: 'FinServ SA', action: 'descargó caso de estudio Hergon', time: 'hace 18 min', type: 'download' },
+            { name: 'Roberto García', company: 'InnovaCorp', action: 'solicitó propuesta personalizada', time: 'hace 25 min', type: 'proposal' },
+            { name: 'Laura Pérez', company: 'ManufacturaPlus', action: 'calculó su potencial de ROI', time: 'hace 32 min', type: 'calculator' },
+            { name: 'Diego Hernández', company: 'StartupTech', action: 'se registró para webinar', time: 'hace 38 min', type: 'webinar' },
+            { name: 'Sofia López', company: 'HealthTech', action: 'contactó al equipo de expertos', time: 'hace 45 min', type: 'contact' },
+            { name: 'Miguel Rodríguez', company: 'EduDigital', action: 'exploró metodología EUREKA', time: 'hace 52 min', type: 'methodology' }
+          ];
+          
+          // Initialize feeds
+          populateSuccessFeed();
+          populateActivityFeed();
+          animateCounters();
+          
+          // Update feeds periodically
+          setInterval(updateSuccessFeed, 15000); // Every 15 seconds
+          setInterval(updateActivityFeed, 8000);  // Every 8 seconds
+          setInterval(updateCounters, 30000);     // Every 30 seconds
+          
+          function populateSuccessFeed() {
+            const successFeed = document.getElementById('success-feed');
+            if (!successFeed) return;
+            
+            const recentSuccesses = successStories.slice(0, 4);
+            successFeed.innerHTML = recentSuccesses.map(story => `
+              <div class="flex items-start space-x-4 p-4 bg-eureka-dark/30 rounded-xl border border-eureka-green/10 hover:border-eureka-green/20 transition-all duration-300">
+                <div class="text-2xl">${story.icon}</div>
+                <div class="flex-1">
+                  <div class="flex justify-between items-start mb-2">
+                    <div class="font-semibold text-eureka-light">${story.company}</div>
+                    <div class="text-xs text-eureka-gray">${story.time}</div>
+                  </div>
+                  <div class="text-sm text-eureka-green font-medium mb-1">${story.improvement}</div>
+                  <div class="text-xs text-eureka-gray">${story.industry}</div>
+                </div>
+              </div>
+            `).join('');
+          }
+          
+          function populateActivityFeed() {
+            const activityFeed = document.getElementById('activity-feed');
+            if (!activityFeed) return;
+            
+            const recentActivities = currentActivities.slice(0, 4);
+            activityFeed.innerHTML = recentActivities.map(activity => `
+              <div class="flex items-start space-x-4 p-4 bg-eureka-dark/30 rounded-xl border border-eureka-blue/10 hover:border-eureka-blue/20 transition-all duration-300">
+                <div class="w-10 h-10 bg-gradient-to-br from-eureka-blue/20 to-eureka-green/20 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                  ${activity.name.split(' ').map(n => n[0]).join('')}
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between items-start mb-2">
+                    <div class="font-semibold text-eureka-light">${activity.name}</div>
+                    <div class="text-xs text-eureka-gray">${activity.time}</div>
+                  </div>
+                  <div class="text-sm text-eureka-blue mb-1">${activity.action}</div>
+                  <div class="text-xs text-eureka-gray">${activity.company}</div>
+                </div>
+              </div>
+            `).join('');
+          }
+          
+          function updateSuccessFeed() {
+            // Rotate success stories
+            const story = successStories.shift();
+            successStories.push(story);
+            populateSuccessFeed();
+          }
+          
+          function updateActivityFeed() {
+            // Rotate activities and update timestamps
+            const activity = currentActivities.shift();
+            // Update timestamp to make it seem more recent
+            activity.time = getRandomTimeAgo();
+            currentActivities.push(activity);
+            populateActivityFeed();
+          }
+          
+          function updateCounters() {
+            // Animate counter updates
+            const activeCount = document.getElementById('active-count');
+            const roiCounter = document.getElementById('roi-counter');
+            
+            if (activeCount) {
+              const currentValue = parseInt(activeCount.textContent);
+              const newValue = currentValue + Math.floor(Math.random() * 3) - 1; // +/- 1
+              const finalValue = Math.max(20, Math.min(30, newValue)); // Keep between 20-30
+              animateNumber(activeCount, finalValue);
+            }
+            
+            if (roiCounter) {
+              const currentValue = parseInt(roiCounter.textContent.replace('%', ''));
+              const newValue = currentValue + Math.floor(Math.random() * 10) - 5; // +/- 5%
+              const finalValue = Math.max(400, Math.min(500, newValue)); // Keep between 400-500%
+              animateNumber(roiCounter, finalValue, '%');
+            }
+          }
+          
+          function animateCounters() {
+            // Initial animation for counters
+            const activeCount = document.getElementById('active-count');
+            const roiCounter = document.getElementById('roi-counter');
+            
+            if (activeCount) {
+              animateNumber(activeCount, 23);
+            }
+            if (roiCounter) {
+              animateNumber(roiCounter, 420, '%');
+            }
+          }
+          
+          function animateNumber(element, targetValue, suffix = '') {
+            const startValue = 0;
+            const duration = 2000;
+            const startTime = performance.now();
+            
+            function update(currentTime) {
+              const elapsedTime = currentTime - startTime;
+              const progress = Math.min(elapsedTime / duration, 1);
+              
+              // Easing function
+              const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+              const currentValue = Math.floor(startValue + (targetValue - startValue) * easeOutCubic);
+              
+              element.textContent = currentValue + suffix;
+              
+              if (progress < 1) {
+                requestAnimationFrame(update);
+              }
+            }
+            
+            requestAnimationFrame(update);
+          }
+          
+          function getRandomTimeAgo() {
+            const times = [
+              'hace 2 min', 'hace 5 min', 'hace 8 min', 'hace 12 min',
+              'hace 15 min', 'hace 18 min', 'hace 22 min', 'hace 25 min',
+              'hace 30 min', 'hace 35 min', 'hace 40 min', 'hace 45 min'
+            ];
+            return times[Math.floor(Math.random() * times.length)];
+          }
+        }
       });
     </script>
   </body>
 </html>
+
+<style>
+  /* Navigation CTA Button */
+  .nav-cta-btn {
+    @apply relative px-6 py-2 bg-eureka-green hover:bg-eureka-green/90 text-eureka-black text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 overflow-hidden;
+  }
+  
+  .nav-btn-glow {
+    @apply absolute inset-0 bg-eureka-green opacity-0 group-hover:opacity-20 rounded-lg transition-opacity duration-300;
+    box-shadow: 0 0 15px rgba(0, 229, 160, 0.5);
+  }
+  
+  /* Mobile CTA */
+  .mobile-cta-btn {
+    @apply bg-eureka-green hover:bg-eureka-green/90 text-eureka-black px-6 py-3 rounded-xl font-semibold transition-colors duration-300;
+  }
+  
+  /* Footer CTA */
+  .footer-cta-btn {
+    @apply relative w-full bg-eureka-green hover:bg-eureka-green/90 text-eureka-black px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 transform hover:scale-105 overflow-hidden;
+  }
+  
+  .footer-btn-glow {
+    @apply absolute inset-0 bg-eureka-green opacity-0 group-hover:opacity-20 rounded-xl transition-opacity duration-300;
+    box-shadow: 0 0 15px rgba(0, 229, 160, 0.4);
+  }
+  
+  /* Footer Pattern */
+  .footer-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2300E5A0' fill-opacity='0.03'%3E%3Cpath d='M20 20h20v20H20V20zM0 0h20v20H0V0z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+</style>

@@ -2,7 +2,130 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Reset básico */
+/* Performance optimizations for Core Web Vitals */
+
+/* Prevent layout shifts with consistent sizing */
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-ratio-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+/* Prevent CLS for images */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+img[width][height] {
+  height: auto;
+}
+
+/* GPU acceleration for animations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.will-change-contents {
+  will-change: contents;
+}
+
+/* Efficient transitions */
+.transition-gpu {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Optimized focus styles */
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: box-shadow 0.15s ease;
+}
+
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00E5A0, 0 0 0 4px rgba(0, 229, 160, 0.2);
+}
+
+/* Performance-first animations */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-in {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Layout stability helpers */
+.stable-width {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stable-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Font display optimization */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+}
+
+/* COLORES EXACTOS DE LA GUÍA DE DISEÑO */
+:root {
+  /* Colores Primarios */
+  --eureka-black: #0D0D0D;
+  --eureka-dark: #1A1A1A;
+  --eureka-green: #00E5A0;
+  --eureka-green-dark: #00D690;
+  --eureka-blue: #0080FF;
+  --eureka-blue-dark: #0070E0;
+  
+  /* Colores Secundarios */
+  --eureka-gray: #4A4A4A;
+  --eureka-gray-light: #6B6B6B;
+  --eureka-light: #E0E0E0;
+  --eureka-white: #FFFFFF;
+  --eureka-off-white: #F5F5F5;
+}
+
 @layer base {
   * {
     margin: 0;
@@ -12,16 +135,50 @@
   
   html {
     scroll-behavior: smooth;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variant: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
-    color: #1f2937;
-    background-color: #ffffff;
+    color: var(--eureka-light);
+    background-color: var(--eureka-black);
+    text-rendering: optimizeLegibility;
   }
   
-  /* Mejoras de accesibilidad */
+  /* Tipografía siguiendo guía de diseño */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300; /* Light weight para títulos principales */
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+  }
+  
+  h1 {
+    font-size: clamp(3rem, 8vw, 4rem); /* 48-64px responsive */
+    letter-spacing: 0.05em; /* Tracking amplio */
+  }
+  
+  h2, h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem); /* 24-32px */
+    font-weight: 400; /* Regular para subtítulos */
+  }
+  
+  p {
+    font-size: clamp(1rem, 2vw, 1.125rem); /* 16-18px */
+    line-height: 1.6; /* Interlineado 1.5-1.6 */
+    max-width: 75ch; /* Ancho máximo para legibilidad */
+  }
+  
+  /* Focus styles para accesibilidad WCAG */
+  *:focus {
+    outline: 2px solid var(--eureka-green);
+    outline-offset: 2px;
+  }
+  
+  /* Skip to content accessibility */
   .sr-only {
     position: absolute;
     width: 1px;
@@ -44,58 +201,785 @@
     clip: auto;
     white-space: normal;
   }
+  
+  /* Button improvements */
+  button, a {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  /* Image optimization */
+  img {
+    height: auto;
+    max-width: 100%;
+  }
 }
 
-/* Animaciones suaves */
 @layer utilities {
+  /* Colores de marca para Tailwind */
+  .text-eureka-black { color: var(--eureka-black); }
+  .text-eureka-dark { color: var(--eureka-dark); }
+  .text-eureka-green { color: var(--eureka-green); }
+  .text-eureka-green-dark { color: var(--eureka-green-dark); }
+  .text-eureka-blue { color: var(--eureka-blue); }
+  .text-eureka-blue-dark { color: var(--eureka-blue-dark); }
+  .text-eureka-gray { color: var(--eureka-gray); }
+  .text-eureka-gray-light { color: var(--eureka-gray-light); }
+  .text-eureka-light { color: var(--eureka-light); }
+  .text-eureka-white { color: var(--eureka-white); }
+  
+  .bg-eureka-black { background-color: var(--eureka-black); }
+  .bg-eureka-dark { background-color: var(--eureka-dark); }
+  .bg-eureka-green { background-color: var(--eureka-green); }
+  .bg-eureka-green-dark { background-color: var(--eureka-green-dark); }
+  .bg-eureka-blue { background-color: var(--eureka-blue); }
+  .bg-eureka-blue-dark { background-color: var(--eureka-blue-dark); }
+  .bg-eureka-gray { background-color: var(--eureka-gray); }
+  .bg-eureka-gray-light { background-color: var(--eureka-gray-light); }
+  .bg-eureka-light { background-color: var(--eureka-light); }
+  .bg-eureka-white { background-color: var(--eureka-white); }
+  
+  .border-eureka-green { border-color: var(--eureka-green); }
+  .border-eureka-blue { border-color: var(--eureka-blue); }
+  .border-eureka-gray { border-color: var(--eureka-gray); }
+  
+  /* Degradados de la guía */
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--eureka-blue) 0%, var(--eureka-green) 100%);
+  }
+  
+  .gradient-text-primary {
+    background: linear-gradient(135deg, var(--eureka-blue) 0%, var(--eureka-green) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Grid System - 12 columnas con gutters amplios */
+  .container-eureka {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .container-eureka {
+      padding: 0 3rem;
+    }
+  }
+  
+  /* Espaciado - múltiplos de 8px */
+  .space-8 { margin: 0.5rem; }
+  .space-16 { margin: 1rem; }
+  .space-24 { margin: 1.5rem; }
+  .space-32 { margin: 2rem; }
+  .space-48 { margin: 3rem; }
+  
+  /* Animaciones suaves - siguiendo principios de diseño */
   .animate-fade-in {
-    animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.8s ease-out;
   }
   
   .animate-slide-up {
-    animation: slideUp 0.3s ease-out;
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  /* Performance utilities */
+  .gpu {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  /* Typography utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Minimalismo - espacios negativos estratégicos */
+  .negative-space {
+    padding: 4rem 0;
+  }
+  
+  @media (min-width: 768px) {
+    .negative-space {
+      padding: 6rem 0;
+    }
   }
 }
 
+/* Animaciones - suaves y profesionales */
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(2rem);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes slideUp {
   from {
-    transform: translateY(10px);
     opacity: 0;
+    transform: translateY(3rem);
   }
   to {
+    opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(0, 229, 160, 0.2);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(0, 229, 160, 0.4);
+  }
+}
+
+/* Patrones geométricas - elementos gráficos de la guía */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.floating-element {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive design - mobile first */
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.02em;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .container-eureka {
+    padding: 0 1rem;
+  }
+}
+
+/* Accesibilidad - WCAG AA compliance */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Alto contraste - siguiendo guía de accesibilidad */
+@media (prefers-contrast: high) {
+  :root {
+    --eureka-black: #000000;
+    --eureka-light: #FFFFFF;
+    --eureka-green: #00FF00;
+    --eureka-blue: #0000FF;
+  }
+  
+  .bg-eureka-green {
+    background-color: #00AA00 !important;
+  }
+  
+  .border-eureka-gray {
+    border-color: #666666 !important;
+  }
+}
+
+/* Dark mode support - ya implementado por defecto */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+/* Print styles - mantener marca en documentos */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  header, footer {
+    display: none;
+  }
+  
+  .no-print {
+    display: none;
+  }
+  
+  /* Mantener colores de marca en impresión */
+  .text-eureka-green {
+    color: #00AA00 !important;
+  }
+  
+  .text-eureka-blue {
+    color: #0066CC !important;
+  }
+}
+
+/* Componentes específicos siguiendo la guía */
+
+/* Botones - siguiendo especificaciones exactas */
+.btn-primary-eureka {
+  background-color: var(--eureka-green);
+  color: var(--eureka-black);
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary-eureka:hover {
+  background-color: var(--eureka-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 229, 160, 0.3);
+}
+
+/* Cards - gris oscuro con transparencia */
+.card-eureka {
+  background-color: rgba(26, 26, 26, 0.8);
+  border: 1px solid var(--eureka-gray);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.card-eureka:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--eureka-green);
+}
+
+/* Iconografía - line icons consistentes */
+.icon-eureka {
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.5px;
+  color: var(--eureka-green);
+}
+
+/* Overlays sutiles para fondos */
+.overlay-pattern {
+  position: relative;
+}
+
+.overlay-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(0, 229, 160, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(0, 128, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Split-screen layouts - patrón 50/50 dinámico */
+.split-screen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .split-screen {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: auto;
+  }
+}
+
+/* Custom styles for interactive components */
+.industry-btn {
+  @apply px-6 py-3 rounded-xl font-medium transition-all duration-300;
+  @apply border border-eureka-gray/30 bg-eureka-dark/40 text-eureka-light;
+  @apply hover:border-eureka-green/50 hover:bg-eureka-green/10 hover:text-eureka-green;
+}
+
+.industry-btn.selected {
+  @apply border-eureka-green bg-eureka-green/20 text-eureka-green;
+}
+
+.size-btn {
+  @apply px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300;
+  @apply border border-eureka-gray/30 bg-eureka-dark/40 text-eureka-light;
+  @apply hover:border-eureka-blue/50 hover:bg-eureka-blue/10 hover:text-eureka-blue;
+}
+
+.size-btn.selected {
+  @apply border-eureka-blue bg-eureka-blue/20 text-eureka-blue;
+}
+
+.challenge-item {
+  @apply p-4 rounded-xl border border-eureka-gray/20 bg-eureka-dark/30;
+  @apply hover:border-eureka-green/30 hover:bg-eureka-green/5;
+  @apply transition-all duration-300 cursor-pointer;
+}
+
+.challenge-item.selected {
+  @apply border-eureka-green/50 bg-eureka-green/10;
+}
+
+/* Premium Microinteractions */
+.premium-hover {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.premium-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 229, 160, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.premium-hover:hover::before {
+  left: 100%;
+}
+
+.premium-glow {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.premium-glow::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(45deg, #00E5A0, #0080FF, #00E5A0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.premium-glow:hover::after {
+  opacity: 1;
+}
+
+.magnetic {
+  transition: transform 0.2s ease;
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ripple:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(-20px) rotate(0deg); }
+  75% { transform: translateY(-10px) rotate(-1deg); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(0, 229, 160, 0.3);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(0, 229, 160, 0.6);
+    transform: scale(1.02);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+
+.loading-dots {
+  position: relative;
+}
+
+.loading-dots::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: loadingDots 1.4s infinite;
+}
+
+@keyframes loadingDots {
+  0%, 20% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.parallax-element {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.glass-morphism {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.typing-effect {
+  overflow: hidden;
+  border-right: 3px solid rgba(0, 229, 160, 0.7);
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgba(0, 229, 160, 0.7); }
+}
+
+.scale-hover {
+  transition: transform 0.3s ease;
+}
+
+.scale-hover:hover {
+  transform: scale(1.05);
+}
+
+.rotate-hover {
+  transition: transform 0.3s ease;
+}
+
+.rotate-hover:hover {
+  transform: rotate(5deg);
+}
+
+.elastic {
+  animation: elastic 0.6s ease-out;
+}
+
+@keyframes elastic {
+  0% { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+  100% { transform: scale(1, 1); }
+}
+
+/* Conversational Diagnostic Styles */
+.conversation-option {
+  @apply w-full bg-eureka-dark/30 hover:bg-eureka-green/10 border border-eureka-gray/20 hover:border-eureka-green/30;
+  @apply rounded-xl p-4 text-left transition-all duration-300 cursor-pointer;
+  @apply transform hover:scale-105 hover:shadow-lg;
+}
+
+.conversation-option:hover {
+  box-shadow: 0 10px 25px rgba(0, 229, 160, 0.15);
+}
+
+.conversation-option.selected {
+  @apply bg-eureka-green/20 border-eureka-green/40;
+  box-shadow: 0 10px 25px rgba(0, 229, 160, 0.25);
+}
+
+.chat-message {
+  animation: slideInMessage 0.5s ease-out;
+}
+
+@keyframes slideInMessage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bot-message {
+  @apply flex items-start space-x-4;
+}
+
+.user-message {
+  @apply flex items-start space-x-4 justify-end;
+}
+
+.user-message .message-bubble {
+  @apply bg-eureka-green/20 border border-eureka-green/30 rounded-2xl rounded-tr-none p-4 max-w-md;
+}
+
+.bot-message .message-bubble {
+  @apply bg-eureka-dark/40 border border-eureka-gray/20 rounded-2xl rounded-tl-none p-4 max-w-md;
+}
+
+.typing-indicator {
+  @apply flex space-x-2 items-center p-4;
+}
+
+.typing-dot {
+  @apply w-2 h-2 bg-eureka-green rounded-full;
+  animation: typingBounce 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typingBounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
     opacity: 1;
   }
 }
 
-/* Scroll suave para navegadores que no lo soportan */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
+.progress-step {
+  @apply w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold;
+  @apply border-2 border-eureka-gray/30 text-eureka-gray transition-all duration-300;
+}
+
+.progress-step.active {
+  @apply border-eureka-green bg-eureka-green text-eureka-black;
+}
+
+.progress-step.completed {
+  @apply border-eureka-green bg-eureka-green/20 text-eureka-green;
+}
+
+.input-field {
+  @apply w-full bg-eureka-black/50 border border-eureka-gray/30 rounded-xl px-4 py-3;
+  @apply text-white focus:border-eureka-green focus:outline-none focus:ring-2 focus:ring-eureka-green/20;
+}
+
+.recommendation-card {
+  @apply bg-gradient-to-br from-eureka-dark/60 to-eureka-black/60 border border-eureka-green/20;
+  @apply rounded-xl p-6 transform transition-all duration-300 hover:scale-105;
+}
+
+.recommendation-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 229, 160, 0.15);
+}
+
+.priority-high {
+  @apply border-red-400/30 bg-red-500/5;
+}
+
+.priority-medium {
+  @apply border-yellow-400/30 bg-yellow-500/5;
+}
+
+.priority-low {
+  @apply border-eureka-green/30 bg-eureka-green/5;
+}
+
+/* Industry Personalization Styles */
+.industry-tab {
+  @apply px-6 py-4 rounded-xl font-medium transition-all duration-300 cursor-pointer;
+  @apply bg-eureka-dark/30 border border-eureka-gray/20 text-eureka-light;
+  @apply hover:border-eureka-green/30 hover:bg-eureka-green/5 hover:text-eureka-green;
+}
+
+.industry-tab.active {
+  @apply border-eureka-green/50 bg-eureka-green/15 text-eureka-green;
+  box-shadow: 0 10px 25px rgba(0, 229, 160, 0.15);
+}
+
+.industry-tab[data-color="blue"].active {
+  @apply border-eureka-blue/50 bg-eureka-blue/15 text-eureka-blue;
+  box-shadow: 0 10px 25px rgba(0, 128, 255, 0.15);
+}
+
+.industry-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+.industry-content.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.industry-content:not(.hidden) {
+  animation: slideInIndustry 0.6s ease-out;
+}
+
+@keyframes slideInIndustry {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Alto contraste */
-@media (prefers-contrast: high) {
-  body {
-    background-color: white;
-    color: black;
+/* Industry Content Grid */
+.industry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .industry-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
-/* Modo oscuro */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1f2937;
-    color: #f9fafb;
-  }
+/* Industry Challenges and Solutions */
+.challenge-card {
+  @apply bg-eureka-dark/40 border border-red-400/20 rounded-xl p-6;
+  backdrop-filter: blur(10px);
+}
+
+.solution-card {
+  @apply border border-eureka-green/20 rounded-xl p-6;
+  background: linear-gradient(135deg, rgba(0, 229, 160, 0.1) 0%, rgba(0, 229, 160, 0.05) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.solution-card.blue {
+  @apply border border-eureka-blue/20;
+  background: linear-gradient(135deg, rgba(0, 128, 255, 0.1) 0%, rgba(0, 128, 255, 0.05) 100%);
+}
+
+/* Industry Metrics */
+.industry-metrics {
+  @apply bg-gradient-to-br from-eureka-dark/60 to-eureka-black/60 backdrop-blur-sm rounded-2xl p-8 border;
+}
+
+.industry-metrics.green {
+  @apply border-eureka-green/20;
+}
+
+.industry-metrics.blue {
+  @apply border-eureka-blue/20;
+}
+
+.metric-card {
+  @apply text-center;
+}
+
+.metric-value {
+  @apply text-3xl font-light mb-2;
+}
+
+.metric-value.green {
+  @apply text-eureka-green;
+}
+
+.metric-value.blue {
+  @apply text-eureka-blue;
+}
+
+.metric-label {
+  @apply text-eureka-light text-sm;
+}
+
+/* Technology Stack */
+.tech-stack {
+  @apply bg-eureka-dark/30 rounded-xl p-6 border border-eureka-gray/20;
+}
+
+.tech-badge {
+  @apply px-3 py-1 rounded-full text-xs font-medium;
+}
+
+.tech-badge.green {
+  @apply bg-eureka-green/10 border border-eureka-green/20 text-eureka-green;
+}
+
+.tech-badge.blue {
+  @apply bg-eureka-blue/10 border border-eureka-blue/20 text-eureka-blue;
 }

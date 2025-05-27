@@ -1,0 +1,97 @@
+---
+export interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  loading?: 'lazy' | 'eager';
+  priority?: boolean;
+  class?: string;
+  sizes?: string;
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  loading = 'lazy',
+  priority = false,
+  class: className = '',
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+} = Astro.props;
+
+// Generate WebP version path
+const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+const avifSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.avif');
+
+// Set loading strategy
+const loadingStrategy = priority ? 'eager' : loading;
+const fetchPriority = priority ? 'high' : 'auto';
+---
+
+<picture class={`optimized-image ${className}`}>
+  <!-- Modern formats for better compression -->
+  <source srcset={avifSrc} type="image/avif" sizes={sizes} />
+  <source srcset={webpSrc} type="image/webp" sizes={sizes} />
+  
+  <!-- Fallback -->
+  <img
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={loadingStrategy}
+    fetchpriority={fetchPriority}
+    sizes={sizes}
+    decoding="async"
+    class="w-full h-auto"
+    onload="this.style.opacity=1"
+    onerror="this.style.opacity=1"
+    style="opacity:0;transition:opacity 0.3s ease"
+  />
+</picture>
+
+<style>
+  .optimized-image {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .optimized-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Loading state */
+  .optimized-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(26, 26, 26, 0.8) 0%,
+      rgba(74, 74, 74, 0.3) 50%,
+      rgba(26, 26, 26, 0.8) 100%
+    );
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .optimized-image img[style*="opacity:1"] + ::before,
+  .optimized-image::before {
+    opacity: 0;
+  }
+  
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+</style>
