@@ -1,0 +1,597 @@
+---
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout 
+  title="EurekaArchiTech - Consultoría de Transformación Digital"
+  description="Servicios de consultoría especializada en transformación digital para empresas. Metodología probada con resultados medibles y calidad mundial."
+>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
+    <!-- Background Effects -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+      
+      <!-- Floating geometric elements -->
+      <div class="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse opacity-60"></div>
+      <div class="absolute top-40 right-20 w-3 h-3 bg-blue-300 rounded-full animate-bounce opacity-40" style="animation-delay: 0.5s"></div>
+      <div class="absolute bottom-32 left-1/4 w-4 h-4 bg-indigo-400 rounded-full animate-pulse opacity-30" style="animation-delay: 1s"></div>
+      <div class="absolute top-60 right-1/3 w-2 h-2 bg-violet-300 rounded-full animate-bounce opacity-50" style="animation-delay: 1.5s"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+      <!-- Logo and Brand -->
+      <div class="mb-12 animate-fade-in">
+        <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 rounded-3xl mb-8 shadow-2xl shadow-blue-500/20">
+          <span class="text-4xl font-bold text-white">E</span>
+        </div>
+        <h1 class="text-5xl lg:text-7xl font-black text-white mb-6 tracking-tight">
+          <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+            EurekaArchiTech
+          </span>
+        </h1>
+        <p class="text-2xl lg:text-3xl text-blue-100 font-light mb-4 max-w-4xl mx-auto leading-relaxed">
+          Consultoría de Transformación Digital
+        </p>
+        <p class="text-lg text-blue-200 max-w-2xl mx-auto opacity-90">
+          Metodología probada • Resultados medibles • Calidad mundial
+        </p>
+      </div>
+      
+      <!-- Trust Indicators -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16 animate-slide-up" style="animation-delay: 0.3s">
+        <div class="text-center">
+          <div class="text-4xl font-bold text-cyan-400 mb-2">98%</div>
+          <div class="text-blue-200 text-sm">Tasa de Éxito</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-cyan-400 mb-2">500+</div>
+          <div class="text-blue-200 text-sm">Proyectos Ejecutados</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+          <div class="text-blue-200 text-sm">Soporte Dedicado</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-cyan-400 mb-2">15+</div>
+          <div class="text-blue-200 text-sm">Años de Experiencia</div>
+        </div>
+      </div>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style="animation-delay: 0.6s">
+        <button class="group relative px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white text-xl font-semibold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25">
+          <span class="relative z-10 flex items-center justify-center">
+            🚀 Comenzar Diagnóstico
+            <svg class="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </span>
+        </button>
+        <button class="px-10 py-5 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white text-xl font-semibold rounded-2xl transition-all duration-300 border-2 border-white/30 hover:border-white/50">
+          📞 Consulta Estratégica
+        </button>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-1 h-12 bg-gradient-to-b from-cyan-400 to-transparent rounded-full"></div>
+    </div>
+  </section>
+
+  <!-- Servicios de Consultoría Section -->
+  <section id="servicios" class="py-24 bg-gradient-to-b from-white to-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-20">
+        <div class="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full mb-6">
+          <span class="text-blue-700 font-semibold text-sm">SERVICIOS DE CONSULTORÍA</span>
+        </div>
+        <h2 class="text-5xl lg:text-6xl font-black text-gray-900 mb-6">
+          Metodología <span class="text-blue-600">Probada</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Transformación digital con metodología estructurada, resultados medibles 
+          y transición sin disrupciones para su organización.
+        </p>
+      </div>
+      
+      <!-- Servicios Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        
+        <!-- Diagnóstico y Planificación Estratégica -->
+        <div class="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-200">
+          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+          <div class="relative">
+            <div class="flex items-start justify-between mb-6">
+              <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <div class="text-right">
+                <div class="text-2xl font-bold text-gray-900">01</div>
+                <div class="text-sm text-gray-500">FASE</div>
+              </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Diagnóstico y Planificación Estratégica
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Evaluación integral del estado actual de su organización y diseño de la hoja de ruta óptima 
+              para la transformación digital, con metodología estructurada y análisis profundo.
+            </p>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
+                <span>Análisis de madurez digital actual</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
+                <span>Identificación de brechas y oportunidades</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
+                <span>Roadmap estratégico personalizado</span>
+              </div>
+            </div>
+            
+            <div class="bg-cyan-50 rounded-xl p-4">
+              <div class="text-sm text-cyan-800">
+                <strong>Entregable:</strong> Plan estratégico con métricas claras y timeline definido
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gestión Proactiva de Riesgos -->
+        <div class="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-green-200">
+          <div class="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+          <div class="relative">
+            <div class="flex items-start justify-between mb-6">
+              <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <div class="text-right">
+                <div class="text-2xl font-bold text-gray-900">02</div>
+                <div class="text-sm text-gray-500">FASE</div>
+              </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Gestión Proactiva de Riesgos
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Identificación temprana y mitigación continua de riesgos mediante frameworks avanzados 
+              y monitoreo constante para garantizar el éxito del proyecto.
+            </p>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                <span>Matriz de riesgos y contingencias</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                <span>Monitoreo en tiempo real</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                <span>Planes de mitigación adaptativos</span>
+              </div>
+            </div>
+            
+            <div class="bg-green-50 rounded-xl p-4">
+              <div class="text-sm text-green-800">
+                <strong>Resultado:</strong> 95% de reducción en riesgos críticos del proyecto
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ejecución Controlada y Medible -->
+        <div class="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-purple-200">
+          <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+          <div class="relative">
+            <div class="flex items-start justify-between mb-6">
+              <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <div class="text-right">
+                <div class="text-2xl font-bold text-gray-900">03</div>
+                <div class="text-sm text-gray-500">FASE</div>
+              </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Ejecución Controlada y Medible
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Implementación por fases con métricas claras de progreso, asegurando visibilidad total 
+              para la toma de decisiones y control absoluto del proyecto.
+            </p>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                <span>Sprints controlados con entregables</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                <span>Dashboard en tiempo real</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                <span>KPIs y métricas de progreso</span>
+              </div>
+            </div>
+            
+            <div class="bg-purple-50 rounded-xl p-4">
+              <div class="text-sm text-purple-800">
+                <strong>Ventaja:</strong> Visibilidad 100% del progreso y control total del proyecto
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aseguramiento de Calidad Continuo -->
+        <div class="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange-200">
+          <div class="absolute -inset-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+          <div class="relative">
+            <div class="flex items-start justify-between mb-6">
+              <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-lg">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                </svg>
+              </div>
+              <div class="text-right">
+                <div class="text-2xl font-bold text-gray-900">04</div>
+                <div class="text-sm text-gray-500">FASE</div>
+              </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Aseguramiento de Calidad Continuo
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Validación sistemática en cada etapa del proyecto con estándares internacionales 
+              y metodologías de testing avanzadas para garantizar la excelencia.
+            </p>
+            
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                <span>Testing automatizado continuo</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                <span>Auditorías de calidad periódicas</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-700">
+                <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                <span>Certificaciones y validaciones</span>
+              </div>
+            </div>
+            
+            <div class="bg-orange-50 rounded-xl p-4">
+              <div class="text-sm text-orange-800">
+                <strong>Garantía:</strong> Calidad certificada en cada entregable del proyecto
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transición sin Disrupciones - Destacada -->
+      <div class="relative">
+        <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl opacity-10"></div>
+        <div class="relative bg-white rounded-3xl p-12 shadow-2xl border border-gray-100">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div class="flex items-center mb-6">
+                <div class="w-20 h-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl flex items-center justify-center shadow-xl mr-6">
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-3xl font-bold text-gray-900">05</div>
+                  <div class="text-sm text-gray-500 font-medium">FASE FINAL</div>
+                </div>
+              </div>
+              
+              <h3 class="text-3xl font-bold text-gray-900 mb-6">
+                Transición sin Disrupciones
+              </h3>
+              <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                Transferencia gradual con soporte dedicado, minimizando el impacto operacional 
+                y asegurando la adopción completa de todas las mejoras implementadas.
+              </p>
+              
+              <div class="space-y-4 mb-8">
+                <div class="flex items-start">
+                  <div class="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <div>
+                    <div class="font-semibold text-gray-900">Plan de Adopción Gradual</div>
+                    <div class="text-gray-600 text-sm">Migración controlada con mínimo impacto</div>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <div>
+                    <div class="font-semibold text-gray-900">Soporte Dedicado 24/7</div>
+                    <div class="text-gray-600 text-sm">Equipo especializado durante la transición</div>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <div>
+                    <div class="font-semibold text-gray-900">Capacitación Integral</div>
+                    <div class="text-gray-600 text-sm">Training completo para todo el equipo</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="relative">
+              <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8">
+                <h4 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+                  Garantía de Adopción
+                </h4>
+                
+                <div class="space-y-6">
+                  <div class="bg-white rounded-xl p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                      <span class="text-sm font-medium text-gray-700">Tasa de Adopción</span>
+                      <span class="text-sm font-bold text-green-600">97%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                      <div class="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full" style="width: 97%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="bg-white rounded-xl p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                      <span class="text-sm font-medium text-gray-700">Satisfacción del Usuario</span>
+                      <span class="text-sm font-bold text-blue-600">98%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                      <div class="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full" style="width: 98%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="bg-white rounded-xl p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-2">
+                      <span class="text-sm font-medium text-gray-700">Tiempo de Adaptación</span>
+                      <span class="text-sm font-bold text-purple-600">14 días</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                      <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="mt-6 text-center">
+                  <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-full text-sm font-semibold">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    Garantía de Éxito
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+    <!-- Background Effects -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-5xl lg:text-6xl font-black mb-8">
+        ¿Listo para la <span class="text-cyan-400">Transformación</span>?
+      </h2>
+      <p class="text-xl lg:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+        Únase a más de 500 organizaciones que ya han transformado su futuro con nuestra metodología probada y resultados garantizados.
+      </p>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <div class="text-5xl mb-4">🎯</div>
+          <h3 class="text-xl font-bold mb-3">Diagnóstico Gratuito</h3>
+          <p class="text-blue-200">Evaluación completa de su estado actual sin compromiso</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <div class="text-5xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold mb-3">Resultados en 48h</h3>
+          <p class="text-blue-200">Plan estratégico personalizado en tiempo récord</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <div class="text-5xl mb-4">🔒</div>
+          <h3 class="text-xl font-bold mb-3">ROI Garantizado</h3>
+          <p class="text-blue-200">Resultados medibles o devolución de inversión</p>
+        </div>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+        <button class="group relative px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white text-xl font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25">
+          <span class="relative z-10 flex items-center justify-center">
+            🚀 Iniciar Transformación
+            <svg class="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </span>
+        </button>
+        <button class="px-12 py-6 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white text-xl font-bold rounded-2xl transition-all duration-300 border-2 border-white/30 hover:border-white/50">
+          📞 oscar@eureka-architech.com
+        </button>
+      </div>
+      
+      <div class="flex items-center justify-center space-x-8 text-blue-300 text-sm">
+        <div class="flex items-center">
+          <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span>Diagnóstico gratuito</span>
+        </div>
+        <div class="flex items-center">
+          <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span>Metodología probada</span>
+        </div>
+        <div class="flex items-center">
+          <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span>Soporte 24/7</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Custom animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Enhanced hover effects */
+  .group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem);
+  }
+  
+  /* Gradient text effect */
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #06b6d4, #3b82f6);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #0891b2, #2563eb);
+  }
+</style>
+
+<script>
+  // Enhanced interactivity
+  document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const element = e.target as HTMLAnchorElement;
+        const href = element.getAttribute('href');
+        if (href) {
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+    
+    // Parallax effect for hero section
+    let ticking = false;
+    
+    function updateParallax() {
+      const scrolled = window.pageYOffset;
+      const hero = document.querySelector('section') as HTMLElement;
+      if (hero) {
+        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+      }
+      ticking = false;
+    }
+    
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }
+    
+    window.addEventListener('scroll', requestTick);
+    
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, observerOptions);
+    
+    // Observe service cards
+    document.querySelectorAll('.group').forEach(card => {
+      observer.observe(card);
+    });
+    
+    console.log('🚀 EurekaArchiTech Consulting Loaded Successfully');
+  });
+</script>

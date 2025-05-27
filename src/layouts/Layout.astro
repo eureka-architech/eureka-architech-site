@@ -1,0 +1,208 @@
+---
+import '../styles/globals.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article' | 'product';
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = "Eureka - Productos y servicios empresariales para PyMEs mexicanas",
+  image = "/ELogo.png",
+  type = "website",
+  noindex = false
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(image, Astro.url);
+---
+
+<!doctype html>
+<html lang="es-MX" dir="ltr">
+  <head>
+    <!-- Meta básicos -->
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- SEO -->
+    <title>{title}</title>
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:site_name" content="Eureka" />
+    <meta property="og:locale" content="es_MX" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
+    
+    <!-- Meta tags adicionales -->
+    <meta name="theme-color" content="#2563eb" />
+    
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  
+  <body class="antialiased bg-white text-gray-900 font-sans">
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50">
+      Ir al contenido principal
+    </a>
+    
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-40 backdrop-blur-sm bg-white/95">
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-sm">E</span>
+            </div>
+            <span class="font-bold text-xl text-gray-900">Eureka</span>
+          </a>
+          
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#productos" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
+              Productos
+            </a>
+            <a href="#servicios" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
+              Servicios
+            </a>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+              Contactar
+            </button>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <button class="md:hidden p-2" id="mobile-menu-btn">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+          <div class="pt-4 pb-2 space-y-2">
+            <a href="#productos" class="block px-2 py-2 text-gray-600 hover:text-blue-600">Productos</a>
+            <a href="#servicios" class="block px-2 py-2 text-gray-600 hover:text-blue-600">Servicios</a>
+            <button class="w-full text-left bg-blue-600 text-white px-2 py-2 rounded-lg">Contactar</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- Main content -->
+    <main id="main-content">
+      <slot />
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                <span class="text-white font-bold text-sm">E</span>
+              </div>
+              <span class="font-bold text-xl">Eureka</span>
+            </div>
+            <p class="text-sm text-gray-600 max-w-xs">
+              Productos y servicios empresariales para PyMEs mexicanas.
+            </p>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold mb-4">Productos</h3>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#productos" class="hover:text-blue-600 transition-colors">Software Empresarial</a></li>
+              <li><a href="#productos" class="hover:text-blue-600 transition-colors">Herramientas Digitales</a></li>
+              <li><a href="#productos" class="hover:text-blue-600 transition-colors">E-commerce</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold mb-4">Servicios</h3>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#servicios" class="hover:text-blue-600 transition-colors">Consultoría Digital</a></li>
+              <li><a href="#servicios" class="hover:text-blue-600 transition-colors">Implementación</a></li>
+              <li><a href="#servicios" class="hover:text-blue-600 transition-colors">Soporte Técnico</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold mb-4">Contacto</h3>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>📧 hola@eureka.mx</li>
+              <li>📱 +52 55 1234 5678</li>
+              <li>🇲🇽 Ciudad de México</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-sm text-gray-600">
+            © 2025 Eureka. Todos los derechos reservados.
+          </p>
+          <p class="text-sm text-gray-600">
+            Hecho con ❤️ en México 🇲🇽
+          </p>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Simple mobile menu script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+          mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+        
+        // Smooth scrolling para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const element = e.target as HTMLAnchorElement;
+            const href = element.getAttribute('href');
+            if (href) {
+              const target = document.querySelector(href);
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                // Cerrar menú móvil si está abierto
+                if (mobileMenu) {
+                  mobileMenu.classList.add('hidden');
+                }
+              }
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
