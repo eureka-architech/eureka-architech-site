@@ -1,8 +1,25 @@
 {
-  "name": "eureka-products-services",
+  "name": "eureka-architech-site",
   "type": "module",
-  "version": "1.0.0",
-  "description": "Eureka - Productos y Servicios para PyMEs Mexicanas",
+  "version": "2.0.0",
+  "description": "EurekaArchiTech - Sitio Web Oficial | Transformación Digital Empresarial AI-First",
+  "homepage": "https://eureka-architech.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osvalois/eureka-architech-site"
+  },
+  "author": "EurekaArchiTech Team <hi@eureka-architech.com>",
+  "license": "MIT",
+  "keywords": [
+    "transformacion-digital",
+    "consultoria-empresarial",
+    "ai-first",
+    "arquitectura-empresarial",
+    "pymes-mexico",
+    "astro",
+    "typescript",
+    "supabase"
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
