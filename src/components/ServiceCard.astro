@@ -1,0 +1,92 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  features: string[];
+  color?: 'accent' | 'secondary';
+  href?: string;
+  class?: string;
+}
+
+const {
+  title,
+  description,
+  icon,
+  features,
+  color = 'accent',
+  href,
+  class: className = ''
+} = Astro.props;
+
+const colorClasses = {
+  accent: {
+    iconBg: 'bg-accent-500',
+    iconText: 'text-primary-900',
+    dot: 'bg-accent-500'
+  },
+  secondary: {
+    iconBg: 'bg-secondary-500',
+    iconText: 'text-white',
+    dot: 'bg-secondary-500'
+  }
+};
+
+const colors = colorClasses[color];
+---
+
+<div class={`card hover-lift ${className}`}>
+  <!-- Icon -->
+  <div class={`w-12 h-12 ${colors.iconBg} rounded-lg flex items-center justify-center mb-6`}>
+    <div class={`w-6 h-6 ${colors.iconText}`} set:html={icon}></div>
+  </div>
+  
+  <!-- Content -->
+  <h3 class="text-title text-primary mb-4">{title}</h3>
+  
+  <p class="text-body text-secondary mb-6">
+    {description}
+  </p>
+  
+  <!-- Features -->
+  <ul class="space-y-2 mb-6">
+    {features.map(feature => (
+      <li class="flex items-center gap-2 text-body-small text-secondary">
+        <span class={`w-1.5 h-1.5 ${colors.dot} rounded-full flex-shrink-0`}></span>
+        {feature}
+      </li>
+    ))}
+  </ul>
+  
+  <!-- CTA -->
+  {href && (
+    <a href={href} class="text-accent hover:text-accent-600 font-medium text-body-small transition-colors inline-flex items-center gap-2">
+      Saber más
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  )}
+</div>
+
+<style>
+  .card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  .card:hover::before {
+    left: 100%;
+  }
+</style>

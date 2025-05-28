@@ -1,0 +1,580 @@
+---
+export interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<footer class={`optimized-footer ${className}`} role="contentinfo">
+  <div class="optimized-footer__background" aria-hidden="true">
+    <div class="bg-pattern bg-pattern--footer-1"></div>
+    <div class="bg-pattern bg-pattern--footer-2"></div>
+  </div>
+  
+  <div class="container">
+    <!-- Main Footer Content -->
+    <div class="optimized-footer__main">
+      <!-- Brand Section -->
+      <div class="optimized-footer__brand">
+        <div class="optimized-footer__brand-header">
+          <a href="/" class="optimized-footer__logo-link hover-scale" aria-label="EurekaArchiTech - Ir al inicio">
+            <img 
+              src="/ELogo.png" 
+              alt="EurekaArchiTech Logo" 
+              class="optimized-footer__logo"
+              width="48"
+              height="48"
+              loading="lazy"
+            />
+            <div class="optimized-footer__brand-text">
+              <span class="optimized-footer__brand-name">EurekaArchiTech</span>
+              <div class="optimized-footer__brand-tagline">Innovación Estructurada</div>
+            </div>
+          </a>
+        </div>
+        
+        <p class="optimized-footer__description">
+          Empoderar a las organizaciones en su transformación digital mediante soluciones innovadoras, 
+          liderazgo estratégico y excelencia operacional.
+        </p>
+        
+      </div>
+      
+      <!-- Navigation Sections -->
+      <div class="optimized-footer__nav">
+        <!-- Services -->
+        <div class="footer-nav-section">
+          <h3 class="footer-nav-section__title">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+            Servicios
+          </h3>
+          <ul class="footer-nav-section__list" role="list">
+            <li>
+              <a href="/servicios#arquitectura" class="footer-nav-link">
+                <span>Arquitectura Tecnológica</span>
+              </a>
+            </li>
+            <li>
+              <a href="/servicios#mentoria" class="footer-nav-link">
+                <span>Mentoría Ejecutiva</span>
+              </a>
+            </li>
+            <li>
+              <a href="/servicios#liderazgo" class="footer-nav-link">
+                <span>Liderazgo Estratégico</span>
+              </a>
+            </li>
+            <li>
+              <a href="/servicios#red-expertos" class="footer-nav-link">
+                <span>Red de Expertos</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Company -->
+        <div class="footer-nav-section">
+          <h3 class="footer-nav-section__title">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            Empresa
+          </h3>
+          <ul class="footer-nav-section__list" role="list">
+            <li>
+              <a href="/nosotros" class="footer-nav-link">
+                <span>Nosotros</span>
+              </a>
+            </li>
+            <li>
+              <a href="/nosotros#equipo" class="footer-nav-link">
+                <span>Nuestro Equipo</span>
+              </a>
+            </li>
+            <li>
+              <a href="/nosotros#metodologia" class="footer-nav-link">
+                <span>Metodología</span>
+              </a>
+            </li>
+            <li>
+              <a href="/nosotros#casos-exito" class="footer-nav-link">
+                <span>Casos de Éxito</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div class="footer-nav-section">
+          <h3 class="footer-nav-section__title">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.965 8.965 0 01-4.126-1.004L3 21l1.996-5.874A8.965 8.965 0 413 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path>
+            </svg>
+            Contacto
+          </h3>
+          <ul class="footer-nav-section__list" role="list">
+            <li>
+              <a href="/contacto" class="footer-nav-link">
+                <span>Contacto</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hi@eureka-architech.com" class="footer-nav-link">
+                <span>hi@eureka-architech.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CTA Section -->
+    <div class="optimized-footer__cta">
+      <div class="optimized-footer__cta-content">
+      </div>
+      <div class="optimized-footer__cta-actions">
+        <a href="/contacto" class="btn btn-primary btn-base hover-lift">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.965 8.965 0 01-4.126-1.004L3 21l1.996-5.874A8.965 8.965 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path>
+          </svg>
+          Solicitar Análisis
+        </a>
+        <a href="/servicios" class="btn btn-ghost btn-base">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          Conocer Más
+        </a>
+      </div>
+    </div>
+    
+    <!-- Bottom Section -->
+    <div class="optimized-footer__bottom">
+      <div class="optimized-footer__bottom-content">
+        <div class="optimized-footer__copyright">
+          <span>© 2025 EurekaArchiTech. Todos los derechos reservados.</span>
+        </div>
+        
+        <div class="optimized-footer__legal">
+          <a href="/legal/privacidad" class="legal-link">Privacidad</a>
+          <a href="/legal/terminos" class="legal-link">Términos</a>
+          <a href="/legal/cookies" class="legal-link">Cookies</a>
+        </div>
+      </div>
+      
+      <!-- Back to Top -->
+      <button 
+        class="back-to-top" 
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        aria-label="Volver al inicio"
+        title="Volver al inicio"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .optimized-footer {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-900) 100%);
+    border-top: 1px solid var(--primary-700);
+    padding: var(--space-20) 0 var(--space-8);
+    overflow: hidden;
+  }
+  
+  /* Background Pattern */
+  .optimized-footer__background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .bg-pattern--footer-1 {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 229, 160, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: float 10s ease-in-out infinite;
+  }
+  
+  .bg-pattern--footer-2 {
+    position: absolute;
+    bottom: -150px;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 128, 255, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 12s ease-in-out infinite reverse;
+  }
+  
+  /* Main Footer */
+  .optimized-footer__main {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    margin-bottom: var(--space-16);
+  }
+  
+  @media (min-width: 768px) {
+    .optimized-footer__main {
+      grid-template-columns: 1fr 2fr;
+      gap: var(--space-16);
+    }
+  }
+  
+  /* Brand Section */
+  .optimized-footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+  
+  .optimized-footer__logo-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    width: fit-content;
+  }
+  
+  .optimized-footer__logo-link:hover {
+    transform: translateY(-2px);
+  }
+  
+  .optimized-footer__logo {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .optimized-footer__brand-name {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    line-height: var(--leading-tight);
+  }
+  
+  .optimized-footer__brand-tagline {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--accent-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: var(--space-1);
+  }
+  
+  .optimized-footer__description {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--text-secondary);
+    max-width: 400px;
+  }
+  
+  
+  /* Navigation */
+  .optimized-footer__nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  @media (min-width: 640px) {
+    .optimized-footer__nav {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .optimized-footer__nav {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .footer-nav-section__title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--accent-500);
+    margin-bottom: var(--space-4);
+  }
+  
+  .footer-nav-section__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .footer-nav-link {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    padding: var(--space-2) 0;
+    transition: all var(--transition-base);
+    position: relative;
+  }
+  
+  .footer-nav-link:hover {
+    color: var(--accent-500);
+    transform: translateX(4px);
+  }
+  
+  .footer-nav-link::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent-500);
+    transition: width var(--transition-base);
+    transform: translateY(-50%);
+  }
+  
+  .footer-nav-link:hover::before {
+    width: 4px;
+  }
+  
+  .footer-nav-text {
+    display: block;
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    padding: var(--space-2) 0;
+  }
+  
+  .footer-nav-text--highlight {
+    color: var(--secondary-500);
+  }
+  
+  /* CTA Section */
+  .optimized-footer__cta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    padding: var(--space-8);
+    background: rgba(0, 229, 160, 0.05);
+    border: 1px solid rgba(0, 229, 160, 0.2);
+    border-radius: var(--radius-2xl);
+    margin-bottom: var(--space-12);
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  @media (min-width: 768px) {
+    .optimized-footer__cta {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+  
+  .optimized-footer__cta-title {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+  }
+  
+  .optimized-footer__cta-subtitle {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+  
+  .optimized-footer__cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    flex-shrink: 0;
+  }
+  
+  @media (min-width: 640px) {
+    .optimized-footer__cta-actions {
+      flex-direction: row;
+    }
+  }
+  
+  /* Bottom Section */
+  .optimized-footer__bottom {
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid var(--primary-700);
+    padding-top: var(--space-6);
+  }
+  
+  .optimized-footer__bottom-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    align-items: center;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .optimized-footer__bottom-content {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+  
+  .optimized-footer__copyright {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+  
+  .optimized-footer__legal {
+    display: flex;
+    gap: var(--space-4);
+  }
+  
+  .legal-link {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-base);
+  }
+  
+  .legal-link:hover {
+    color: var(--accent-500);
+  }
+  
+  .optimized-footer__powered {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: center;
+  }
+  
+  @media (min-width: 640px) {
+    .optimized-footer__powered {
+      flex-direction: row;
+      gap: var(--space-4);
+    }
+  }
+  
+  .powered-item {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+  
+  /* Back to Top */
+  .back-to-top {
+    position: fixed;
+    bottom: var(--space-6);
+    right: var(--space-6);
+    width: 48px;
+    height: 48px;
+    background: var(--accent-500);
+    border: none;
+    border-radius: 50%;
+    color: var(--text-inverse);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-base);
+    z-index: 1000;
+  }
+  
+  .back-to-top:hover {
+    background: var(--accent-600);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-accent-lg);
+  }
+  
+  .back-to-top:active {
+    transform: translateY(0);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 640px) {
+    .optimized-footer {
+      padding: var(--space-16) 0 var(--space-6);
+    }
+    
+    .optimized-footer__main {
+      gap: var(--space-8);
+      margin-bottom: var(--space-12);
+    }
+    
+    .optimized-footer__cta {
+      padding: var(--space-6);
+      margin-bottom: var(--space-8);
+    }
+    
+  }
+  
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .optimized-footer *,
+    .bg-pattern--footer-1,
+    .bg-pattern--footer-2 {
+      animation: none;
+      transition: none;
+    }
+    
+    .optimized-footer__logo-link:hover,
+    .footer-nav-link:hover,
+    .back-to-top:hover {
+      transform: none;
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: high) {
+    .optimized-footer {
+      border-top-width: 2px;
+    }
+    
+    .optimized-footer__cta {
+      border-width: 2px;
+      background: var(--primary-700);
+    }
+    
+    .back-to-top {
+      border: 2px solid var(--text-primary);
+    }
+  }
+  
+  /* Focus Styles */
+  .footer-nav-link:focus-visible,
+  .legal-link:focus-visible,
+  .optimized-footer__logo-link:focus-visible {
+    outline: 2px solid var(--accent-500);
+    outline-offset: 2px;
+    border-radius: var(--radius-base);
+  }
+  
+  .back-to-top:focus-visible {
+    outline: 2px solid var(--accent-500);
+    outline-offset: 4px;
+  }
+</style>

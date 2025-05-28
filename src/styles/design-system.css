@@ -591,3 +591,71 @@ body {
     --secondary-500: #0000FF;
   }
 }
+
+/* ================================
+   🎨 COMPATIBILITY CLASSES
+   Clases para compatibilidad con código existente
+   ================================ */
+
+/* Colores de marca compatibles */
+.text-eureka-black { color: var(--primary-900); }
+.text-eureka-dark { color: var(--primary-800); }
+.text-eureka-green { color: var(--accent-500); }
+.text-eureka-green-dark { color: var(--accent-600); }
+.text-eureka-blue { color: var(--secondary-500); }
+.text-eureka-blue-dark { color: var(--secondary-600); }
+.text-eureka-gray { color: var(--neutral-600); }
+.text-eureka-gray-light { color: var(--neutral-500); }
+.text-eureka-light { color: var(--neutral-300); }
+.text-eureka-white { color: var(--neutral-50); }
+
+.bg-eureka-black { background-color: var(--primary-900); }
+.bg-eureka-dark { background-color: var(--primary-800); }
+.bg-eureka-green { background-color: var(--accent-500); }
+.bg-eureka-green-dark { background-color: var(--accent-600); }
+.bg-eureka-blue { background-color: var(--secondary-500); }
+.bg-eureka-blue-dark { background-color: var(--secondary-600); }
+.bg-eureka-gray { background-color: var(--neutral-600); }
+.bg-eureka-gray-light { background-color: var(--neutral-500); }
+.bg-eureka-light { background-color: var(--neutral-300); }
+.bg-eureka-white { background-color: var(--neutral-50); }
+
+/* Background con opacidad */
+.bg-eureka-dark-10 { background-color: rgba(26, 26, 26, 0.1); }
+.bg-eureka-dark-20 { background-color: rgba(26, 26, 26, 0.2); }
+.bg-eureka-dark-30 { background-color: rgba(26, 26, 26, 0.3); }
+.bg-eureka-dark-40 { background-color: rgba(26, 26, 26, 0.4); }
+.bg-eureka-dark-50 { background-color: rgba(26, 26, 26, 0.5); }
+.bg-eureka-dark-60 { background-color: rgba(26, 26, 26, 0.6); }
+.bg-eureka-dark-70 { background-color: rgba(26, 26, 26, 0.7); }
+.bg-eureka-dark-80 { background-color: rgba(26, 26, 26, 0.8); }
+.bg-eureka-dark-90 { background-color: rgba(26, 26, 26, 0.9); }
+
+.bg-eureka-green-5 { background-color: rgba(0, 229, 160, 0.05); }
+.bg-eureka-green-10 { background-color: rgba(0, 229, 160, 0.1); }
+.bg-eureka-green-20 { background-color: rgba(0, 229, 160, 0.2); }
+.bg-eureka-green-30 { background-color: rgba(0, 229, 160, 0.3); }
+
+.bg-eureka-blue-5 { background-color: rgba(0, 128, 255, 0.05); }
+.bg-eureka-blue-10 { background-color: rgba(0, 128, 255, 0.1); }
+.bg-eureka-blue-15 { background-color: rgba(0, 128, 255, 0.15); }
+.bg-eureka-blue-20 { background-color: rgba(0, 128, 255, 0.2); }
+
+/* Borders con opacidad */
+.border-eureka-green { border-color: var(--accent-500); }
+.border-eureka-blue { border-color: var(--secondary-500); }
+.border-eureka-gray { border-color: var(--neutral-600); }
+
+.border-eureka-green-10 { border-color: rgba(0, 229, 160, 0.1); }
+.border-eureka-green-20 { border-color: rgba(0, 229, 160, 0.2); }
+.border-eureka-green-30 { border-color: rgba(0, 229, 160, 0.3); }
+.border-eureka-green-40 { border-color: rgba(0, 229, 160, 0.4); }
+.border-eureka-green-50 { border-color: rgba(0, 229, 160, 0.5); }
+
+.border-eureka-blue-10 { border-color: rgba(0, 128, 255, 0.1); }
+.border-eureka-blue-20 { border-color: rgba(0, 128, 255, 0.2); }
+.border-eureka-blue-30 { border-color: rgba(0, 128, 255, 0.3); }
+
+.border-eureka-gray-10 { border-color: rgba(108, 117, 125, 0.1); }
+.border-eureka-gray-20 { border-color: rgba(108, 117, 125, 0.2); }
+.border-eureka-gray-30 { border-color: rgba(108, 117, 125, 0.3); }

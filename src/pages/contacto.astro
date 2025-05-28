@@ -1,0 +1,486 @@
+---
+import OptimizedLayout from '@/layouts/OptimizedLayout.astro';
+---
+
+<OptimizedLayout 
+  title="Contacto - Diagnóstico Gratuito | EurekaArchiTech"
+  description="Agenda tu diagnóstico digital gratuito. Descubre cómo transformar tu PyME en líder digital con la metodología EUREKA en solo 90 días."
+>
+  <!-- Hero Section -->
+  <section class="py-24 bg-gradient-to-br from-accent-500 to-secondary-500">
+    <div class="container text-center">
+      <h1 class="text-display text-white mb-6">
+        Diagnóstico Digital <span class="text-primary-900">Gratuito</span>
+      </h1>
+      <p class="text-body-large text-white mb-8 max-w-3xl mx-auto opacity-90">
+        Descubre en 30 minutos las oportunidades de transformación específicas para tu empresa
+      </p>
+      <div class="flex justify-center gap-6 text-white text-body-small">
+        <span class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          100% Gratuito
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          Sin compromisos
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          Respuesta en 24h
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto -->
+  <section class="py-20">
+    <div class="container">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <!-- Formulario -->
+        <div class="card card-premium">
+          <h2 class="text-title text-primary mb-6">
+            Agenda tu Diagnóstico Gratuito
+          </h2>
+          <p class="text-body text-secondary mb-8">
+            Completa el formulario y nuestro equipo se pondrá en contacto contigo en menos de 24 horas.
+          </p>
+          
+          <form id="diagnostic-form" class="space-y-6">
+            <!-- Información Personal -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="nombre" class="block text-body-small text-primary font-medium mb-2">
+                  Nombre completo *
+                </label>
+                <input 
+                  type="text" 
+                  id="nombre" 
+                  name="nombre" 
+                  required
+                  class="form-input"
+                  placeholder="Tu nombre"
+                />
+              </div>
+              <div>
+                <label for="cargo" class="block text-body-small text-primary font-medium mb-2">
+                  Cargo
+                </label>
+                <input 
+                  type="text" 
+                  id="cargo" 
+                  name="cargo"
+                  class="form-input"
+                  placeholder="CEO, Director, etc."
+                />
+              </div>
+            </div>
+            
+            <!-- Información de Contacto -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="email" class="block text-body-small text-primary font-medium mb-2">
+                  Email corporativo *
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required
+                  class="form-input"
+                  placeholder="tu@empresa.com"
+                />
+              </div>
+              <div>
+                <label for="telefono" class="block text-body-small text-primary font-medium mb-2">
+                  Teléfono
+                </label>
+                <input 
+                  type="tel" 
+                  id="telefono" 
+                  name="telefono"
+                  class="form-input"
+                  placeholder="+52 55 1234 5678"
+                />
+              </div>
+            </div>
+            
+            <!-- Información de la Empresa -->
+            <div>
+              <label for="empresa" class="block text-body-small text-primary font-medium mb-2">
+                Nombre de la empresa *
+              </label>
+              <input 
+                type="text" 
+                id="empresa" 
+                name="empresa" 
+                required
+                class="form-input"
+                placeholder="Nombre de tu empresa"
+              />
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="industria" class="block text-body-small text-primary font-medium mb-2">
+                  Industria *
+                </label>
+                <select id="industria" name="industria" required class="form-input">
+                  <option value="">Selecciona tu industria</option>
+                  <option value="fintech">Fintech / Servicios Financieros</option>
+                  <option value="retail">Retail / E-commerce</option>
+                  <option value="manufactura">Manufactura</option>
+                  <option value="tecnologia">Tecnología / Software</option>
+                  <option value="salud">Salud / Healthcare</option>
+                  <option value="educacion">Educación</option>
+                  <option value="logistica">Logística / Transporte</option>
+                  <option value="construccion">Construcción</option>
+                  <option value="turismo">Turismo / Hospitalidad</option>
+                  <option value="otra">Otra</option>
+                </select>
+              </div>
+              <div>
+                <label for="empleados" class="block text-body-small text-primary font-medium mb-2">
+                  Número de empleados
+                </label>
+                <select id="empleados" name="empleados" class="form-input">
+                  <option value="">Selecciona el tamaño</option>
+                  <option value="1-10">1-10 empleados (Micro)</option>
+                  <option value="11-50">11-50 empleados (Pequeña)</option>
+                  <option value="51-250">51-250 empleados (Mediana)</option>
+                  <option value="251-1000">251-1000 empleados (Grande)</option>
+                  <option value="1000+">1000+ empleados (Corporativo)</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Desafíos Principales -->
+            <div>
+              <label for="desafios" class="block text-body-small text-primary font-medium mb-3">
+                ¿Cuáles son tus principales desafíos? (Selecciona todos los que apliquen)
+              </label>
+              <div class="space-y-3">
+                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
+                  <input type="checkbox" name="desafios[]" value="procesos-manuales" class="form-checkbox">
+                  <div>
+                    <span class="text-body text-primary font-medium">Procesos manuales lentos</span>
+                    <p class="text-body-small text-secondary">Demasiadas tareas repetitivas que consumen tiempo</p>
+                  </div>
+                </label>
+                
+                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
+                  <input type="checkbox" name="desafios[]" value="sistemas-desconectados" class="form-checkbox">
+                  <div>
+                    <span class="text-body text-primary font-medium">Sistemas desconectados</span>
+                    <p class="text-body-small text-secondary">Herramientas que no se comunican entre sí</p>
+                  </div>
+                </label>
+                
+                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
+                  <input type="checkbox" name="desafios[]" value="falta-visibilidad" class="form-checkbox">
+                  <div>
+                    <span class="text-body text-primary font-medium">Falta de visibilidad</span>
+                    <p class="text-body-small text-secondary">Dificultad para obtener datos y métricas en tiempo real</p>
+                  </div>
+                </label>
+                
+                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
+                  <input type="checkbox" name="desafios[]" value="competencia-digital" class="form-checkbox">
+                  <div>
+                    <span class="text-body text-primary font-medium">Competencia más digital</span>
+                    <p class="text-body-small text-secondary">Competidores están ganando terreno con mejores herramientas</p>
+                  </div>
+                </label>
+                
+                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
+                  <input type="checkbox" name="desafios[]" value="escalabilidad" class="form-checkbox">
+                  <div>
+                    <span class="text-body text-primary font-medium">Problemas de escalabilidad</span>
+                    <p class="text-body-small text-secondary">Dificultad para crecer sin contratar más personal</p>
+                  </div>
+                </label>
+                
+                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
+                  <input type="checkbox" name="desafios[]" value="experiencia-cliente" class="form-checkbox">
+                  <div>
+                    <span class="text-body text-primary font-medium">Experiencia de cliente</span>
+                    <p class="text-body-small text-secondary">Clientes esperan experiencias más digitales</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Urgencia -->
+            <div>
+              <label for="urgencia" class="block text-body-small text-primary font-medium mb-2">
+                ¿Qué tan urgente es resolver estos desafíos?
+              </label>
+              <select id="urgencia" name="urgencia" class="form-input">
+                <option value="">Selecciona el nivel de urgencia</option>
+                <option value="inmediata">Inmediata (1-30 días)</option>
+                <option value="corto-plazo">Corto plazo (1-3 meses)</option>
+                <option value="mediano-plazo">Mediano plazo (3-6 meses)</option>
+                <option value="largo-plazo">Largo plazo (6+ meses)</option>
+                <option value="exploratorio">Solo explorando opciones</option>
+              </select>
+            </div>
+            
+            <!-- Presupuesto -->
+            <div>
+              <label for="presupuesto" class="block text-body-small text-primary font-medium mb-2">
+                Presupuesto estimado para transformación digital
+              </label>
+              <select id="presupuesto" name="presupuesto" class="form-input">
+                <option value="">Selecciona rango de presupuesto</option>
+                <option value="50k-100k">$50,000 - $100,000 MXN</option>
+                <option value="100k-250k">$100,000 - $250,000 MXN</option>
+                <option value="250k-500k">$250,000 - $500,000 MXN</option>
+                <option value="500k-1m">$500,000 - $1,000,000 MXN</option>
+                <option value="1m+">$1,000,000+ MXN</option>
+                <option value="no-definido">Aún no definido</option>
+              </select>
+            </div>
+            
+            <!-- Mensaje Adicional -->
+            <div>
+              <label for="mensaje" class="block text-body-small text-primary font-medium mb-2">
+                Mensaje adicional (opcional)
+              </label>
+              <textarea 
+                id="mensaje" 
+                name="mensaje" 
+                rows="4"
+                class="form-input resize-none"
+                placeholder="Cuéntanos más sobre tus necesidades específicas..."
+              ></textarea>
+            </div>
+            
+            <!-- Consentimiento -->
+            <div class="flex items-start gap-3">
+              <input type="checkbox" id="consentimiento" name="consentimiento" required class="form-checkbox mt-1">
+              <label for="consentimiento" class="text-body-small text-secondary cursor-pointer">
+                Acepto que EurekaArchiTech me contacte para proporcionar información sobre sus servicios de transformación digital. 
+                Puedo retirar mi consentimiento en cualquier momento.
+              </label>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-lg w-full">
+              <span id="btn-text">Solicitar Diagnóstico Gratuito</span>
+              <span id="btn-loading" class="hidden">Enviando...</span>
+            </button>
+          </form>
+        </div>
+        
+        <!-- Información Adicional -->
+        <div class="space-y-8">
+          <!-- Qué Incluye -->
+          <div class="card">
+            <h3 class="text-title text-primary mb-6">
+              ¿Qué incluye tu diagnóstico?
+            </h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-primary-900 text-sm">✓</span>
+                </div>
+                <div>
+                  <h4 class="text-body text-primary font-semibold mb-1">Análisis de Procesos Actuales</h4>
+                  <p class="text-body-small text-secondary">Evaluamos tus flujos de trabajo para identificar cuellos de botella</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-primary-900 text-sm">✓</span>
+                </div>
+                <div>
+                  <h4 class="text-body text-primary font-semibold mb-1">Mapa de Oportunidades</h4>
+                  <p class="text-body-small text-secondary">Identificamos las áreas con mayor potencial de mejora</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-primary-900 text-sm">✓</span>
+                </div>
+                <div>
+                  <h4 class="text-body text-primary font-semibold mb-1">Proyección de ROI</h4>
+                  <p class="text-body-small text-secondary">Calculamos el retorno de inversión esperado</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-primary-900 text-sm">✓</span>
+                </div>
+                <div>
+                  <h4 class="text-body text-primary font-semibold mb-1">Plan de Acción Personalizado</h4>
+                  <p class="text-body-small text-secondary">Recomendaciones específicas para tu empresa</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contacto Directo -->
+          <div class="card card-premium">
+            <h3 class="text-title text-accent mb-4">
+              Contacto Directo
+            </h3>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-accent-500 rounded-lg flex items-center justify-center">
+                  <svg class="w-5 h-5 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-body text-primary font-semibold">Email</div>
+                  <a href="mailto:hi@eureka-architech.com" class="text-body-small text-accent hover:text-accent-600 transition-colors">
+                    hi@eureka-architech.com
+                  </a>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-secondary-500 rounded-lg flex items-center justify-center">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-body text-primary font-semibold">Respuesta</div>
+                  <div class="text-body-small text-secondary">Menos de 24 horas</div>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-accent-500 rounded-lg flex items-center justify-center">
+                  <svg class="w-5 h-5 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-body text-primary font-semibold">Ubicación</div>
+                  <div class="text-body-small text-secondary">México • Servicios Remotos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Garantía -->
+          <div class="card bg-gradient-to-br from-accent-500 to-secondary-500 text-white">
+            <h3 class="text-title mb-4">
+              Compromiso Triple 30
+            </h3>
+            <p class="text-body mb-4 opacity-90">
+              Nuestra garantía única que demuestra nuestra confianza en los resultados:
+            </p>
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div class="text-2xl font-bold mb-1">30</div>
+                <div class="text-body-small opacity-75">Días garantía</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold mb-1">30%</div>
+                <div class="text-body-small opacity-75">Mejora mínima</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold mb-1">30h</div>
+                <div class="text-body-small opacity-75">Soporte mensual</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</OptimizedLayout>
+
+<style>
+  /* Form Styles */
+  .form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--primary-900);
+    border: 1px solid var(--primary-600);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    font-size: var(--text-base);
+    transition: all var(--transition-base);
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: var(--accent-500);
+    box-shadow: 0 0 0 3px rgba(0, 229, 160, 0.1);
+  }
+  
+  .form-input::placeholder {
+    color: var(--text-muted);
+  }
+  
+  .form-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--primary-900);
+    border: 2px solid var(--primary-600);
+    border-radius: var(--radius-base);
+    flex-shrink: 0;
+    transition: all var(--transition-base);
+  }
+  
+  .form-checkbox:checked {
+    background-color: var(--accent-500);
+    border-color: var(--accent-500);
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m13.854 3.646-7.5 7.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6 10.293l7.146-7.147a.5.5 0 0 1 .708.708z'/%3e%3c/svg%3e");
+  }
+  
+  .form-checkbox:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 229, 160, 0.2);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('diagnostic-form');
+    const btnText = document.getElementById('btn-text');
+    const btnLoading = document.getElementById('btn-loading');
+    
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Show loading state
+        btnText.classList.add('hidden');
+        btnLoading.classList.remove('hidden');
+        
+        // Simulate form submission (replace with actual endpoint)
+        setTimeout(() => {
+          // Show success message
+          const successDiv = document.createElement('div');
+          successDiv.className = 'bg-accent-500 text-white p-6 rounded-xl text-center';
+          successDiv.innerHTML = `
+            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 class="text-title mb-2">¡Solicitud Enviada!</h3>
+            <p class="text-body mb-4">Recibirás tu diagnóstico personalizado en las próximas 24 horas.</p>
+            <p class="text-body-small opacity-90">Nuestro equipo de expertos analizará tu información y te contactará con recomendaciones específicas.</p>
+          `;
+          
+          form.replaceWith(successDiv);
+        }, 2000);
+      });
+    }
+  });
+</script>

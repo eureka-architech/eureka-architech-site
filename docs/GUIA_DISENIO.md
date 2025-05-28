@@ -212,4 +212,4 @@ Service Cards:
 
 Esta guía debe servir como referencia base para mantener coherencia visual en todos los materiales de EurekaArchiTech. La flexibilidad está permitida siempre que se respeten los principios fundamentales de la marca: **innovación**, **profesionalismo** y **claridad en la comunicación**.
 
-Para consultas sobre aplicaciones específicas no cubiertas en esta guía, contactar a: oscar@eureka-architech.com
+Para consultas sobre aplicaciones específicas no cubiertas en esta guía, contactar a: hi@eureka-architech.com

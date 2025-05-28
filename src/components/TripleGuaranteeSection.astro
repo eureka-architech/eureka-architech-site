@@ -1,0 +1,430 @@
+---
+import GuaranteeCard from './GuaranteeCard.astro';
+---
+
+<section class="triple-guarantee-section" id="garantia-triple-30" aria-labelledby="guarantee-title">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="triple-guarantee-section__header animate-fade-in">
+      <!-- Badge -->
+      <div class="triple-guarantee-section__badge">
+        <div class="triple-guarantee-section__badge-icon">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <span class="triple-guarantee-section__badge-text">Nuestro Compromiso</span>
+      </div>
+      
+      <!-- Title -->
+      <h2 class="triple-guarantee-section__title" id="guarantee-title">
+        Garantía <span class="triple-guarantee-section__title-accent">Triple 30</span>
+      </h2>
+      
+      <!-- Subtitle -->
+      <p class="triple-guarantee-section__subtitle">
+        Compromiso absoluto con resultados medibles y garantía de satisfacción total
+      </p>
+      
+      <!-- Trust Indicators -->
+      <div class="triple-guarantee-section__trust-indicators">
+        <div class="trust-indicator">
+          <span class="trust-indicator__value">30</span>
+          <span class="trust-indicator__label">Días sin Riesgo</span>
+        </div>
+        <div class="trust-indicator">
+          <span class="trust-indicator__value">30%</span>
+          <span class="trust-indicator__label">Honorarios Vinculados</span>
+        </div>
+        <div class="trust-indicator">
+          <span class="trust-indicator__value">30</span>
+          <span class="trust-indicator__label">Días de Soporte</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Guarantee Cards Grid -->
+    <div class="triple-guarantee-section__grid animate-slide-up">
+      <!-- 30 Days Risk-Free Trial -->
+      <GuaranteeCard
+        number="30"
+        unit="días"
+        title="Prueba sin Riesgo"
+        category="Garantía Total"
+        description="Evaluación completa sin compromiso. Si no cumplimos expectativas, cancelación sin penalización."
+        features={[
+          "Cancelación sin penalización",
+          "Evaluación integral",
+          "Diagnóstico detallado",
+          "Propuesta personalizada"
+        ]}
+        badgeText="0% Riesgo"
+        badgeIcon={`<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+        </svg>`}
+        variant="trial"
+        class="animate-scale-in"
+      />
+      
+      <!-- 30% Performance-Based Payment -->
+      <GuaranteeCard
+        number="30"
+        unit="%"
+        title="Honorarios Vinculados"
+        category="Garantía KPIs"
+        description="Solo cobramos el 100% cuando cumplimos todos los indicadores de rendimiento acordados."
+        features={[
+          "KPIs medibles definidos",
+          "Pago por resultados",
+          "Transparencia total",
+          "Reportes en tiempo real"
+        ]}
+        badgeText="Vinculado a KPIs"
+        badgeIcon={`<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path>
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path>
+        </svg>`}
+        variant="guarantee"
+        class="animate-scale-in"
+        style="animation-delay: 0.2s"
+      />
+      
+      <!-- 30 Days Post-Project Support -->
+      <GuaranteeCard
+        number="30"
+        unit="días"
+        title="Soporte Post-Proyecto"
+        category="Sin Costo Adicional"
+        description="Acompañamiento completo durante la transición para asegurar adopción exitosa y continuidad operacional."
+        features={[
+          "Soporte técnico inmediato",
+          "Ajustes y optimizaciones",
+          "Capacitación del equipo",
+          "Monitoreo continuo"
+        ]}
+        badgeText="24/7 Disponible"
+        badgeIcon={`<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+        </svg>`}
+        variant="support"
+        class="animate-scale-in"
+        style="animation-delay: 0.4s"
+      />
+    </div>
+    
+    <!-- Call-to-Action -->
+    <div class="triple-guarantee-section__cta animate-fade-in" style="animation-delay: 0.6s">
+      <div class="triple-guarantee-section__cta-content">
+        <h3 class="text-title text-primary mb-4">
+          ¿Listo para optimizar tu arquitectura empresarial?
+        </h3>
+        <p class="text-body text-secondary mb-6">
+          Inicia con nuestro diagnóstico estratégico sin compromiso y evalúa el estado actual de tu organización.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contacto" class="btn btn-primary btn-lg hover-lift">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.965 8.965 0 01-4.126-1.004L3 21l1.996-5.874A8.965 8.965 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path>
+            </svg>
+            Diagnóstico Estratégico
+          </a>
+          <a href="/servicios" class="btn btn-secondary btn-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+            Ver Servicios
+          </a>
+        </div>
+      </div>
+      
+      <!-- Security Badges -->
+      <div class="triple-guarantee-section__security-badges">
+        <div class="security-badge">
+          <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span>100% Seguro</span>
+        </div>
+        <div class="security-badge">
+          <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span>Certificado</span>
+        </div>
+        <div class="security-badge">
+          <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span>Garantizado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Background decoration -->
+  <div class="triple-guarantee-section__background" aria-hidden="true">
+    <div class="bg-pattern bg-pattern--top"></div>
+    <div class="bg-pattern bg-pattern--bottom"></div>
+  </div>
+</section>
+
+<style>
+  .triple-guarantee-section {
+    position: relative;
+    padding: var(--space-20) 0;
+    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+    overflow: hidden;
+  }
+  
+  /* Header */
+  .triple-guarantee-section__header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .triple-guarantee-section__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: rgba(0, 229, 160, 0.1);
+    border: 1px solid rgba(0, 229, 160, 0.3);
+    border-radius: var(--radius-full);
+    padding: var(--space-3) var(--space-6);
+    margin-bottom: var(--space-6);
+    backdrop-filter: blur(10px);
+  }
+  
+  .triple-guarantee-section__badge-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--accent-500);
+  }
+  
+  .triple-guarantee-section__badge-text {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--accent-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .triple-guarantee-section__title {
+    font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    color: var(--text-primary);
+    margin-bottom: var(--space-6);
+    letter-spacing: -0.025em;
+  }
+  
+  .triple-guarantee-section__title-accent {
+    background: linear-gradient(135deg, var(--accent-500) 0%, var(--secondary-500) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease-in-out infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .triple-guarantee-section__subtitle {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto var(--space-8);
+  }
+  
+  /* Trust Indicators */
+  .triple-guarantee-section__trust-indicators {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+  }
+  
+  .trust-indicator {
+    text-align: center;
+  }
+  
+  .trust-indicator__value {
+    display: block;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--accent-500);
+    line-height: 1;
+  }
+  
+  .trust-indicator__label {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    font-weight: var(--font-medium);
+    margin-top: var(--space-1);
+  }
+  
+  /* Grid */
+  .triple-guarantee-section__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-8);
+    margin-bottom: var(--space-16);
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* CTA Section */
+  .triple-guarantee-section__cta {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .triple-guarantee-section__cta-content {
+    max-width: 600px;
+    margin: 0 auto var(--space-8);
+  }
+  
+  /* Security Badges */
+  .triple-guarantee-section__security-badges {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+  }
+  
+  .security-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background: rgba(0, 229, 160, 0.05);
+    border: 1px solid rgba(0, 229, 160, 0.2);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-secondary);
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Background Decoration */
+  .triple-guarantee-section__background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .bg-pattern {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 229, 160, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .bg-pattern--top {
+    top: -200px;
+    right: -200px;
+    animation-delay: 0s;
+  }
+  
+  .bg-pattern--bottom {
+    bottom: -200px;
+    left: -200px;
+    animation-delay: 4s;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(20px, -20px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-10px, -30px) rotate(0deg);
+    }
+    75% {
+      transform: translate(-20px, 10px) rotate(-1deg);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .triple-guarantee-section {
+      padding: var(--space-16) 0;
+    }
+    
+    .triple-guarantee-section__header {
+      margin-bottom: var(--space-12);
+    }
+    
+    .triple-guarantee-section__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+      margin-bottom: var(--space-12);
+    }
+    
+    .triple-guarantee-section__trust-indicators {
+      gap: var(--space-6);
+    }
+    
+    .triple-guarantee-section__security-badges {
+      gap: var(--space-4);
+    }
+    
+    .security-badge {
+      padding: var(--space-2) var(--space-3);
+      font-size: var(--text-xs);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .triple-guarantee-section__grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .trust-indicator {
+      min-width: 80px;
+    }
+    
+    .triple-guarantee-section__security-badges {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .triple-guarantee-section__title-accent,
+    .bg-pattern {
+      animation: none;
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: high) {
+    .triple-guarantee-section__badge,
+    .security-badge {
+      border-width: 2px;
+      background: var(--primary-700);
+    }
+    
+    .triple-guarantee-section__title-accent {
+      -webkit-text-fill-color: var(--accent-500);
+      background: none;
+    }
+  }
+</style>

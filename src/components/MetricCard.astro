@@ -1,0 +1,79 @@
+---
+export interface Props {
+  value: string;
+  label: string;
+  description?: string;
+  color?: 'accent' | 'secondary' | 'success' | 'warning';
+  icon?: string;
+  trend?: 'up' | 'down' | 'stable';
+  class?: string;
+}
+
+const {
+  value,
+  label,
+  description,
+  color = 'accent',
+  icon,
+  trend,
+  class: className = ''
+} = Astro.props;
+
+const colorClasses = {
+  accent: 'text-accent',
+  secondary: 'text-secondary-color',
+  success: 'text-success-500',
+  warning: 'text-warning-500'
+};
+
+const trendIcons = {
+  up: '↗️',
+  down: '↘️',
+  stable: '→'
+};
+
+const trendColors = {
+  up: 'text-success-500',
+  down: 'text-error-500',
+  stable: 'text-muted'
+};
+---
+
+<div class={`card hover-lift text-center ${className}`}>
+  {icon && (
+    <div class="text-4xl mb-4">{icon}</div>
+  )}
+  
+  <div class={`text-3xl lg:text-4xl font-bold mb-2 ${colorClasses[color]}`}>
+    {value}
+  </div>
+  
+  <div class="text-body text-primary font-medium mb-2">
+    {label}
+  </div>
+  
+  {description && (
+    <div class="text-body-small text-secondary">
+      {description}
+    </div>
+  )}
+  
+  {trend && (
+    <div class={`text-body-small mt-2 ${trendColors[trend]}`}>
+      <span class="mr-1">{trendIcons[trend]}</span>
+      {trend === 'up' && 'Creciendo'}
+      {trend === 'down' && 'Disminuyendo'}
+      {trend === 'stable' && 'Estable'}
+    </div>
+  )}
+</div>
+
+<style>
+  .card {
+    transition: all var(--transition-base);
+  }
+  
+  .card:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+</style>
