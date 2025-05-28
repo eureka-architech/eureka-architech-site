@@ -64,6 +64,12 @@ import GuaranteeCard from './GuaranteeCard.astro';
         </svg>`}
         variant="trial"
         class="animate-scale-in"
+        maturityLevel="Inicial a Avanzado"
+        conditions={[
+          "Debe completarse el formulario de evaluación inicial",
+          "Cancelación sin penalización dentro de los primeros 30 días",
+          "Reembolso completo si no se cumplen las expectativas acordadas"
+        ]}
       />
       
       <!-- 30% Performance-Based Payment -->
@@ -87,6 +93,13 @@ import GuaranteeCard from './GuaranteeCard.astro';
         variant="guarantee"
         class="animate-scale-in"
         style="animation-delay: 0.2s"
+        maturityLevel="Medio a Avanzado"
+         conditions={[
+          "KPIs específicos acordados al inicio del proyecto",
+          "30% de honorarios vinculados al cumplimiento de métricas",
+          "Medición mensual con reporting transparente",
+          "Reajuste de objetivos solo por acuerdo mutuo"
+        ]}
       />
       
       <!-- 30 Days Post-Project Support -->
@@ -109,55 +122,14 @@ import GuaranteeCard from './GuaranteeCard.astro';
         variant="support"
         class="animate-scale-in"
         style="animation-delay: 0.4s"
+        maturityLevel="Todos los niveles"
+        conditions={[
+          "Soporte disponible por 30 días posteriores a la implementación",
+          "Limitado a consultas relacionadas con el proyecto entregado",
+          "Tiempo de respuesta garantizado de máximo 24 horas",
+          "Extensión de soporte disponible con cargo adicional"
+        ]}
       />
-    </div>
-    
-    <!-- Call-to-Action -->
-    <div class="triple-guarantee-section__cta animate-fade-in" style="animation-delay: 0.6s">
-      <div class="triple-guarantee-section__cta-content">
-        <h3 class="text-title text-primary mb-4">
-          ¿Listo para optimizar tu arquitectura empresarial?
-        </h3>
-        <p class="text-body text-secondary mb-6">
-          Inicia con nuestro diagnóstico estratégico sin compromiso y evalúa el estado actual de tu organización.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contacto" class="btn btn-primary btn-lg hover-lift">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.965 8.965 0 01-4.126-1.004L3 21l1.996-5.874A8.965 8.965 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path>
-            </svg>
-            Diagnóstico Estratégico
-          </a>
-          <a href="/servicios" class="btn btn-secondary btn-lg">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-            </svg>
-            Ver Servicios
-          </a>
-        </div>
-      </div>
-      
-      <!-- Security Badges -->
-      <div class="triple-guarantee-section__security-badges">
-        <div class="security-badge">
-          <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-          </svg>
-          <span>100% Seguro</span>
-        </div>
-        <div class="security-badge">
-          <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-          </svg>
-          <span>Certificado</span>
-        </div>
-        <div class="security-badge">
-          <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-          <span>Garantizado</span>
-        </div>
-      </div>
     </div>
   </div>
   

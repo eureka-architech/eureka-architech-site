@@ -1,414 +1,975 @@
 ---
-import OptimizedLayout from '@/layouts/OptimizedLayout.astro';
+import OptimizedLayout from '../layouts/OptimizedLayout.astro';
 ---
 
 <OptimizedLayout 
-  title="Contacto - Diagnóstico Gratuito | EurekaArchiTech"
-  description="Agenda tu diagnóstico digital gratuito. Descubre cómo transformar tu PyME en líder digital con la metodología EUREKA en solo 90 días."
+  title="Contacto - Diagnóstico Digital Gratuito | EurekaArchiTech"
+  description="Obtén tu diagnóstico digital gratuito y descubre cómo transformar tu empresa con la metodología EUREKA. Análisis personalizado sin compromiso en menos de 24 horas."
+  type="article"
 >
-  <!-- Hero Section -->
-  <section class="py-24 bg-gradient-to-br from-accent-500 to-secondary-500">
-    <div class="container text-center">
-      <h1 class="text-display text-white mb-6">
-        Diagnóstico Digital <span class="text-primary-900">Gratuito</span>
-      </h1>
-      <p class="text-body-large text-white mb-8 max-w-3xl mx-auto opacity-90">
-        Descubre en 30 minutos las oportunidades de transformación específicas para tu empresa
-      </p>
-      <div class="flex justify-center gap-6 text-white text-body-small">
-        <span class="flex items-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-          </svg>
-          100% Gratuito
-        </span>
-        <span class="flex items-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-          </svg>
-          Sin compromisos
-        </span>
-        <span class="flex items-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-          </svg>
-          Respuesta en 24h
-        </span>
+  <!-- Enhanced Hero Section -->
+  <section class="hero-section">
+    <div class="hero-background"></div>
+    
+    <div class="container relative z-10">
+      <div class="hero-content">
+        <!-- Enhanced Badge -->
+        <div class="hero-badge animate-fade-in">
+          <div class="badge-icon">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.965 8.965 0 01-4.126-1.004L3 21l1.996-5.874A8.965 8.965 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path>
+            </svg>
+          </div>
+          <span class="badge-text">Diagnóstico Gratuito</span>
+        </div>
+        
+        <!-- Enhanced Title -->
+        <h1 class="hero-title animate-slide-up" style="animation-delay: 0.2s">
+          Diagnóstico Digital
+          <span class="title-gradient">Gratuito</span>
+        </h1>
+        
+        <!-- Enhanced Description -->
+        <p class="hero-description animate-slide-up" style="animation-delay: 0.4s">
+          Descubre las oportunidades de transformación específicas para tu empresa. 
+          Análisis personalizado y estratégico en menos de 24 horas, sin compromisos.
+        </p>
+        
+        <!-- Enhanced Trust Indicators -->
+        <div class="trust-indicators animate-scale-in" style="animation-delay: 0.6s">
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="trust-content">
+              <span class="trust-value">24h</span>
+              <span class="trust-label">Respuesta</span>
+            </div>
+          </div>
+          
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="trust-content">
+              <span class="trust-value">100%</span>
+              <span class="trust-label">Gratuito</span>
+            </div>
+          </div>
+          
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="trust-content">
+              <span class="trust-value">30min</span>
+              <span class="trust-label">Duración</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Formulario de Contacto -->
-  <section class="py-20">
+  <!-- Enhanced Main Contact Section -->
+  <section class="contact-section">
     <div class="container">
-      <div class="grid lg:grid-cols-2 gap-16 items-start">
-        <!-- Formulario -->
-        <div class="card card-premium">
-          <h2 class="text-title text-primary mb-6">
-            Agenda tu Diagnóstico Gratuito
-          </h2>
-          <p class="text-body text-secondary mb-8">
-            Completa el formulario y nuestro equipo se pondrá en contacto contigo en menos de 24 horas.
-          </p>
-          
-          <form id="diagnostic-form" class="space-y-6">
-            <!-- Información Personal -->
-            <div class="grid md:grid-cols-2 gap-4">
-              <div>
-                <label for="nombre" class="block text-body-small text-primary font-medium mb-2">
-                  Nombre completo *
-                </label>
-                <input 
-                  type="text" 
-                  id="nombre" 
-                  name="nombre" 
-                  required
-                  class="form-input"
-                  placeholder="Tu nombre"
-                />
-              </div>
-              <div>
-                <label for="cargo" class="block text-body-small text-primary font-medium mb-2">
-                  Cargo
-                </label>
-                <input 
-                  type="text" 
-                  id="cargo" 
-                  name="cargo"
-                  class="form-input"
-                  placeholder="CEO, Director, etc."
-                />
-              </div>
-            </div>
-            
-            <!-- Información de Contacto -->
-            <div class="grid md:grid-cols-2 gap-4">
-              <div>
-                <label for="email" class="block text-body-small text-primary font-medium mb-2">
-                  Email corporativo *
-                </label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  required
-                  class="form-input"
-                  placeholder="tu@empresa.com"
-                />
-              </div>
-              <div>
-                <label for="telefono" class="block text-body-small text-primary font-medium mb-2">
-                  Teléfono
-                </label>
-                <input 
-                  type="tel" 
-                  id="telefono" 
-                  name="telefono"
-                  class="form-input"
-                  placeholder="+52 55 1234 5678"
-                />
-              </div>
-            </div>
-            
-            <!-- Información de la Empresa -->
-            <div>
-              <label for="empresa" class="block text-body-small text-primary font-medium mb-2">
-                Nombre de la empresa *
-              </label>
-              <input 
-                type="text" 
-                id="empresa" 
-                name="empresa" 
-                required
-                class="form-input"
-                placeholder="Nombre de tu empresa"
-              />
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-4">
-              <div>
-                <label for="industria" class="block text-body-small text-primary font-medium mb-2">
-                  Industria *
-                </label>
-                <select id="industria" name="industria" required class="form-input">
-                  <option value="">Selecciona tu industria</option>
-                  <option value="fintech">Fintech / Servicios Financieros</option>
-                  <option value="retail">Retail / E-commerce</option>
-                  <option value="manufactura">Manufactura</option>
-                  <option value="tecnologia">Tecnología / Software</option>
-                  <option value="salud">Salud / Healthcare</option>
-                  <option value="educacion">Educación</option>
-                  <option value="logistica">Logística / Transporte</option>
-                  <option value="construccion">Construcción</option>
-                  <option value="turismo">Turismo / Hospitalidad</option>
-                  <option value="otra">Otra</option>
-                </select>
-              </div>
-              <div>
-                <label for="empleados" class="block text-body-small text-primary font-medium mb-2">
-                  Número de empleados
-                </label>
-                <select id="empleados" name="empleados" class="form-input">
-                  <option value="">Selecciona el tamaño</option>
-                  <option value="1-10">1-10 empleados (Micro)</option>
-                  <option value="11-50">11-50 empleados (Pequeña)</option>
-                  <option value="51-250">51-250 empleados (Mediana)</option>
-                  <option value="251-1000">251-1000 empleados (Grande)</option>
-                  <option value="1000+">1000+ empleados (Corporativo)</option>
-                </select>
-              </div>
-            </div>
-            
-            <!-- Desafíos Principales -->
-            <div>
-              <label for="desafios" class="block text-body-small text-primary font-medium mb-3">
-                ¿Cuáles son tus principales desafíos? (Selecciona todos los que apliquen)
-              </label>
-              <div class="space-y-3">
-                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
-                  <input type="checkbox" name="desafios[]" value="procesos-manuales" class="form-checkbox">
-                  <div>
-                    <span class="text-body text-primary font-medium">Procesos manuales lentos</span>
-                    <p class="text-body-small text-secondary">Demasiadas tareas repetitivas que consumen tiempo</p>
-                  </div>
-                </label>
-                
-                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
-                  <input type="checkbox" name="desafios[]" value="sistemas-desconectados" class="form-checkbox">
-                  <div>
-                    <span class="text-body text-primary font-medium">Sistemas desconectados</span>
-                    <p class="text-body-small text-secondary">Herramientas que no se comunican entre sí</p>
-                  </div>
-                </label>
-                
-                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
-                  <input type="checkbox" name="desafios[]" value="falta-visibilidad" class="form-checkbox">
-                  <div>
-                    <span class="text-body text-primary font-medium">Falta de visibilidad</span>
-                    <p class="text-body-small text-secondary">Dificultad para obtener datos y métricas en tiempo real</p>
-                  </div>
-                </label>
-                
-                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
-                  <input type="checkbox" name="desafios[]" value="competencia-digital" class="form-checkbox">
-                  <div>
-                    <span class="text-body text-primary font-medium">Competencia más digital</span>
-                    <p class="text-body-small text-secondary">Competidores están ganando terreno con mejores herramientas</p>
-                  </div>
-                </label>
-                
-                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
-                  <input type="checkbox" name="desafios[]" value="escalabilidad" class="form-checkbox">
-                  <div>
-                    <span class="text-body text-primary font-medium">Problemas de escalabilidad</span>
-                    <p class="text-body-small text-secondary">Dificultad para crecer sin contratar más personal</p>
-                  </div>
-                </label>
-                
-                <label class="flex items-start gap-3 cursor-pointer p-3 rounded-lg hover:bg-primary-800 transition-colors">
-                  <input type="checkbox" name="desafios[]" value="experiencia-cliente" class="form-checkbox">
-                  <div>
-                    <span class="text-body text-primary font-medium">Experiencia de cliente</span>
-                    <p class="text-body-small text-secondary">Clientes esperan experiencias más digitales</p>
-                  </div>
-                </label>
-              </div>
-            </div>
-            
-            <!-- Urgencia -->
-            <div>
-              <label for="urgencia" class="block text-body-small text-primary font-medium mb-2">
-                ¿Qué tan urgente es resolver estos desafíos?
-              </label>
-              <select id="urgencia" name="urgencia" class="form-input">
-                <option value="">Selecciona el nivel de urgencia</option>
-                <option value="inmediata">Inmediata (1-30 días)</option>
-                <option value="corto-plazo">Corto plazo (1-3 meses)</option>
-                <option value="mediano-plazo">Mediano plazo (3-6 meses)</option>
-                <option value="largo-plazo">Largo plazo (6+ meses)</option>
-                <option value="exploratorio">Solo explorando opciones</option>
-              </select>
-            </div>
-            
-            <!-- Presupuesto -->
-            <div>
-              <label for="presupuesto" class="block text-body-small text-primary font-medium mb-2">
-                Presupuesto estimado para transformación digital
-              </label>
-              <select id="presupuesto" name="presupuesto" class="form-input">
-                <option value="">Selecciona rango de presupuesto</option>
-                <option value="50k-100k">$50,000 - $100,000 MXN</option>
-                <option value="100k-250k">$100,000 - $250,000 MXN</option>
-                <option value="250k-500k">$250,000 - $500,000 MXN</option>
-                <option value="500k-1m">$500,000 - $1,000,000 MXN</option>
-                <option value="1m+">$1,000,000+ MXN</option>
-                <option value="no-definido">Aún no definido</option>
-              </select>
-            </div>
-            
-            <!-- Mensaje Adicional -->
-            <div>
-              <label for="mensaje" class="block text-body-small text-primary font-medium mb-2">
-                Mensaje adicional (opcional)
-              </label>
-              <textarea 
-                id="mensaje" 
-                name="mensaje" 
-                rows="4"
-                class="form-input resize-none"
-                placeholder="Cuéntanos más sobre tus necesidades específicas..."
-              ></textarea>
-            </div>
-            
-            <!-- Consentimiento -->
-            <div class="flex items-start gap-3">
-              <input type="checkbox" id="consentimiento" name="consentimiento" required class="form-checkbox mt-1">
-              <label for="consentimiento" class="text-body-small text-secondary cursor-pointer">
-                Acepto que EurekaArchiTech me contacte para proporcionar información sobre sus servicios de transformación digital. 
-                Puedo retirar mi consentimiento en cualquier momento.
-              </label>
-            </div>
-            
-            <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary btn-lg w-full">
-              <span id="btn-text">Solicitar Diagnóstico Gratuito</span>
-              <span id="btn-loading" class="hidden">Enviando...</span>
-            </button>
-          </form>
+      <!-- Enhanced Section Header -->
+      <header class="section-header animate-fade-in">
+        <div class="section-badge">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <span>Solicita tu Diagnóstico</span>
         </div>
         
-        <!-- Información Adicional -->
-        <div class="space-y-8">
-          <!-- Qué Incluye -->
-          <div class="card">
-            <h3 class="text-title text-primary mb-6">
-              ¿Qué incluye tu diagnóstico?
-            </h3>
-            <div class="space-y-4">
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center flex-shrink-0 mt-1">
-                  <span class="text-primary-900 text-sm">✓</span>
-                </div>
-                <div>
-                  <h4 class="text-body text-primary font-semibold mb-1">Análisis de Procesos Actuales</h4>
-                  <p class="text-body-small text-secondary">Evaluamos tus flujos de trabajo para identificar cuellos de botella</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center flex-shrink-0 mt-1">
-                  <span class="text-primary-900 text-sm">✓</span>
-                </div>
-                <div>
-                  <h4 class="text-body text-primary font-semibold mb-1">Mapa de Oportunidades</h4>
-                  <p class="text-body-small text-secondary">Identificamos las áreas con mayor potencial de mejora</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center flex-shrink-0 mt-1">
-                  <span class="text-primary-900 text-sm">✓</span>
-                </div>
-                <div>
-                  <h4 class="text-body text-primary font-semibold mb-1">Proyección de ROI</h4>
-                  <p class="text-body-small text-secondary">Calculamos el retorno de inversión esperado</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center flex-shrink-0 mt-1">
-                  <span class="text-primary-900 text-sm">✓</span>
-                </div>
-                <div>
-                  <h4 class="text-body text-primary font-semibold mb-1">Plan de Acción Personalizado</h4>
-                  <p class="text-body-small text-secondary">Recomendaciones específicas para tu empresa</p>
-                </div>
+        <h2 class="section-title">
+          Análisis Personalizado <span class="title-gradient">Sin Compromiso</span>
+        </h2>
+        
+        <p class="section-description">
+          Completa el formulario con información específica de tu empresa para recibir un diagnóstico 
+          estratégico que identificará oportunidades concretas de transformación digital.
+        </p>
+      </header>
+      
+      <!-- Enhanced Contact Grid -->
+      <div class="contact-grid">
+        <!-- Contact Form Card -->
+        <article class="contact-card contact-card--primary animate-slide-up" style="animation-delay: 0.1s">
+          <header class="contact-card__header">
+            <div class="contact-card__icon-wrapper">
+              <div class="contact-card__icon contact-card__icon--primary">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
               </div>
             </div>
-          </div>
+            
+            <div class="contact-card__meta">
+              <span class="contact-card__category">Formulario Digital</span>
+              <h3 class="contact-card__title">Diagnóstico Empresarial</h3>
+            </div>
+            
+            <div class="contact-card__metric">
+              <span class="metric__value">95%</span>
+              <span class="metric__label">Precisión</span>
+            </div>
+          </header>
           
-          <!-- Contacto Directo -->
-          <div class="card card-premium">
-            <h3 class="text-title text-accent mb-4">
-              Contacto Directo
-            </h3>
-            <div class="space-y-4">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-accent-500 rounded-lg flex items-center justify-center">
-                  <svg class="w-5 h-5 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <div class="text-body text-primary font-semibold">Email</div>
-                  <a href="mailto:hi@eureka-architech.com" class="text-body-small text-accent hover:text-accent-600 transition-colors">
-                    hi@eureka-architech.com
-                  </a>
-                </div>
-              </div>
-              
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-secondary-500 rounded-lg flex items-center justify-center">
-                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <div class="text-body text-primary font-semibold">Respuesta</div>
-                  <div class="text-body-small text-secondary">Menos de 24 horas</div>
+          <div class="contact-card__content">
+            <!-- Contact Form -->
+            <form id="diagnostic-form" class="contact-form">
+              <!-- Información Personal -->
+              <div class="form-section">
+                <h4 class="form-section__title">Información de Contacto</h4>
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="nombre" class="form-label">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" required class="form-input" placeholder="Tu nombre completo">
+                  </div>
+                  <div class="form-field">
+                    <label for="cargo" class="form-label">Cargo</label>
+                    <input type="text" id="cargo" name="cargo" class="form-input" placeholder="CEO, Director, CTO...">
+                  </div>
+                  <div class="form-field">
+                    <label for="email" class="form-label">Email corporativo *</label>
+                    <input type="email" id="email" name="email" required class="form-input" placeholder="tu@empresa.com">
+                  </div>
+                  <div class="form-field">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="+52 55 1234 5678">
+                  </div>
                 </div>
               </div>
               
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-accent-500 rounded-lg flex items-center justify-center">
-                  <svg class="w-5 h-5 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <!-- Información Empresarial -->
+              <div class="form-section">
+                <h4 class="form-section__title">Información Empresarial</h4>
+                <div class="form-grid">
+                  <div class="form-field form-field--full">
+                    <label for="empresa" class="form-label">Nombre de la empresa *</label>
+                    <input type="text" id="empresa" name="empresa" required class="form-input" placeholder="Nombre de tu empresa">
+                  </div>
+                  <div class="form-field">
+                    <label for="industria" class="form-label">Industria *</label>
+                    <select id="industria" name="industria" required class="form-input">
+                      <option value="">Selecciona tu industria</option>
+                      <option value="fintech">Fintech / Servicios Financieros</option>
+                      <option value="retail">Retail / E-commerce</option>
+                      <option value="manufactura">Manufactura</option>
+                      <option value="tecnologia">Tecnología / Software</option>
+                      <option value="salud">Salud / Healthcare</option>
+                      <option value="educacion">Educación</option>
+                      <option value="logistica">Logística / Transporte</option>
+                      <option value="construccion">Construcción</option>
+                      <option value="turismo">Turismo / Hospitalidad</option>
+                      <option value="otra">Otra</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <label for="empleados" class="form-label">Número de empleados</label>
+                    <select id="empleados" name="empleados" class="form-input">
+                      <option value="">Selecciona el tamaño</option>
+                      <option value="1-10">1-10 empleados (Micro)</option>
+                      <option value="11-50">11-50 empleados (Pequeña)</option>
+                      <option value="51-250">51-250 empleados (Mediana)</option>
+                      <option value="251-1000">251-1000 empleados (Grande)</option>
+                      <option value="1000+">1000+ empleados (Corporativo)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Desafíos -->
+              <div class="form-section">
+                <h4 class="form-section__title">Principales Desafíos</h4>
+                <p class="form-section__description">Selecciona los desafíos que más impactan a tu empresa actualmente</p>
+                <div class="challenges-grid">
+                  <label class="challenge-option">
+                    <input type="checkbox" name="desafios[]" value="procesos-manuales" class="challenge-checkbox">
+                    <div class="challenge-content">
+                      <span class="challenge-title">Procesos manuales lentos</span>
+                      <span class="challenge-description">Tareas repetitivas que consumen tiempo</span>
+                    </div>
+                  </label>
+                  
+                  <label class="challenge-option">
+                    <input type="checkbox" name="desafios[]" value="sistemas-desconectados" class="challenge-checkbox">
+                    <div class="challenge-content">
+                      <span class="challenge-title">Sistemas desconectados</span>
+                      <span class="challenge-description">Herramientas que no se comunican</span>
+                    </div>
+                  </label>
+                  
+                  <label class="challenge-option">
+                    <input type="checkbox" name="desafios[]" value="falta-visibilidad" class="challenge-checkbox">
+                    <div class="challenge-content">
+                      <span class="challenge-title">Falta de visibilidad</span>
+                      <span class="challenge-description">Dificultad para obtener métricas</span>
+                    </div>
+                  </label>
+                  
+                  <label class="challenge-option">
+                    <input type="checkbox" name="desafios[]" value="competencia-digital" class="challenge-checkbox">
+                    <div class="challenge-content">
+                      <span class="challenge-title">Competencia más digital</span>
+                      <span class="challenge-description">Competidores con mejores herramientas</span>
+                    </div>
+                  </label>
+                  
+                  <label class="challenge-option">
+                    <input type="checkbox" name="desafios[]" value="escalabilidad" class="challenge-checkbox">
+                    <div class="challenge-content">
+                      <span class="challenge-title">Problemas de escalabilidad</span>
+                      <span class="challenge-description">Dificultad para crecer sin más personal</span>
+                    </div>
+                  </label>
+                  
+                  <label class="challenge-option">
+                    <input type="checkbox" name="desafios[]" value="experiencia-cliente" class="challenge-checkbox">
+                    <div class="challenge-content">
+                      <span class="challenge-title">Experiencia de cliente</span>
+                      <span class="challenge-description">Clientes esperan más digitalización</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              
+              <!-- Urgencia y Mensaje -->
+              <div class="form-section">
+                <h4 class="form-section__title">Contexto del Proyecto</h4>
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="urgencia" class="form-label">¿Qué tan urgente es resolver estos desafíos?</label>
+                    <select id="urgencia" name="urgencia" class="form-input">
+                      <option value="">Selecciona nivel de urgencia</option>
+                      <option value="inmediata">Inmediata (1-30 días)</option>
+                      <option value="corto-plazo">Corto plazo (1-3 meses)</option>
+                      <option value="mediano-plazo">Mediano plazo (3-6 meses)</option>
+                      <option value="largo-plazo">Largo plazo (6+ meses)</option>
+                      <option value="exploratorio">Solo explorando opciones</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <label for="presupuesto" class="form-label">Presupuesto estimado</label>
+                    <select id="presupuesto" name="presupuesto" class="form-input">
+                      <option value="">Selecciona rango de presupuesto</option>
+                      <option value="50k-100k">$50,000 - $100,000 MXN</option>
+                      <option value="100k-250k">$100,000 - $250,000 MXN</option>
+                      <option value="250k-500k">$250,000 - $500,000 MXN</option>
+                      <option value="500k-1m">$500,000 - $1,000,000 MXN</option>
+                      <option value="1m+">$1,000,000+ MXN</option>
+                      <option value="no-definido">Aún no definido</option>
+                    </select>
+                  </div>
+                  <div class="form-field form-field--full">
+                    <label for="mensaje" class="form-label">Mensaje adicional (opcional)</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" class="form-input form-textarea" placeholder="Cuéntanos más sobre tus necesidades específicas o proyectos en mente..."></textarea>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Consentimiento -->
+              <div class="form-section">
+                <label class="consent-option">
+                  <input type="checkbox" id="consentimiento" name="consentimiento" required class="consent-checkbox">
+                  <div class="consent-content">
+                    <span class="consent-text">
+                      Acepto que EurekaArchiTech me contacte para proporcionar información sobre sus servicios de transformación digital. 
+                      Puedo retirar mi consentimiento en cualquier momento.
+                    </span>
+                  </div>
+                </label>
+              </div>
+              
+              <!-- Submit Button -->
+              <div class="form-submit">
+                <button type="submit" class="service-cta service-cta--primary">
+                  <span id="btn-text">Solicitar Diagnóstico Gratuito</span>
+                  <span id="btn-loading" class="hidden">Enviando...</span>
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                   </svg>
-                </div>
-                <div>
-                  <div class="text-body text-primary font-semibold">Ubicación</div>
-                  <div class="text-body-small text-secondary">México • Servicios Remotos</div>
-                </div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </article>
+
+        <!-- Contact Information Card -->
+        <article class="contact-card contact-card--secondary animate-slide-up" style="animation-delay: 0.2s">
+          <header class="contact-card__header">
+            <div class="contact-card__icon-wrapper">
+              <div class="contact-card__icon contact-card__icon--secondary">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
               </div>
             </div>
-          </div>
+            
+            <div class="contact-card__meta">
+              <span class="contact-card__category">Contacto Directo</span>
+              <h3 class="contact-card__title">¿Prefieres Hablar Directamente?</h3>
+            </div>
+            
+            <div class="contact-card__metric contact-card__metric--secondary">
+              <span class="metric__value">24h</span>
+              <span class="metric__label">Respuesta</span>
+            </div>
+          </header>
           
-          <!-- Garantía -->
-          <div class="card bg-gradient-to-br from-accent-500 to-secondary-500 text-white">
-            <h3 class="text-title mb-4">
-              Compromiso Triple 30
-            </h3>
-            <p class="text-body mb-4 opacity-90">
-              Nuestra garantía única que demuestra nuestra confianza en los resultados:
+          <div class="contact-card__content">
+            <p class="contact-card__description">
+              Si prefieres una conversación directa o tienes preguntas específicas, nuestro equipo está 
+              disponible para atenderte de manera personalizada.
             </p>
-            <div class="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div class="text-2xl font-bold mb-1">30</div>
-                <div class="text-body-small opacity-75">Días garantía</div>
-              </div>
-              <div>
-                <div class="text-2xl font-bold mb-1">30%</div>
-                <div class="text-body-small opacity-75">Mejora mínima</div>
-              </div>
-              <div>
-                <div class="text-2xl font-bold mb-1">30h</div>
-                <div class="text-body-small opacity-75">Soporte mensual</div>
+            
+            <!-- Enhanced Contact Methods -->
+            <div class="contact-methods-section">
+              <h4 class="contact-methods-section__title">Métodos de Contacto</h4>
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <div class="contact-method__icon">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div class="contact-method__content">
+                    <h5 class="contact-method__title">Email General</h5>
+                    <a href="mailto:hi@eureka-architech.com" class="contact-method__value">hi@eureka-architech.com</a>
+                    <p class="contact-method__description">Para consultas generales y nuevos proyectos</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-method__icon contact-method__icon--secondary">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    </svg>
+                  </div>
+                  <div class="contact-method__content">
+                    <h5 class="contact-method__title">Privacidad y Datos</h5>
+                    <a href="mailto:privacy@eureka-architech.com" class="contact-method__value">privacy@eureka-architech.com</a>
+                    <p class="contact-method__description">Para temas relacionados con protección de datos</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-method__icon">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div class="contact-method__content">
+                    <h5 class="contact-method__title">Tiempo de Respuesta</h5>
+                    <span class="contact-method__value">Menos de 24 horas</span>
+                    <p class="contact-method__description">En días hábiles de 09:00 a 18:00 hrs</p>
+                  </div>
+                </div>
+                
+                <div class="contact-method">
+                  <div class="contact-method__icon contact-method__icon--secondary">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                  </div>
+                  <div class="contact-method__content">
+                    <h5 class="contact-method__title">Ubicación</h5>
+                    <span class="contact-method__value">México</span>
+                    <p class="contact-method__description">Servicios remotos en toda LATAM</p>
+                  </div>
+                </div>
               </div>
             </div>
+            
+            <!-- Enhanced Guarantee Section */
+            <div class="guarantee-section">
+              <h4 class="guarantee-section__title">Compromiso Triple 30</h4>
+              <div class="guarantee-metrics">
+                <div class="guarantee-metric">
+                  <div class="guarantee-metric__icon">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div class="guarantee-metric__content">
+                    <span class="guarantee-metric__value">30</span>
+                    <span class="guarantee-metric__label">días garantía</span>
+                  </div>
+                </div>
+                
+                <div class="guarantee-metric">
+                  <div class="guarantee-metric__icon">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                  </div>
+                  <div class="guarantee-metric__content">
+                    <span class="guarantee-metric__value">30%</span>
+                    <span class="guarantee-metric__label">mejora mínima</span>
+                  </div>
+                </div>
+                
+                <div class="guarantee-metric">
+                  <div class="guarantee-metric__icon">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div class="guarantee-metric__content">
+                    <span class="guarantee-metric__value">30</span>
+                    <span class="guarantee-metric__label">días soporte</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <footer class="contact-card__footer">
+            <a href="mailto:hi@eureka-architech.com" class="service-cta service-cta--secondary">
+              <span>Contacto Directo</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </a>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Methodology Preview Section -->
+  <section class="methodology-section">
+    <div class="container">
+      <!-- Enhanced Section Header -->
+      <header class="section-header animate-fade-in">
+        <div class="section-badge">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+          <span>Metodología EUREKA</span>
+        </div>
+        
+        <h2 class="section-title">
+          Proceso de <span class="title-gradient">Transformación</span>
+        </h2>
+        
+        <p class="section-description">
+          Te explicaremos nuestra metodología propietaria que estructura la transformación digital 
+          y convierte desafíos en ventajas competitivas sostenibles.
+        </p>
+      </header>
+      
+      <!-- Enhanced Methodology Preview -->
+      <div class="methodology-preview">
+        <div class="methodology-step-card animate-slide-up" style="animation-delay: 0.1s">
+          <div class="methodology-step-card__icon methodology-step-card__icon--primary">
+            <span>E</span>
+          </div>
+          <div class="methodology-step-card__content">
+            <h3 class="methodology-step-card__title">Evaluación</h3>
+            <p class="methodology-step-card__description">Análisis integral de tu situación actual y oportunidades</p>
           </div>
         </div>
+        
+        <div class="methodology-step-card animate-slide-up" style="animation-delay: 0.2s">
+          <div class="methodology-step-card__icon methodology-step-card__icon--secondary">
+            <span>U</span>
+          </div>
+          <div class="methodology-step-card__content">
+            <h3 class="methodology-step-card__title">Unificación</h3>
+            <p class="methodology-step-card__description">Integración de procesos y sistemas empresariales</p>
+          </div>
+        </div>
+        
+        <div class="methodology-step-card animate-slide-up" style="animation-delay: 0.3s">
+          <div class="methodology-step-card__icon methodology-step-card__icon--primary">
+            <span>R</span>
+          </div>
+          <div class="methodology-step-card__content">
+            <h3 class="methodology-step-card__title">Rediseño</h3>
+            <p class="methodology-step-card__description">Arquitectura optimizada para el futuro digital</p>
+          </div>
+        </div>
+        
+        <div class="methodology-step-card animate-slide-up" style="animation-delay: 0.4s">
+          <div class="methodology-step-card__icon methodology-step-card__icon--secondary">
+            <span>E</span>
+          </div>
+          <div class="methodology-step-card__content">
+            <h3 class="methodology-step-card__title">Ejecución</h3>
+            <p class="methodology-step-card__description">Implementación controlada por fases con métricas</p>
+          </div>
+        </div>
+        
+        <div class="methodology-step-card animate-slide-up" style="animation-delay: 0.5s">
+          <div class="methodology-step-card__icon methodology-step-card__icon--primary">
+            <span>K</span>
+          </div>
+          <div class="methodology-step-card__content">
+            <h3 class="methodology-step-card__title">Knowledge</h3>
+            <p class="methodology-step-card__description">Transferencia sistemática de conocimiento al equipo</p>
+          </div>
+        </div>
+        
+        <div class="methodology-step-card animate-slide-up" style="animation-delay: 0.6s">
+          <div class="methodology-step-card__icon methodology-step-card__icon--secondary">
+            <span>A</span>
+          </div>
+          <div class="methodology-step-card__content">
+            <h3 class="methodology-step-card__title">Autonomía</h3>
+            <p class="methodology-step-card__description">Operación independiente garantizada con soporte</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="methodology-cta">
+        <a href="/nosotros" class="service-cta service-cta--secondary">
+          <span>Conocer Metodología Completa</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 </OptimizedLayout>
 
 <style>
-  /* Form Styles */
+  /* ================================
+     ENHANCED CONTACT PAGE STYLES
+     ================================ */
+  
+  /* Enhanced Hero Section (same as services) */
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: var(--space-32) 0 var(--space-24);
+  }
+  
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(0, 229, 160, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 70% 80%, rgba(0, 128, 255, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  
+  .hero-content {
+    max-width: 56rem;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Enhanced Hero Badge (same as services) */
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    background: rgba(0, 229, 160, 0.1);
+    border: 1px solid rgba(0, 229, 160, 0.3);
+    border-radius: var(--radius-full);
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--accent-500);
+    margin-bottom: var(--space-10);
+    backdrop-filter: blur(12px);
+    transition: all var(--transition-base);
+  }
+  
+  .hero-badge:hover {
+    background: rgba(0, 229, 160, 0.15);
+    border-color: rgba(0, 229, 160, 0.4);
+    transform: translateY(-2px);
+  }
+  
+  .badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .badge-text {
+    letter-spacing: 0.025em;
+  }
+  
+  /* Enhanced Hero Title (same as services) */
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    color: var(--text-primary);
+    margin-bottom: var(--space-8);
+    letter-spacing: -0.025em;
+  }
+  
+  .title-gradient {
+    background: linear-gradient(135deg, var(--accent-500) 0%, var(--secondary-500) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Enhanced Hero Description */
+  .hero-description {
+    font-size: var(--text-xl);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-16);
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Enhanced Trust Indicators (same as services) */
+  .trust-indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-6);
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+  
+  .trust-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6) var(--space-5);
+    background: rgba(0, 229, 160, 0.05);
+    border: 1px solid rgba(0, 229, 160, 0.15);
+    border-radius: var(--radius-xl);
+    backdrop-filter: blur(12px);
+    transition: all var(--transition-base);
+  }
+  
+  .trust-card:hover {
+    transform: translateY(-4px);
+    background: rgba(0, 229, 160, 0.08);
+    border-color: rgba(0, 229, 160, 0.25);
+    box-shadow: 0 12px 32px rgba(0, 229, 160, 0.15);
+  }
+  
+  .trust-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 229, 160, 0.15);
+    border: 1px solid rgba(0, 229, 160, 0.3);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-500);
+  }
+  
+  .trust-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .trust-value {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--accent-500);
+    line-height: 1;
+  }
+  
+  .trust-label {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    font-weight: var(--font-medium);
+  }
+  
+  /* Enhanced Contact Section */
+  .contact-section {
+    padding: var(--space-32) 0;
+    background: var(--primary-800);
+    position: relative;
+  }
+  
+  /* Enhanced Section Header (same as services) */
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-20);
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: rgba(0, 128, 255, 0.1);
+    border: 1px solid rgba(0, 128, 255, 0.25);
+    border-radius: var(--radius-full);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--secondary-500);
+    margin-bottom: var(--space-8);
+    backdrop-filter: blur(10px);
+  }
+  
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-6);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+  }
+  
+  .section-description {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+  
+  /* Enhanced Contact Grid */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: var(--space-10);
+    max-width: 88rem;
+    margin: 0 auto;
+  }
+  
+  /* Enhanced Contact Cards (similar to service cards) */
+  .contact-card {
+    background: linear-gradient(135deg, 
+      rgba(26, 26, 26, 0.95) 0%, 
+      rgba(42, 42, 42, 0.85) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-10);
+    backdrop-filter: blur(20px);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-500), var(--secondary-500));
+    opacity: 0;
+    transition: opacity var(--transition-base);
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 229, 160, 0.3);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 229, 160, 0.1);
+  }
+  
+  .contact-card:hover::before {
+    opacity: 1;
+  }
+  
+  .contact-card--secondary::before {
+    background: linear-gradient(90deg, var(--secondary-500), var(--accent-500));
+  }
+  
+  .contact-card--secondary:hover {
+    border-color: rgba(0, 128, 255, 0.3);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 128, 255, 0.1);
+  }
+  
+  /* Enhanced Contact Card Header (same as service cards) */
+  .contact-card__header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-5);
+  }
+  
+  .contact-card__icon-wrapper {
+    flex-shrink: 0;
+  }
+  
+  .contact-card__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-base);
+  }
+  
+  .contact-card__icon--primary {
+    background: linear-gradient(135deg, rgba(0, 229, 160, 0.15) 0%, rgba(0, 229, 160, 0.05) 100%);
+    border: 2px solid rgba(0, 229, 160, 0.3);
+    color: var(--accent-500);
+  }
+  
+  .contact-card__icon--secondary {
+    background: linear-gradient(135deg, rgba(0, 128, 255, 0.15) 0%, rgba(0, 128, 255, 0.05) 100%);
+    border: 2px solid rgba(0, 128, 255, 0.3);
+    color: var(--secondary-500);
+  }
+  
+  .contact-card:hover .contact-card__icon {
+    transform: scale(1.05);
+  }
+  
+  .contact-card__meta {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .contact-card__category {
+    font-size: var(--text-xs);
+    font-weight: var(--font-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: var(--space-2);
+  }
+  
+  .contact-card__title {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    line-height: var(--leading-snug);
+  }
+  
+  /* Enhanced Contact Metrics (same as service cards) */
+  .contact-card__metric {
+    text-align: right;
+    flex-shrink: 0;
+    padding: var(--space-3) var(--space-4);
+    background: rgba(0, 229, 160, 0.05);
+    border: 1px solid rgba(0, 229, 160, 0.15);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+  }
+  
+  .contact-card__metric--secondary {
+    background: rgba(0, 128, 255, 0.05);
+    border-color: rgba(0, 128, 255, 0.15);
+  }
+  
+  .metric__value {
+    display: block;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--accent-500);
+    line-height: 1;
+    margin-bottom: var(--space-1);
+  }
+  
+  .contact-card__metric--secondary .metric__value {
+    color: var(--secondary-500);
+  }
+  
+  .metric__label {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    font-weight: var(--font-medium);
+  }
+  
+  /* Enhanced Contact Card Content */
+  .contact-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    flex: 1;
+  }
+  
+  .contact-card__description {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+  
+  /* Enhanced Contact Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  
+  .form-section {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+  }
+  
+  .form-section__title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--accent-500);
+    margin-bottom: var(--space-2);
+  }
+  
+  .form-section__description {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-6);
+    line-height: var(--leading-relaxed);
+  }
+  
+  .form-grid {
+    display: grid;
+    gap: var(--space-4);
+  }
+  
+  @media (min-width: 768px) {
+    .form-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .form-field--full {
+    grid-column: 1 / -1;
+  }
+  
+  .form-label {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+  }
+  
   .form-input {
     width: 100%;
-    padding: 0.75rem 1rem;
-    background-color: var(--primary-900);
+    padding: var(--space-3) var(--space-4);
+    background: var(--primary-900);
     border: 1px solid var(--primary-600);
     border-radius: var(--radius-lg);
     color: var(--text-primary);
@@ -426,25 +987,529 @@ import OptimizedLayout from '@/layouts/OptimizedLayout.astro';
     color: var(--text-muted);
   }
   
-  .form-checkbox {
-    width: 1.25rem;
-    height: 1.25rem;
-    background-color: var(--primary-900);
-    border: 2px solid var(--primary-600);
-    border-radius: var(--radius-base);
-    flex-shrink: 0;
+  .form-textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Enhanced Challenges Grid */
+  .challenges-grid {
+    display: grid;
+    gap: var(--space-3);
+  }
+  
+  @media (min-width: 768px) {
+    .challenges-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .challenge-option {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: var(--primary-900);
+    border: 1px solid var(--primary-700);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
     transition: all var(--transition-base);
   }
   
-  .form-checkbox:checked {
-    background-color: var(--accent-500);
+  .challenge-option:hover {
+    border-color: rgba(0, 229, 160, 0.3);
+    background: rgba(0, 229, 160, 0.03);
+  }
+  
+  .challenge-checkbox {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-900);
+    border: 2px solid var(--primary-600);
+    border-radius: var(--radius-base);
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all var(--transition-base);
+  }
+  
+  .challenge-checkbox:checked {
+    background: var(--accent-500);
     border-color: var(--accent-500);
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m13.854 3.646-7.5 7.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6 10.293l7.146-7.147a.5.5 0 0 1 .708.708z'/%3e%3c/svg%3e");
   }
   
-  .form-checkbox:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 229, 160, 0.2);
+  .challenge-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .challenge-title {
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+  }
+  
+  .challenge-description {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+  
+  /* Consent Option */
+  .consent-option {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    cursor: pointer;
+  }
+  
+  .consent-checkbox {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-900);
+    border: 2px solid var(--primary-600);
+    border-radius: var(--radius-base);
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all var(--transition-base);
+  }
+  
+  .consent-checkbox:checked {
+    background: var(--accent-500);
+    border-color: var(--accent-500);
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m13.854 3.646-7.5 7.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6 10.293l7.146-7.147a.5.5 0 0 1 .708.708z'/%3e%3c/svg%3e");
+  }
+  
+  .consent-text {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+  
+  /* Form Submit */
+  .form-submit {
+    margin-top: var(--space-4);
+  }
+  
+  /* Enhanced Contact Methods Section */
+  .contact-methods-section {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+  }
+  
+  .contact-methods-section__title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--secondary-500);
+    margin-bottom: var(--space-6);
+  }
+  
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+  
+  .contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: var(--primary-900);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all var(--transition-base);
+  }
+  
+  .contact-method:hover {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .contact-method__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--accent-500);
+    color: var(--text-inverse);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--space-1);
+  }
+  
+  .contact-method__icon--secondary {
+    background: var(--secondary-500);
+  }
+  
+  .contact-method__content {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .contact-method__title {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+  }
+  
+  .contact-method__value {
+    font-size: var(--text-base);
+    color: var(--accent-500);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-2);
+    text-decoration: none;
+    transition: color var(--transition-base);
+  }
+  
+  .contact-method__value:hover {
+    color: var(--accent-400);
+  }
+  
+  .contact-method__description {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+  
+  /* Enhanced Guarantee Section */
+  .guarantee-section {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+  }
+  
+  .guarantee-section__title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--secondary-500);
+    margin-bottom: var(--space-6);
+  }
+  
+  .guarantee-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+  
+  .guarantee-metric {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: var(--primary-900);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .guarantee-metric__icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 128, 255, 0.1);
+    border: 1px solid rgba(0, 128, 255, 0.2);
+    border-radius: var(--radius-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-500);
+  }
+  
+  .guarantee-metric__content {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .guarantee-metric__value {
+    display: block;
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: var(--secondary-500);
+    line-height: 1;
+    margin-bottom: var(--space-1);
+  }
+  
+  .guarantee-metric__label {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    font-weight: var(--font-medium);
+  }
+  
+  /* Enhanced Contact Card Footer */
+  .contact-card__footer {
+    margin-top: auto;
+    padding-top: var(--space-2);
+  }
+  
+  /* Enhanced Service CTA (same as services) */
+  .service-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    width: 100%;
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    text-decoration: none;
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-cta--primary {
+    background: linear-gradient(135deg, var(--accent-500) 0%, var(--accent-400) 100%);
+    color: var(--text-inverse);
+    border: 1px solid var(--accent-500);
+  }
+  
+  .service-cta--secondary {
+    background: linear-gradient(135deg, var(--secondary-500) 0%, var(--secondary-400) 100%);
+    color: var(--text-inverse);
+    border: 1px solid var(--secondary-500);
+  }
+  
+  .service-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+  }
+  
+  .service-cta:hover {
+    transform: translateY(-2px);
+  }
+  
+  .service-cta--primary:hover {
+    box-shadow: 0 12px 32px rgba(0, 229, 160, 0.4);
+  }
+  
+  .service-cta--secondary:hover {
+    box-shadow: 0 12px 32px rgba(0, 128, 255, 0.4);
+  }
+  
+  .service-cta:hover::before {
+    left: 100%;
+  }
+  
+  /* Enhanced Methodology Section */
+  .methodology-section {
+    padding: var(--space-32) 0;
+    background: var(--primary-900);
+    position: relative;
+  }
+  
+  /* Enhanced Methodology Preview */
+  .methodology-preview {
+    display: grid;
+    gap: var(--space-6);
+    margin-bottom: var(--space-12);
+  }
+  
+  @media (min-width: 768px) {
+    .methodology-preview {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .methodology-preview {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .methodology-step-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background: var(--primary-800);
+    border: 1px solid var(--primary-700);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-base);
+  }
+  
+  .methodology-step-card:hover {
+    border-color: rgba(0, 229, 160, 0.3);
+    background: rgba(0, 229, 160, 0.03);
+    transform: translateY(-4px);
+  }
+  
+  .methodology-step-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-xl);
+    font-weight: var(--font-bold);
+    font-size: var(--text-xl);
+    flex-shrink: 0;
+  }
+  
+  .methodology-step-card__icon--primary {
+    background: var(--accent-500);
+    color: var(--text-inverse);
+  }
+  
+  .methodology-step-card__icon--secondary {
+    background: var(--secondary-500);
+    color: var(--text-inverse);
+  }
+  
+  .methodology-step-card__content {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .methodology-step-card__title {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+  }
+  
+  .methodology-step-card__description {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+  
+  .methodology-cta {
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      max-width: 36rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: var(--space-20) 0 var(--space-16);
+    }
+    
+    .trust-indicators {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    
+    .trust-card {
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .contact-card {
+      padding: var(--space-8);
+      gap: var(--space-6);
+    }
+    
+    .contact-card__header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-4);
+    }
+    
+    .contact-card__metric {
+      text-align: center;
+    }
+    
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .challenges-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .methodology-preview {
+      grid-template-columns: 1fr;
+    }
+    
+    .guarantee-metrics {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-card {
+      padding: var(--space-6);
+    }
+    
+    .hero-description {
+      font-size: var(--text-lg);
+    }
+  }
+  
+  /* Loading states */
+  .hidden {
+    display: none;
+  }
+  
+  /* Success message styles */
+  .success-message {
+    background: var(--accent-500);
+    color: var(--text-inverse);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    text-align: center;
+  }
+  
+  .success-message h3 {
+    margin-bottom: var(--space-4);
+  }
+  
+  .success-message p {
+    margin-bottom: var(--space-2);
+  }
+  
+  .success-message p:last-child {
+    margin-bottom: 0;
+    opacity: 0.9;
+  }
+  
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    .contact-card,
+    .trust-card,
+    .hero-badge,
+    .service-cta,
+    .methodology-step-card,
+    .challenge-option,
+    .contact-method,
+    .guarantee-metric,
+    .animate-fade-in,
+    .animate-slide-up,
+    .animate-scale-in {
+      animation: none;
+      transition: none;
+    }
+    
+    .contact-card:hover,
+    .trust-card:hover,
+    .service-cta:hover,
+    .methodology-step-card:hover {
+      transform: none;
+    }
   }
 </style>
 
@@ -454,7 +1519,7 @@ import OptimizedLayout from '@/layouts/OptimizedLayout.astro';
     const btnText = document.getElementById('btn-text');
     const btnLoading = document.getElementById('btn-loading');
     
-    if (form) {
+    if (form && btnText && btnLoading) {
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
@@ -464,21 +1529,26 @@ import OptimizedLayout from '@/layouts/OptimizedLayout.astro';
         
         // Simulate form submission (replace with actual endpoint)
         setTimeout(() => {
-          // Show success message
+          // Create success message
           const successDiv = document.createElement('div');
-          successDiv.className = 'bg-accent-500 text-white p-6 rounded-xl text-center';
+          successDiv.className = 'success-message animate-fade-in';
           successDiv.innerHTML = `
-            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div style="width: 4rem; height: 4rem; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-6);">
+              <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
             </div>
-            <h3 class="text-title mb-2">¡Solicitud Enviada!</h3>
-            <p class="text-body mb-4">Recibirás tu diagnóstico personalizado en las próximas 24 horas.</p>
-            <p class="text-body-small opacity-90">Nuestro equipo de expertos analizará tu información y te contactará con recomendaciones específicas.</p>
+            <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); margin-bottom: var(--space-4);">¡Solicitud Enviada Exitosamente!</h3>
+            <p style="font-size: var(--text-base); margin-bottom: var(--space-4);">Tu diagnóstico digital está en proceso. Recibirás tu análisis personalizado en las próximas 24 horas.</p>
+            <p style="font-size: var(--text-sm); opacity: 0.9;">Nuestro equipo de expertos analizará la información proporcionada y te contactará con recomendaciones específicas para tu empresa.</p>
           `;
           
-          form.replaceWith(successDiv);
+          // Replace form with success message
+          const formContainer = form.closest('.contact-card__content');
+          if (formContainer) {
+            formContainer.innerHTML = '';
+            formContainer.appendChild(successDiv);
+          }
         }, 2000);
       });
     }

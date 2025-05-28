@@ -4,130 +4,214 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
 ---
 
 <OptimizedLayout 
-  title="Eureka ArchiTech - Transformando el Futuro Digital"
-  description="Empoderar a las organizaciones en su transformación digital mediante soluciones innovadoras, liderazgo estratégico y excelencia operacional."
+  title="EurekaArchiTech - Transformación Digital Empresarial | Consultoría Estratégica"
+  description="Empoderar a las organizaciones en su transformación digital mediante soluciones innovadoras, liderazgo estratégico y excelencia operacional que garantizan resultados medibles y sostenibles."
+  type="website"
 >
-  <!-- Hero Section - Minimalista y Directo -->
-  <section class="hero-container">
-    <div class="container text-center animate-fade-in">
-      
-      <!-- Headline Principal -->
-      <h1 class="text-display text-primary mb-6 max-w-5xl mx-auto">
-        Transformando el 
-        <span class="text-accent">Futuro Digital</span>
-      </h1>
-      
-      <!-- Subheadline Claro -->
-      <p class="text-headline text-secondary mb-8 max-w-3xl mx-auto">
-        Empoderar a las organizaciones en su transformación digital mediante soluciones innovadoras
-      </p>
-      
-      <!-- CTA Principal Prominente -->
-      <div class="mb-12">
-        <a href="/contacto" class="btn btn-primary btn-lg hover-lift animate-scale-in">
-          Diagnóstico Gratuito
-        </a>
-      </div>
-      
-      <!-- Social Proof Simple -->
-      <div class="flex items-center justify-center gap-8 text-body-small text-muted">
-        <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-          </svg>
-          Red de +40 especialistas
-        </span>
-        <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-          </svg>
-          Compromiso Triple 30
-        </span>
+  <!-- Hero Section Enhanced -->
+  <section class="home-hero">
+    <div class="home-hero__background">
+      <div class="home-hero__orb home-hero__orb--primary"></div>
+      <div class="home-hero__orb home-hero__orb--secondary"></div>
+      <div class="home-hero__grid-pattern"></div>
+    </div>
+    
+    <div class="container relative z-10">
+      <div class="home-hero__content">
+        <!-- Badge -->
+        <div class="home-hero__badge animate-fade-in">
+          <div class="home-hero__badge-icon">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <span class="home-hero__badge-text">Transformación Digital Empresarial</span>
+        </div>
+        
+        <!-- Main Title -->
+        <h1 class="home-hero__title animate-slide-up" style="animation-delay: 0.2s">
+          Transformando el 
+          <span class="home-hero__title-accent">Futuro Digital</span>
+          de tu Empresa
+        </h1>
+        
+        <!-- Description -->
+        <p class="home-hero__description animate-slide-up" style="animation-delay: 0.4s">
+          Empoderar a las organizaciones en su transformación digital mediante soluciones innovadoras, 
+          liderazgo estratégico y excelencia operacional que garantizan resultados medibles y sostenibles.
+        </p>
+        
+        <!-- CTA Section -->
+        <div class="home-hero__cta animate-scale-in" style="animation-delay: 0.6s">
+          <a href="/contacto" class="btn btn-primary btn-lg hover-lift">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Diagnóstico Digital Gratuito
+          </a>
+          <a href="/servicios" class="btn btn-secondary btn-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+            Explorar Servicios
+          </a>
+        </div>
+        
+        <!-- Trust Indicators -->
+        <div class="home-hero__trust animate-fade-in" style="animation-delay: 0.8s">
+          <div class="home-hero__trust-item">
+            <div class="home-hero__trust-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <div class="home-hero__trust-content">
+              <span class="home-hero__trust-value">40+</span>
+              <span class="home-hero__trust-label">Especialistas</span>
+            </div>
+          </div>
+          
+          <div class="home-hero__trust-item">
+            <div class="home-hero__trust-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="home-hero__trust-content">
+              <span class="home-hero__trust-value">95%</span>
+              <span class="home-hero__trust-label">Éxito Proyectos</span>
+            </div>
+          </div>
+          
+          <div class="home-hero__trust-item">
+            <div class="home-hero__trust-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="home-hero__trust-content">
+              <span class="home-hero__trust-value">48h</span>
+              <span class="home-hero__trust-label">Activación</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Problema + Solución Section -->
-  <section class="py-20 bg-primary-800">
+  <!-- Problema + Solución Section - Refined -->
+  <section class="problem-solution-section">
     <div class="container">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <!-- Problema -->
-        <div class="animate-slide-up">
-          <h2 class="text-headline text-primary mb-6">
-            ¿Tu PyME se está quedando atrás digitalmente?
-          </h2>
-          <div class="space-y-4">
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-error-500 flex items-center justify-center flex-shrink-0 mt-1">
-                <span class="text-white text-sm">✕</span>
+      <div class="problem-solution-section__header">
+        <div class="problem-solution-section__badge">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span>Desafíos Digitales Actuales</span>
+        </div>
+        
+        <h2 class="problem-solution-section__title">
+          ¿Tu empresa se está quedando <span class="problem-solution-section__title-accent">atrás digitalmente?</span>
+        </h2>
+        
+        <p class="problem-solution-section__subtitle">
+          Identificamos y resolvemos los desafíos más comunes que enfrentan las organizaciones en su transformación digital.
+        </p>
+      </div>
+      
+      <div class="problem-solution-section__content">
+        <!-- Problemas -->
+        <div class="problem-solution-section__problems">
+          <h3 class="problem-solution-section__section-title">Desafíos Comunes</h3>
+          <div class="problems-list">
+            <div class="problem-item">
+              <div class="problem-item__icon">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
               </div>
-              <p class="text-body text-secondary">
-                Procesos manuales que consumen tiempo y recursos valiosos
-              </p>
+              <div class="problem-item__content">
+                <h4 class="problem-item__title">Procesos Manuales Ineficientes</h4>
+                <p class="problem-item__description">Tareas repetitivas que consumen tiempo y recursos valiosos</p>
+              </div>
             </div>
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-error-500 flex items-center justify-center flex-shrink-0 mt-1">
-                <span class="text-white text-sm">✕</span>
+            
+            <div class="problem-item">
+              <div class="problem-item__icon">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
               </div>
-              <p class="text-body text-secondary">
-                Competidores más ágiles ganando terreno en tu mercado
-              </p>
+              <div class="problem-item__content">
+                <h4 class="problem-item__title">Competencia Más Ágil</h4>
+                <p class="problem-item__description">Competidores con mejores herramientas ganando terreno en tu mercado</p>
+              </div>
             </div>
-            <div class="flex items-start gap-3">
-              <div class="w-6 h-6 rounded-full bg-error-500 flex items-center justify-center flex-shrink-0 mt-1">
-                <span class="text-white text-sm">✕</span>
+            
+            <div class="problem-item">
+              <div class="problem-item__icon">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                </svg>
               </div>
-              <p class="text-body text-secondary">
-                Clientes esperando experiencias digitales que no puedes ofrecer
-              </p>
+              <div class="problem-item__content">
+                <h4 class="problem-item__title">Expectativas de Cliente</h4>
+                <p class="problem-item__description">Clientes esperando experiencias digitales que no puedes ofrecer</p>
+              </div>
             </div>
           </div>
         </div>
         
         <!-- Solución -->
-        <div class="animate-slide-up">
-          <div class="card card-premium">
-            <h3 class="text-title text-accent mb-4">Metodología EUREKA</h3>
-            <p class="text-body text-secondary mb-6">
-              Transformación digital estructurada que convierte tus desafíos en ventajas competitivas.
+        <div class="problem-solution-section__solution">
+          <div class="solution-card">
+            <div class="solution-card__header">
+              <div class="solution-card__icon">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="solution-card__title">Metodología <span class="text-accent">EUREKA</span></h3>
+            </div>
+            
+            <p class="solution-card__description">
+              Transformación digital estructurada que convierte tus desafíos en ventajas competitivas sostenibles.
             </p>
-            <div class="space-y-3">
-              <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center">
-                  <span class="text-primary-900 text-sm font-bold">E</span>
-                </div>
-                <span class="text-body text-primary">Evaluación integral</span>
+            
+            <div class="eureka-steps">
+              <div class="eureka-step">
+                <div class="eureka-step__marker">E</div>
+                <span class="eureka-step__label">Evaluación integral</span>
               </div>
-              <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center">
-                  <span class="text-primary-900 text-sm font-bold">U</span>
-                </div>
-                <span class="text-body text-primary">Unificación de procesos</span>
+              <div class="eureka-step">
+                <div class="eureka-step__marker">U</div>
+                <span class="eureka-step__label">Unificación de procesos</span>
               </div>
-              <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center">
-                  <span class="text-primary-900 text-sm font-bold">R</span>
-                </div>
-                <span class="text-body text-primary">Rediseño estratégico</span>
+              <div class="eureka-step">
+                <div class="eureka-step__marker">R</div>
+                <span class="eureka-step__label">Rediseño estratégico</span>
               </div>
-              <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center">
-                  <span class="text-primary-900 text-sm font-bold">E</span>
-                </div>
-                <span class="text-body text-primary">Ejecución controlada</span>
+              <div class="eureka-step">
+                <div class="eureka-step__marker">E</div>
+                <span class="eureka-step__label">Ejecución controlada</span>
               </div>
-              <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center">
-                  <span class="text-primary-900 text-sm font-bold">K</span>
-                </div>
-                <span class="text-body text-primary">Knowledge transfer</span>
+              <div class="eureka-step">
+                <div class="eureka-step__marker">K</div>
+                <span class="eureka-step__label">Knowledge transfer</span>
               </div>
-              <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center">
-                  <span class="text-primary-900 text-sm font-bold">A</span>
-                </div>
-                <span class="text-body text-primary">Autonomía garantizada</span>
+              <div class="eureka-step">
+                <div class="eureka-step__marker">A</div>
+                <span class="eureka-step__label">Autonomía garantizada</span>
               </div>
+            </div>
+            
+            <div class="solution-card__cta">
+              <a href="/nosotros" class="btn btn-secondary btn-base">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Conocer Metodología Completa
+              </a>
             </div>
           </div>
         </div>
@@ -135,9 +219,8 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
     </div>
   </section>
 
-  <!-- Casos de Éxito Comprobado - Enhanced -->
+  <!-- Success Stories Section - Enhanced -->
   <section class="success-stories-section">
-    <!-- Enhanced Background Effects -->
     <div class="success-stories__background">
       <div class="success-stories__orb success-stories__orb--primary"></div>
       <div class="success-stories__orb success-stories__orb--secondary"></div>
@@ -146,7 +229,7 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
     
     <div class="container relative z-10">
       <!-- Enhanced Header -->
-      <div class="success-stories__header">
+      <div class="success-stories__header animate-fade-in">
         <div class="success-stories__badge">
           <div class="success-stories__badge-icon">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -156,26 +239,26 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
           <span class="success-stories__badge-text">Casos de Éxito Comprobado</span>
         </div>
         
-        <h2 class="success-stories__title">
+        <h2 class="success-stories__title animate-slide-up" style="animation-delay: 0.2s">
           Transformación Digital que 
           <span class="success-stories__title-accent">Transforma Resultados</span>
         </h2>
         
-        <p class="success-stories__subtitle">
+        <p class="success-stories__subtitle animate-slide-up" style="animation-delay: 0.3s">
           Descubre cómo nuestros clientes han logrado resultados excepcionales con nuestras soluciones de transformación digital
         </p>
         
         <!-- Success Metrics Overview -->
-        <div class="success-stories__overview">
-          <div class="success-stories__overview-stat">
+        <div class="success-stories__overview animate-scale-in" style="animation-delay: 0.4s">
+          <div class="success-stories__overview-stat hover-lift">
             <div class="success-stories__overview-number">40+</div>
             <div class="success-stories__overview-label">Especialistas</div>
           </div>
-          <div class="success-stories__overview-stat">
+          <div class="success-stories__overview-stat hover-lift">
             <div class="success-stories__overview-number">95%</div>
             <div class="success-stories__overview-label">Éxito de Proyectos</div>
           </div>
-          <div class="success-stories__overview-stat">
+          <div class="success-stories__overview-stat hover-lift">
             <div class="success-stories__overview-number">2024</div>
             <div class="success-stories__overview-label">Fundación</div>
           </div>
@@ -183,7 +266,7 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
       </div>
       
       <!-- Featured Case Study -->
-      <div class="success-stories__featured">
+      <div class="success-stories__featured animate-fade-in" style="animation-delay: 0.5s">
         <!-- Company Header -->
         <div class="success-stories__company-header">
           <div class="success-stories__company-info">
@@ -222,9 +305,6 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
               </svg>
               Visitar Sitio Web
             </a>
-            <button class="btn btn-ghost btn-base">
-              Ver Caso Completo
-            </button>
           </div>
         </div>
 
@@ -233,7 +313,7 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
           <!-- Metrics and Timeline -->
           <div class="success-stories__main">
             <!-- Key Metrics -->
-            <div class="success-stories__metrics-container">
+            <div class="success-stories__metrics-container animate-slide-up" style="animation-delay: 0.6s">
               <h4 class="success-stories__section-title">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
@@ -242,7 +322,7 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
               </h4>
               
               <div class="success-stories__metrics-grid">
-                <div class="success-stories__metric">
+                <div class="success-stories__metric hover-lift">
                   <div class="success-stories__metric-header">
                     <div class="success-stories__metric-value success-stories__metric-value--accent">
                       40%
@@ -257,7 +337,7 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
                   <div class="success-stories__metric-description">Optimización de procesos core</div>
                 </div>
                 
-                <div class="success-stories__metric">
+                <div class="success-stories__metric hover-lift">
                   <div class="success-stories__metric-header">
                     <div class="success-stories__metric-value success-stories__metric-value--success">
                       0
@@ -272,7 +352,7 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
                   <div class="success-stories__metric-description">Estabilidad operacional total</div>
                 </div>
                 
-                <div class="success-stories__metric">
+                <div class="success-stories__metric hover-lift">
                   <div class="success-stories__metric-header">
                     <div class="success-stories__metric-value success-stories__metric-value--accent">
                       100%
@@ -287,7 +367,7 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
                   <div class="success-stories__metric-description">Certificación regulatoria completa</div>
                 </div>
                 
-                <div class="success-stories__metric">
+                <div class="success-stories__metric hover-lift">
                   <div class="success-stories__metric-header">
                     <div class="success-stories__metric-value success-stories__metric-value--warning">
                       ISO
@@ -305,24 +385,24 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
             </div>
             
             <!-- Implementation Timeline -->
-            <div class="success-stories__timeline">
+            <div class="success-stories__timeline animate-slide-up" style="animation-delay: 0.7s">
               <h5 class="success-stories__timeline-title">Fases de Implementación</h5>
               <div class="success-stories__timeline-items">
-                <div class="success-stories__timeline-item">
+                <div class="success-stories__timeline-item hover-lift">
                   <div class="success-stories__timeline-marker"></div>
                   <div class="success-stories__timeline-content">
                     <div class="success-stories__timeline-phase">Q2 2024</div>
                     <div class="success-stories__timeline-description">Arquitectura cloud-nativa y diseño del sistema</div>
                   </div>
                 </div>
-                <div class="success-stories__timeline-item">
+                <div class="success-stories__timeline-item hover-lift">
                   <div class="success-stories__timeline-marker"></div>
                   <div class="success-stories__timeline-content">
                     <div class="success-stories__timeline-phase">Q3 2024</div>
                     <div class="success-stories__timeline-description">Security Operations Center (SOC) y frameworks de seguridad</div>
                   </div>
                 </div>
-                <div class="success-stories__timeline-item">
+                <div class="success-stories__timeline-item hover-lift">
                   <div class="success-stories__timeline-marker"></div>
                   <div class="success-stories__timeline-content">
                     <div class="success-stories__timeline-phase">Q1 2025</div>
@@ -336,7 +416,7 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
           <!-- Sidebar Content -->
           <div class="success-stories__sidebar">
             <!-- Enhanced Testimonial -->
-            <div class="success-stories__testimonial">
+            <div class="success-stories__testimonial animate-fade-in" style="animation-delay: 0.6s">
               <div class="success-stories__testimonial-quote">
                 <svg class="w-10 h-10 text-accent-500 opacity-30" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
@@ -357,14 +437,14 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
                 </div>
                 <div class="success-stories__testimonial-verification">
                   <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723a3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812a3.066 3.066 0 00-1.745.723a3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                   </svg>
                 </div>
               </div>
             </div>
             
             <!-- Tech Stack -->
-            <div class="success-stories__tech-stack">
+            <div class="success-stories__tech-stack animate-slide-up" style="animation-delay: 0.8s">
               <h5 class="success-stories__tech-title">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
@@ -372,19 +452,19 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
                 Stack Tecnológico
               </h5>
               <div class="success-stories__tech-list">
-                <div class="success-stories__tech-item">
+                <div class="success-stories__tech-item hover-lift">
                   <div class="success-stories__tech-icon" style="background-color: #0078d4;"></div>
                   <span>Microsoft Azure Cloud</span>
                 </div>
-                <div class="success-stories__tech-item">
+                <div class="success-stories__tech-item hover-lift">
                   <div class="success-stories__tech-icon" style="background-color: #10b981;"></div>
                   <span>Microservicios Architecture</span>
                 </div>
-                <div class="success-stories__tech-item">
+                <div class="success-stories__tech-item hover-lift">
                   <div class="success-stories__tech-icon" style="background-color: #8b5cf6;"></div>
                   <span>Event-Driven Architecture</span>
                 </div>
-                <div class="success-stories__tech-item">
+                <div class="success-stories__tech-item hover-lift">
                   <div class="success-stories__tech-icon" style="background-color: #ef4444;"></div>
                   <span>DevSecOps Pipeline</span>
                 </div>
@@ -396,380 +476,198 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
     </div>
   </section>
 
-  <!-- Servicios de Transformación - Enhanced -->
-  <section class="services-section">
+  <!-- Services Preview Section -->
+  <section class="services-preview-section">
     <div class="container">
       <!-- Enhanced Header -->
-      <div class="services-section__header">
-        <div class="services-section__badge">
+      <div class="services-preview__header">
+        <div class="services-preview__badge">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
           </svg>
           <span>Nuestros Servicios</span>
         </div>
         
-        <h2 class="services-section__title">
-          Transformación Digital <span class="services-section__title-accent">Integral</span>
+        <h2 class="services-preview__title">
+          Transformación Digital <span class="services-preview__title-accent">Integral</span>
         </h2>
         
-        <p class="services-section__subtitle">
-          Cinco pilares fundamentales para acelerar su evolución tecnológica con resultados medibles
+        <p class="services-preview__subtitle">
+          Cinco pilares fundamentales para acelerar su evolución tecnológica con resultados medibles y un enfoque estratégico que garantiza el éxito sostenible.
         </p>
       </div>
       
       <!-- Services Grid -->
-      <div class="services-section__grid">
-        <!-- Arquitectura Tecnológica -->
-        <div class="service-card service-card--enhanced">
-          <div class="service-card__header-enhanced">
-            <div class="service-card__icon-container service-card__icon-container--architecture">
-              <svg class="service-card__icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="services-preview__grid">
+        <!-- Service 1: Arquitectura Tecnológica -->
+        <div class="service-preview-card">
+          <div class="service-preview-card__header">
+            <div class="service-preview-card__icon service-preview-card__icon--primary">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
               </svg>
             </div>
-            
-            <div class="service-card__header-content">
-              <h3 class="service-card__title">Arquitectura Tecnológica</h3>
-              <p class="service-card__category">Infraestructura & Cloud</p>
-            </div>
-            
-            <div class="service-card__metric">
-              <span class="service-card__metric-value">40%</span>
-              <span class="service-card__metric-label">Reducción Costos IT</span>
+            <div class="service-preview-card__metric">
+              <span class="service-preview-card__metric-value">40%</span>
+              <span class="service-preview-card__metric-label">Reducción Costos</span>
             </div>
           </div>
           
-          <div class="service-card__content">
-            <p class="service-card__description">
-              Diseñamos arquitecturas cloud-nativas escalables que unifican sus sistemas y optimizan el rendimiento empresarial.
+          <div class="service-preview-card__content">
+            <h3 class="service-preview-card__title">Arquitectura Tecnológica Empresarial</h3>
+            <p class="service-preview-card__category">Infraestructura & Cloud</p>
+            <p class="service-preview-card__description">
+              Transformamos su infraestructura tecnológica con una arquitectura empresarial completa que unifica plataformas cloud, aplicaciones de negocio e inteligencia artificial.
             </p>
-            
-            <div class="service-card__features">
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Microservicios & APIs</span>
-              </div>
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>DevSecOps Pipeline</span>
-              </div>
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Monitoring Avanzado</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="service-card__footer">
-            <button class="service-card__cta">
-              Explorar Arquitectura
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </button>
           </div>
         </div>
         
-        <!-- Mentoría Ejecutiva -->
-        <div class="service-card service-card--enhanced">
-          <div class="service-card__header-enhanced">
-            <div class="service-card__icon-container service-card__icon-container--mentoring">
-              <svg class="service-card__icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        <!-- Service 2: Mentoría Ejecutiva -->
+        <div class="service-preview-card">
+          <div class="service-preview-card__header">
+            <div class="service-preview-card__icon service-preview-card__icon--secondary">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
               </svg>
             </div>
-            
-            <div class="service-card__header-content">
-              <h3 class="service-card__title">Mentoría Ejecutiva</h3>
-              <p class="service-card__category">Liderazgo & Desarrollo</p>
-            </div>
-            
-            <div class="service-card__metric">
-              <span class="service-card__metric-value">85%</span>
-              <span class="service-card__metric-label">Mejora Performance</span>
+            <div class="service-preview-card__metric">
+              <span class="service-preview-card__metric-value">85%</span>
+              <span class="service-preview-card__metric-label">Mejora Performance</span>
             </div>
           </div>
           
-          <div class="service-card__content">
-            <p class="service-card__description">
-              Aceleramos el crecimiento de su equipo con mentores C-Level especializados en transformación digital.
+          <div class="service-preview-card__content">
+            <h3 class="service-preview-card__title">Mentoría Ejecutiva y Técnica</h3>
+            <p class="service-preview-card__category">Liderazgo & Desarrollo</p>
+            <p class="service-preview-card__description">
+              Potencie las capacidades de su equipo para afrontar los desafíos digitales actuales con mentores C-Level especializados en transformación digital.
             </p>
-            
-            <div class="service-card__features">
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Framework GEAR™</span>
-              </div>
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>KPIs Medibles</span>
-              </div>
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>ROI en 90 días</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="service-card__footer">
-            <button class="service-card__cta">
-              Conocer Mentores
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </button>
           </div>
         </div>
         
-        <!-- Liderazgo Estratégico -->
-        <div class="service-card service-card--enhanced">
-          <div class="service-card__header-enhanced">
-            <div class="service-card__icon-container service-card__icon-container--leadership">
-              <svg class="service-card__icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- Service 3: Liderazgo Estratégico -->
+        <div class="service-preview-card">
+          <div class="service-preview-card__header">
+            <div class="service-preview-card__icon service-preview-card__icon--primary">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
               </svg>
             </div>
-            
-            <div class="service-card__header-content">
-              <h3 class="service-card__title">Liderazgo Estratégico</h3>
-              <p class="service-card__category">Transformación & Resultados</p>
-            </div>
-            
-            <div class="service-card__metric">
-              <span class="service-card__metric-value">60%</span>
-              <span class="service-card__metric-label">Faster Time-to-Market</span>
+            <div class="service-preview-card__metric">
+              <span class="service-preview-card__metric-value">60%</span>
+              <span class="service-preview-card__metric-label">Faster Time-to-Market</span>
             </div>
           </div>
           
-          <div class="service-card__content">
-            <p class="service-card__description">
-              Ejecutivos experimentados que lideran su transformación digital con metodologías probadas y resultados garantizados.
+          <div class="service-preview-card__content">
+            <h3 class="service-preview-card__title">Liderazgo Estratégico como Servicio</h3>
+            <p class="service-preview-card__category">Estrategia & Ejecución</p>
+            <p class="service-preview-card__description">
+              Acelere su transformación digital con ejecutivos experimentados que han liderado proyectos similares exitosamente.
             </p>
-            
-            <div class="service-card__features">
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>C-Level Interino</span>
-              </div>
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Risk Management</span>
-              </div>
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Change Management</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="service-card__footer">
-            <button class="service-card__cta">
-              Solicitar Liderazgo
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </button>
           </div>
         </div>
+      </div>
+      
+      <div class="services-preview__cta">
+        <a href="/servicios" class="btn btn-primary btn-lg">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+          </svg>
+          Ver Todos los Servicios
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <!-- Recursos Temporales de Transición -->
-        <div class="service-card service-card--enhanced">
-          <div class="service-card__header-enhanced">
-            <div class="service-card__icon-container service-card__icon-container--resources">
-              <svg class="service-card__icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-              </svg>
-            </div>
-            
-            <div class="service-card__header-content">
-              <h3 class="service-card__title">Recursos Temporales</h3>
-              <p class="service-card__category">Talento & Transición</p>
-            </div>
-            
-            <div class="service-card__metric">
-              <span class="service-card__metric-value">90%</span>
-              <span class="service-card__metric-label">Éxito Transición</span>
-            </div>
-          </div>
-          
-          <div class="service-card__content">
-            <p class="service-card__description">
-              Expertos temporales que aseguran continuidad operacional durante procesos críticos de transformación digital.
-            </p>
-            
-            <div class="service-card__features">
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Integración inmediata</span>
-              </div>
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Transferencia de conocimiento</span>
-              </div>
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Mentoring transicional</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="service-card__footer">
-            <button class="service-card__cta">
-              Solicitar Recursos
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </button>
-          </div>
+  <!-- Triple Guarantee Section -->
+  <TripleGuaranteeSection />
+
+  <!-- Final CTA Section -->
+  <section class="final-cta-section">
+    <div class="container">
+      <div class="final-cta__content">
+        <div class="final-cta__header">
+          <h2 class="final-cta__title">
+            ¿Listo para <span class="final-cta__title-accent">Transformar</span> tu Empresa?
+          </h2>
+          <p class="final-cta__description">
+            Obtén tu diagnóstico digital gratuito y descubre las oportunidades específicas para tu organización.
+          </p>
         </div>
-
-        <!-- Red de Expertos -->
-        <div class="service-card service-card--enhanced">
-          <div class="service-card__header-enhanced">
-            <div class="service-card__icon-container service-card__icon-container--network">
-              <svg class="service-card__icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
-            </div>
-            
-            <div class="service-card__header-content">
-              <h3 class="service-card__title">Red de Expertos</h3>
-              <p class="service-card__category">Conocimiento & Conexiones</p>
-            </div>
-            
-            <div class="service-card__metric">
-              <span class="service-card__metric-value">500+</span>
-              <span class="service-card__metric-label">Expertos Globales</span>
-            </div>
+        
+        <div class="final-cta__actions">
+          <a href="/contacto" class="btn btn-primary btn-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Solicitar Diagnóstico Gratuito
+          </a>
+          <a href="/nosotros" class="btn btn-secondary btn-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            Conocer Nuestro Equipo
+          </a>
+        </div>
+        
+        <div class="final-cta__guarantees">
+          <div class="final-cta__guarantee">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>100% Gratuito, sin compromiso</span>
           </div>
-          
-          <div class="service-card__content">
-            <p class="service-card__description">
-              Acceso directo a nuestra red internacional de especialistas en tecnologías emergentes y metodologías disruptivas.
-            </p>
-            
-            <div class="service-card__features">
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Conectividad global</span>
-              </div>
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Tecnologías emergentes</span>
-              </div>
-              <div class="service-card__feature">
-                <svg class="service-card__feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Knowledge sharing</span>
-              </div>
-            </div>
+          <div class="final-cta__guarantee">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Respuesta en menos de 24 horas</span>
           </div>
-          
-          <div class="service-card__footer">
-            <button class="service-card__cta">
-              Acceder a la Red
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </button>
+          <div class="final-cta__guarantee">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Análisis personalizado por expertos</span>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Garantía Triple 30 - Componente Optimizado -->
-  <TripleGuaranteeSection />
-
-  <!-- CTA Final -->
-
 </OptimizedLayout>
 
 <style>
-  /* Custom animations for this page */
-  .animate-fade-in {
-    animation: fadeIn 0.8s ease-out;
-  }
-  
-  .animate-slide-up {
-    animation: slideUp 0.6s ease-out;
-  }
-  
-  .animate-scale-in {
-    animation: scaleIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  /* Staggered animations */
-  .animate-slide-up:nth-child(2) {
-    animation-delay: 0.2s;
-    opacity: 0;
-    animation-fill-mode: forwards;
-  }
-  
-  /* Hero background subtle pattern */
-  .hero-container {
-    background: 
-      radial-gradient(circle at 25% 25%, rgba(0, 229, 160, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, rgba(0, 128, 255, 0.05) 0%, transparent 50%),
-      linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 100%);
-  }
-  
-  /* =======================================
-     SUCCESS STORIES SECTION - ENHANCED
-     ======================================= */
-  
-  .success-stories-section {
+  /* ================================
+     HOME PAGE ENHANCED STYLES
+     ================================ */
+
+  /* Hero Section Enhanced */
+  .home-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    padding: 6rem 0;
-    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
     overflow: hidden;
+    padding: var(--space-32) 0 var(--space-24);
+    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
   }
-  
-  /* Enhanced Background Effects */
-  .success-stories__background {
+
+  .home-hero__background {
     position: absolute;
     inset: 0;
     overflow: hidden;
   }
-  
-  .success-stories__orb {
+
+  .home-hero__orb {
     position: absolute;
     border-radius: 50%;
     filter: blur(100px);
     opacity: 0.1;
     animation: float 6s ease-in-out infinite;
   }
-  
-  .success-stories__orb--primary {
+
+  .home-hero__orb--primary {
     width: 400px;
     height: 400px;
     background: var(--accent-500);
@@ -777,8 +675,8 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
     left: -10%;
     animation-delay: 0s;
   }
-  
-  .success-stories__orb--secondary {
+
+  .home-hero__orb--secondary {
     width: 600px;
     height: 600px;
     background: var(--secondary-500);
@@ -786,8 +684,8 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
     right: -15%;
     animation-delay: 3s;
   }
-  
-  .success-stories__grid-pattern {
+
+  .home-hero__grid-pattern {
     position: absolute;
     inset: 0;
     background-image: 
@@ -796,557 +694,630 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
     background-size: 50px 50px;
     opacity: 0.3;
   }
-  
+
   @keyframes float {
     0%, 100% { transform: translateY(0px) scale(1); }
     50% { transform: translateY(-20px) scale(1.1); }
   }
-  
-  /* Header Styles */
-  .success-stories__header {
+
+  .home-hero__content {
+    max-width: 56rem;
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 4rem;
     position: relative;
     z-index: 10;
   }
-  
-  .success-stories__badge {
+
+  /* Hero Badge */
+  .home-hero__badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
-    background: linear-gradient(135deg, rgba(0, 229, 160, 0.1) 0%, rgba(0, 128, 255, 0.1) 100%);
+    gap: var(--space-3);
+    background: rgba(0, 229, 160, 0.1);
     border: 1px solid rgba(0, 229, 160, 0.3);
-    border-radius: 50px;
-    padding: 0.75rem 1.5rem;
-    margin-bottom: 2rem;
-    backdrop-filter: blur(10px);
+    border-radius: var(--radius-full);
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--accent-500);
+    margin-bottom: var(--space-10);
+    backdrop-filter: blur(12px);
     transition: all var(--transition-base);
   }
-  
-  .success-stories__badge:hover {
-    background: linear-gradient(135deg, rgba(0, 229, 160, 0.15) 0%, rgba(0, 128, 255, 0.15) 100%);
-    border-color: rgba(0, 229, 160, 0.5);
+
+  .home-hero__badge:hover {
+    background: rgba(0, 229, 160, 0.15);
+    border-color: rgba(0, 229, 160, 0.4);
     transform: translateY(-2px);
   }
-  
-  .success-stories__badge-icon {
-    color: var(--accent-500);
+
+  .home-hero__badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
   }
-  
-  .success-stories__badge-text {
-    color: var(--accent-500);
-    font-weight: var(--font-semibold);
-    font-size: var(--text-sm);
+
+  .home-hero__badge-text {
+    letter-spacing: 0.025em;
   }
-  
-  .success-stories__title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+
+  /* Hero Title */
+  .home-hero__title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: var(--font-bold);
     line-height: var(--leading-tight);
     color: var(--text-primary);
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+    margin-bottom: var(--space-8);
+    letter-spacing: -0.025em;
   }
-  
-  .success-stories__title-accent {
+
+  .home-hero__title-accent {
     background: linear-gradient(135deg, var(--accent-500) 0%, var(--secondary-500) 100%);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
+    background-clip: text;
   }
-  
-  .success-stories__subtitle {
-    font-size: var(--text-lg);
+
+  /* Hero Description */
+  .home-hero__description {
+    font-size: var(--text-xl);
     color: var(--text-secondary);
-    max-width: 48rem;
-    margin: 0 auto 3rem;
     line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-16);
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  /* Overview Stats */
-  .success-stories__overview {
+
+  /* Hero CTA */
+  .home-hero__cta {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-16);
+  }
+
+  @media (min-width: 768px) {
+    .home-hero__cta {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  /* Trust Indicators */
+  .home-hero__trust {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-6);
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+
+  .home-hero__trust-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6) var(--space-5);
+    background: rgba(0, 229, 160, 0.05);
+    border: 1px solid rgba(0, 229, 160, 0.15);
+    border-radius: var(--radius-xl);
+    backdrop-filter: blur(12px);
+    transition: all var(--transition-base);
+  }
+
+  .home-hero__trust-item:hover {
+    transform: translateY(-4px);
+    background: rgba(0, 229, 160, 0.08);
+    border-color: rgba(0, 229, 160, 0.25);
+    box-shadow: 0 12px 32px rgba(0, 229, 160, 0.15);
+  }
+
+  .home-hero__trust-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 229, 160, 0.15);
+    border: 1px solid rgba(0, 229, 160, 0.3);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 3rem;
-    margin-top: 2rem;
+    color: var(--accent-500);
   }
-  
-  .success-stories__overview-stat {
-    text-align: center;
-    position: relative;
+
+  .home-hero__trust-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
   }
-  
-  .success-stories__overview-stat::after {
-    content: '';
-    position: absolute;
-    bottom: -0.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2rem;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-500), var(--secondary-500));
-    border-radius: 1px;
-  }
-  
-  .success-stories__overview-number {
-    font-size: var(--text-3xl);
+
+  .home-hero__trust-value {
+    font-size: var(--text-2xl);
     font-weight: var(--font-bold);
     color: var(--accent-500);
-    margin-bottom: 0.5rem;
+    line-height: 1;
   }
-  
-  .success-stories__overview-label {
+
+  .home-hero__trust-label {
     font-size: var(--text-sm);
     color: var(--text-secondary);
     font-weight: var(--font-medium);
   }
-  
-  /* Featured Case Study */
-  .success-stories__featured {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(42, 42, 42, 0.6) 100%);
-    border: 1px solid var(--primary-600);
-    border-radius: var(--radius-2xl);
-    padding: 3rem;
-    backdrop-filter: blur(20px);
-    transition: all var(--transition-base);
+
+  /* Problem Solution Section */
+  .problem-solution-section {
+    padding: var(--space-32) 0;
+    background: var(--primary-800);
     position: relative;
-    overflow: hidden;
   }
-  
-  .success-stories__featured::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-500), var(--secondary-500), var(--accent-500));
-    opacity: 0;
-    transition: opacity var(--transition-base);
+
+  .problem-solution-section__header {
+    text-align: center;
+    margin-bottom: var(--space-20);
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  .success-stories__featured:hover {
-    border-color: var(--accent-500);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 229, 160, 0.1);
-  }
-  
-  .success-stories__featured:hover::before {
-    opacity: 1;
-  }
-  
-  /* Company Header */
-  .success-stories__company-header {
-    display: flex;
+
+  .problem-solution-section__badge {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid var(--primary-600);
+    gap: var(--space-2);
+    background: rgba(0, 128, 255, 0.1);
+    border: 1px solid rgba(0, 128, 255, 0.25);
+    border-radius: var(--radius-full);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--secondary-500);
+    margin-bottom: var(--space-8);
+    backdrop-filter: blur(10px);
   }
-  
-  .success-stories__company-info {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+
+  .problem-solution-section__title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-6);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
   }
-  
-  .success-stories__company-logo {
-    width: 5rem;
-    height: 5rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
-    border-radius: var(--radius-xl);
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: 
-      0 8px 25px rgba(0, 0, 0, 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    transition: all var(--transition-base);
+
+  .problem-solution-section__title-accent {
+    background: linear-gradient(135deg, var(--accent-500) 0%, var(--secondary-500) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  
-  .success-stories__company-logo::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    background: linear-gradient(45deg, var(--accent-500), var(--secondary-500), var(--accent-500));
-    border-radius: inherit;
-    z-index: -1;
-    opacity: 0.6;
-    filter: blur(1px);
+
+  .problem-solution-section__subtitle {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
   }
-  
-  .success-stories__company-logo::after {
-    content: '';
-    position: absolute;
-    inset: 2px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: calc(var(--radius-xl) - 2px);
-    z-index: 1;
-    opacity: 0;
-    transition: opacity var(--transition-base);
+
+  .problem-solution-section__content {
+    display: grid;
+    gap: var(--space-12);
+    align-items: start;
   }
-  
-  .success-stories__company-logo:hover {
-    transform: scale(1.05);
-    box-shadow: 
-      0 12px 35px rgba(0, 229, 160, 0.2),
-      0 8px 25px rgba(0, 0, 0, 0.25),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  @media (min-width: 1024px) {
+    .problem-solution-section__content {
+      grid-template-columns: 1fr 1fr;
+    }
   }
-  
-  .success-stories__company-logo:hover::before {
-    opacity: 0.8;
-    filter: blur(0);
-  }
-  
-  .success-stories__company-logo:hover::after {
-    opacity: 1;
-  }
-  
-  .success-stories__company-logo img {
-    position: relative;
-    z-index: 2;
-    filter: contrast(1.1) brightness(1.05);
-    transition: all var(--transition-base);
-  }
-  
-  .success-stories__company-logo:hover img {
-    filter: contrast(1.2) brightness(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  }
-  
-  .success-stories__company-name {
+
+  .problem-solution-section__section-title {
     font-size: var(--text-xl);
     font-weight: var(--font-semibold);
     color: var(--text-primary);
-    margin-bottom: 0.25rem;
+    margin-bottom: var(--space-8);
   }
-  
-  .success-stories__company-industry {
-    font-size: var(--text-sm);
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
-  }
-  
-  .success-stories__company-meta {
+
+  /* Problems List */
+  .problems-list {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    flex-direction: column;
+    gap: var(--space-6);
   }
-  
-  .success-stories__project-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(0, 229, 160, 0.1);
-    color: var(--accent-500);
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--radius-full);
-    font-size: var(--text-xs);
-    font-weight: var(--font-medium);
-    border: 1px solid rgba(0, 229, 160, 0.2);
-  }
-  
-  .success-stories__project-timeline {
-    font-size: var(--text-xs);
-    color: var(--text-muted);
-  }
-  
-  .success-stories__company-actions {
+
+  .problem-item {
     display: flex;
-    gap: 0.75rem;
-  }
-  
-  /* Main Content Grid */
-  .success-stories__content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-  }
-  
-  /* Metrics Container */
-  .success-stories__metrics-container {
-    background: rgba(0, 0, 0, 0.2);
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background: var(--primary-900);
+    border: 1px solid var(--primary-700);
     border-radius: var(--radius-xl);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border: 1px solid var(--primary-600);
-  }
-  
-  .success-stories__section-title {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: var(--text-lg);
-    font-weight: var(--font-semibold);
-    color: var(--accent-500);
-    margin-bottom: 1.5rem;
-  }
-  
-  .success-stories__metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .success-stories__metric {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(42, 42, 42, 0.4) 100%);
-    border: 1px solid var(--primary-600);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    text-align: center;
     transition: all var(--transition-base);
-    position: relative;
-    overflow: hidden;
   }
-  
-  .success-stories__metric::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-500), var(--secondary-500));
-    opacity: 0;
-    transition: opacity var(--transition-base);
+
+  .problem-item:hover {
+    border-color: rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.03);
   }
-  
-  .success-stories__metric:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent-500);
-    box-shadow: 0 8px 25px rgba(0, 229, 160, 0.15);
-  }
-  
-  .success-stories__metric:hover::before {
-    opacity: 1;
-  }
-  
-  .success-stories__metric-header {
+
+  .problem-item__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
+    color: var(--error-500);
   }
-  
-  .success-stories__metric-value {
-    font-size: var(--text-3xl);
-    font-weight: var(--font-bold);
-  }
-  
-  .success-stories__metric-value--accent { color: var(--accent-500); }
-  .success-stories__metric-value--success { color: var(--success-500); }
-  .success-stories__metric-value--warning { color: var(--warning-500); }
-  .success-stories__metric-value--secondary { color: var(--secondary-500); }
-  
-  .success-stories__metric-trend {
-    opacity: 0.7;
-  }
-  
-  .success-stories__metric-trend--up { color: var(--success-500); }
-  .success-stories__metric-trend--down { color: var(--error-500); }
-  .success-stories__metric-trend--neutral { color: var(--neutral-500); }
-  
-  .success-stories__metric-label {
-    font-size: var(--text-sm);
-    color: var(--text-secondary);
-    font-weight: var(--font-medium);
-    margin-bottom: 0.25rem;
-  }
-  
-  .success-stories__metric-description {
-    font-size: var(--text-xs);
-    color: var(--text-muted);
-  }
-  
-  /* Timeline */
-  .success-stories__timeline {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: var(--radius-xl);
-    padding: 2rem;
-    border: 1px solid var(--primary-600);
-  }
-  
-  .success-stories__timeline-title {
+
+  .problem-item__title {
     font-size: var(--text-base);
     font-weight: var(--font-semibold);
     color: var(--text-primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-2);
   }
-  
-  .success-stories__timeline-items {
-    position: relative;
-  }
-  
-  .success-stories__timeline-items::before {
-    content: '';
-    position: absolute;
-    left: 0.5rem;
-    top: 0.5rem;
-    bottom: 0.5rem;
-    width: 2px;
-    background: linear-gradient(180deg, var(--accent-500), var(--secondary-500));
-    border-radius: 1px;
-  }
-  
-  .success-stories__timeline-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-  }
-  
-  .success-stories__timeline-item:last-child {
-    margin-bottom: 0;
-  }
-  
-  .success-stories__timeline-marker {
-    width: 1rem;
-    height: 1rem;
-    background: var(--accent-500);
-    border-radius: 50%;
-    border: 3px solid var(--primary-800);
-    flex-shrink: 0;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .success-stories__timeline-phase {
-    font-size: var(--text-sm);
-    font-weight: var(--font-semibold);
-    color: var(--accent-500);
-    margin-bottom: 0.25rem;
-  }
-  
-  .success-stories__timeline-description {
+
+  .problem-item__description {
     font-size: var(--text-sm);
     color: var(--text-secondary);
     line-height: var(--leading-relaxed);
   }
-  
-  /* Sidebar */
-  .success-stories__sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  /* Enhanced Testimonial */
-  .success-stories__testimonial {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(42, 42, 42, 0.6) 100%);
-    border: 1px solid var(--primary-600);
+
+  /* Solution Card */
+  .solution-card {
+    background: linear-gradient(135deg, rgba(0, 229, 160, 0.05) 0%, rgba(26, 26, 26, 0.9) 100%);
+    border: 1px solid rgba(0, 229, 160, 0.2);
     border-radius: var(--radius-xl);
-    padding: 2rem;
-    position: relative;
-    backdrop-filter: blur(10px);
-    transition: all var(--transition-base);
+    padding: var(--space-8);
   }
-  
-  .success-stories__testimonial:hover {
-    border-color: var(--accent-500);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(0, 229, 160, 0.08);
-  }
-  
-  .success-stories__testimonial-quote {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-  }
-  
-  .success-stories__testimonial-text {
-    font-size: var(--text-base);
-    line-height: var(--leading-relaxed);
-    color: var(--text-primary);
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .success-stories__testimonial-author {
+
+  .solution-card__header {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
   }
-  
-  .success-stories__testimonial-avatar {
-    width: 3rem;
-    height: 3rem;
-    background: linear-gradient(135deg, var(--accent-500), var(--secondary-500));
+
+  .solution-card__icon {
+    width: 48px;
+    height: 48px;
+    background: var(--accent-500);
+    color: var(--primary-900);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .solution-card__title {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+  }
+
+  .solution-card__description {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-8);
+  }
+
+  /* EUREKA Steps */
+  .eureka-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+  }
+
+  .eureka-step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-lg);
+  }
+
+  .eureka-step__marker {
+    width: 32px;
+    height: 32px;
+    background: var(--accent-500);
+    color: var(--primary-900);
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-bold);
+    font-size: var(--text-sm);
+    flex-shrink: 0;
+  }
+
+  .eureka-step__label {
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    font-weight: var(--font-medium);
+  }
+
+  .solution-card__cta {
+    text-align: center;
+  }
+
+  /* Services Preview Section */
+  .services-preview-section {
+    padding: var(--space-32) 0;
+    background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-700) 100%);
+    position: relative;
+  }
+
+  .services-preview__header {
+    text-align: center;
+    margin-bottom: var(--space-20);
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-preview__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: rgba(0, 229, 160, 0.1);
+    color: var(--accent-500);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    border: 1px solid rgba(0, 229, 160, 0.2);
+    margin-bottom: var(--space-8);
+    transition: all var(--transition-base);
+  }
+
+  .services-preview__title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    color: var(--text-primary);
+    margin-bottom: var(--space-6);
+  }
+
+  .services-preview__title-accent {
+    background: linear-gradient(135deg, var(--accent-500) 0%, var(--secondary-500) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .services-preview__subtitle {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+
+  .services-preview__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-8);
+    margin-bottom: var(--space-16);
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Service Preview Cards */
+  .service-preview-card {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(42, 42, 42, 0.8) 100%);
+    border: 1px solid var(--primary-600);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+  }
+
+  .service-preview-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-500);
+    box-shadow: 0 20px 40px rgba(0, 229, 160, 0.1);
+  }
+
+  .service-preview-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-6);
+  }
+
+  .service-preview-card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-xl);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-inverse);
+  }
+
+  .service-preview-card__icon--primary {
+    background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
+  }
+
+  .service-preview-card__icon--secondary {
+    background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
+  }
+
+  .service-preview-card__metric {
+    text-align: right;
+    padding: var(--space-3) var(--space-4);
+    background: rgba(0, 229, 160, 0.05);
+    border: 1px solid rgba(0, 229, 160, 0.15);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+  }
+
+  .service-preview-card__metric-value {
+    display: block;
+    font-size: var(--text-xl);
     font-weight: var(--font-bold);
-    font-size: var(--text-sm);
+    color: var(--accent-500);
+    line-height: 1;
+    margin-bottom: var(--space-1);
   }
-  
-  .success-stories__testimonial-info {
-    flex: 1;
-  }
-  
-  .success-stories__testimonial-name {
-    font-size: var(--text-sm);
-    font-weight: var(--font-semibold);
-    color: var(--text-primary);
-    margin-bottom: 0.125rem;
-  }
-  
-  .success-stories__testimonial-role {
+
+  .service-preview-card__metric-label {
     font-size: var(--text-xs);
-    color: var(--text-secondary);
+    color: var(--text-muted);
+    font-weight: var(--font-medium);
   }
-  
-  .success-stories__testimonial-verification {
-    opacity: 0.7;
-  }
-  
-  /* Tech Stack */
-  .success-stories__tech-stack {
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--primary-600);
-    border-radius: var(--radius-xl);
-    padding: 1.5rem;
-  }
-  
-  .success-stories__tech-title {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: var(--text-base);
+
+  .service-preview-card__title {
+    font-size: var(--text-xl);
     font-weight: var(--font-semibold);
     color: var(--text-primary);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-2);
   }
-  
-  .success-stories__tech-list {
+
+  .service-preview-card__category {
+    font-size: var(--text-sm);
+    color: var(--accent-500);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-4);
+  }
+
+  .service-preview-card__description {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+
+  .services-preview__cta {
+    text-align: center;
+  }
+
+  /* Final CTA Section */
+  .final-cta-section {
+    padding: var(--space-32) 0;
+    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+    position: relative;
+  }
+
+  .final-cta__content {
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .final-cta__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-6);
+    line-height: var(--leading-tight);
+  }
+
+  .final-cta__title-accent {
+    background: linear-gradient(135deg, var(--accent-500) 0%, var(--secondary-500) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .final-cta__description {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-12);
+  }
+
+  .final-cta__actions {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-12);
   }
-  
-  .success-stories__tech-item {
+
+  @media (min-width: 768px) {
+    .final-cta__actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  .final-cta__guarantees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .final-cta__guarantee {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: center;
+    gap: var(--space-2);
     font-size: var(--text-sm);
-    color: var(--text-secondary);
+    color: var(--accent-500);
+    font-weight: var(--font-medium);
   }
-  
-  .success-stories__tech-icon {
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-    flex-shrink: 0;
+
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
   }
-  
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Staggered animations */
+  .animate-slide-up:nth-child(2) {
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   /* Responsive Design */
   @media (max-width: 1024px) {
     .success-stories__content {
@@ -1362,1318 +1333,61 @@ import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
       grid-template-columns: 1fr;
     }
   }
-  
+
   @media (max-width: 768px) {
-    .success-stories-section {
-      padding: 4rem 0;
+    .home-hero {
+      padding: var(--space-20) 0 var(--space-16);
     }
     
-    .success-stories__featured {
-      padding: 2rem;
-    }
-    
-    .success-stories__company-header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1.5rem;
-    }
-    
-    .success-stories__company-actions {
-      width: 100%;
-      justify-content: stretch;
-    }
-    
-    .success-stories__company-actions .btn {
-      flex: 1;
-    }
-    
-    .success-stories__overview {
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    
-    .success-stories__timeline-items::before {
-      display: none;
-    }
-  }
-  
-  /* Legacy metric card styles for compatibility */
-  .metric-card {
-    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
-    border: 1px solid var(--primary-600);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    text-align: center;
-    transition: all var(--transition-base);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .metric-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-500), var(--secondary-500));
-    opacity: 0;
-    transition: opacity var(--transition-base);
-  }
-  
-  .metric-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(0, 229, 160, 0.3);
-    box-shadow: 0 8px 25px rgba(0, 229, 160, 0.15);
-  }
-  
-  .metric-card:hover::before {
-    opacity: 1;
-  }
-  
-  /* =======================================
-     SERVICE CARD ENHANCED COMPONENTS
-     ======================================= */
-  
-  .service-card {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .service-card__header {
-    position: relative;
-    margin-bottom: 1.5rem;
-  }
-  
-  .service-card__icon {
-    position: relative;
-    transition: all var(--transition-base);
-  }
-  
-  .service-card:hover .service-card__icon {
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 128, 255, 0.3);
-  }
-  
-  /* Service Metrics */
-  .service-card__metrics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1rem;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--primary-600);
-  }
-  
-  .service-card__metric {
-    text-align: center;
-    padding: 0.5rem;
-  }
-  
-  .service-card__metric-value {
-    font-size: var(--text-xl);
-    font-weight: var(--font-bold);
-    color: var(--secondary-500);
-    margin-bottom: 0.25rem;
-  }
-  
-  .service-card__metric-label {
-    font-size: var(--text-xs);
-    color: var(--text-secondary);
-    font-weight: var(--font-medium);
-    line-height: var(--leading-tight);
-  }
-  
-  /* Enhanced Benefits */
-  .service-card__benefits {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .service-card__benefit {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    padding: 0.75rem;
-    background: rgba(0, 128, 255, 0.05);
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(0, 128, 255, 0.1);
-    transition: all var(--transition-base);
-  }
-  
-  .service-card__benefit:hover {
-    background: rgba(0, 128, 255, 0.1);
-    border-color: rgba(0, 128, 255, 0.2);
-    transform: translateX(4px);
-  }
-  
-  .service-card__benefit-icon {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 128, 255, 0.1);
-    border-radius: var(--radius-sm);
-    margin-top: 0.125rem;
-  }
-  
-  .service-card__benefit-content {
-    flex: 1;
-  }
-  
-  .service-card__benefit-title {
-    font-size: var(--text-sm);
-    font-weight: var(--font-semibold);
-    color: var(--text-primary);
-    margin-bottom: 0.125rem;
-  }
-  
-  .service-card__benefit-description {
-    font-size: var(--text-xs);
-    color: var(--text-secondary);
-    line-height: var(--leading-relaxed);
-  }
-  
-  /* Success Rate Footer */
-  .service-card__footer {
-    border-top: 1px solid var(--primary-600);
-    padding-top: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .service-card__success-rate {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: linear-gradient(135deg, rgba(0, 128, 255, 0.1) 0%, rgba(0, 229, 160, 0.1) 100%);
-    padding: 0.75rem 1rem;
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(0, 128, 255, 0.2);
-  }
-  
-  .service-card__success-number {
-    font-size: var(--text-2xl);
-    font-weight: var(--font-bold);
-    color: var(--secondary-500);
-    flex-shrink: 0;
-  }
-  
-  .service-card__success-text {
-    font-size: var(--text-xs);
-    color: var(--text-secondary);
-    font-weight: var(--font-medium);
-    line-height: var(--leading-tight);
-  }
-  
-  /* Responsive adjustments for service cards */
-  @media (max-width: 768px) {
-    .service-card__metrics {
+    .home-hero__trust {
       grid-template-columns: 1fr;
-      gap: 0.5rem;
+      gap: var(--space-4);
     }
     
-    .service-card__benefit {
-      padding: 0.5rem;
-    }
-    
-    .service-card__success-rate {
-      flex-direction: column;
+    .home-hero__trust-item {
+      justify-content: center;
       text-align: center;
-      gap: 0.5rem;
     }
-  }
-  
-  /* =======================================
-     ENHANCED SERVICES SECTION
-     ======================================= */
-  
-  .services-section {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-700) 100%);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .services-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(circle at 25% 25%, rgba(0, 229, 160, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, rgba(0, 128, 255, 0.03) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  
-  /* Enhanced Header */
-  .services-section__header {
-    text-align: center;
-    margin-bottom: 4rem;
-    position: relative;
-    z-index: 10;
-  }
-  
-  .services-section__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(0, 229, 160, 0.1);
-    color: var(--accent-500);
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-full);
-    font-size: var(--text-sm);
-    font-weight: var(--font-medium);
-    border: 1px solid rgba(0, 229, 160, 0.2);
-    margin-bottom: 1.5rem;
-    transition: all var(--transition-base);
-  }
-  
-  .services-section__badge:hover {
-    background: rgba(0, 229, 160, 0.15);
-    border-color: rgba(0, 229, 160, 0.4);
-    transform: translateY(-2px);
-  }
-  
-  .services-section__title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: var(--font-bold);
-    line-height: var(--leading-tight);
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-  }
-  
-  .services-section__title-accent {
-    background: linear-gradient(135deg, var(--accent-500) 0%, var(--secondary-500) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .services-section__subtitle {
-    font-size: var(--text-lg);
-    color: var(--text-secondary);
-    max-width: 42rem;
-    margin: 0 auto;
-    line-height: var(--leading-relaxed);
-  }
-  
-  /* Services Grid */
-  .services-section__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Enhanced Service Cards */
-  .service-card--enhanced {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(42, 42, 42, 0.8) 100%);
-    border: 1px solid var(--primary-600);
-    border-radius: var(--radius-2xl);
-    padding: 0;
-    transition: all var(--transition-base);
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(20px);
-  }
-  
-  .service-card--enhanced::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-500), var(--secondary-500));
-    opacity: 0;
-    transition: opacity var(--transition-base);
-  }
-  
-  .service-card--enhanced:hover {
-    transform: translateY(-8px);
-    border-color: var(--accent-500);
-    box-shadow: 0 20px 40px rgba(0, 229, 160, 0.1);
-  }
-  
-  .service-card--enhanced:hover::before {
-    opacity: 1;
-  }
-  
-  /* Enhanced Header */
-  .service-card__header-enhanced {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 2rem 1rem;
-    border-bottom: 1px solid var(--primary-600);
-  }
-  
-  .service-card__icon-container {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: var(--radius-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: all var(--transition-base);
-  }
-  
-  .service-card__icon-container--architecture {
-    background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
-  }
-  
-  .service-card__icon-container--mentoring {
-    background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
-  }
-  
-  .service-card__icon-container--leadership {
-    background: linear-gradient(135deg, var(--accent-500), var(--secondary-500));
-  }
-
-  .service-card__icon-container--resources {
-    background: linear-gradient(135deg, #F59E0B, #EF4444);
-  }
-
-  .service-card__icon-container--network {
-    background: linear-gradient(135deg, #10B981, #059669);
-  }
-
-  /* ===== COMMITMENT SECTION ===== */
-  .commitment-section {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, 
-      var(--primary-50) 0%, 
-      var(--neutral-50) 25%, 
-      var(--accent-50) 50%, 
-      var(--secondary-50) 75%, 
-      var(--neutral-100) 100%
-    );
-    position: relative;
-    overflow: hidden;
-  }
-
-  .commitment-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(ellipse 800px 600px at 20% 10%, rgba(var(--accent-rgb), 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse 600px 800px at 80% 20%, rgba(var(--primary-rgb), 0.06) 0%, transparent 50%),
-      radial-gradient(ellipse 400px 300px at 50% 80%, rgba(var(--secondary-rgb), 0.05) 0%, transparent 50%),
-      linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.7) 50%, transparent 100%);
-    pointer-events: none;
-    animation: shimmer 8s ease-in-out infinite;
-  }
-
-  .commitment-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(circle at 1px 1px, rgba(var(--primary-rgb), 0.15) 1px, transparent 0);
-    background-size: 20px 20px;
-    opacity: 0.3;
-    pointer-events: none;
-  }
-
-  @keyframes shimmer {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 1; }
-  }
-
-  .commitment-section__header {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 4rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .commitment-section__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(135deg, 
-      rgba(var(--accent-rgb), 0.15) 0%, 
-      rgba(var(--primary-rgb), 0.1) 100%
-    );
-    color: var(--primary-700);
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(var(--accent-rgb), 0.3);
-    backdrop-filter: blur(12px);
-    box-shadow: 
-      0 8px 32px rgba(var(--accent-rgb), 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .commitment-section__badge::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-      transparent 0%, 
-      rgba(255, 255, 255, 0.4) 50%, 
-      transparent 100%
-    );
-    animation: badge-shine 3s ease-in-out infinite;
-  }
-
-  @keyframes badge-shine {
-    0% { left: -100%; }
-    50% { left: 100%; }
-    100% { left: 100%; }
-  }
-
-  .commitment-section__title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 800;
-    line-height: 1.1;
-    color: var(--primary-900);
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
-  }
-
-  .commitment-section__title-accent {
-    background: linear-gradient(135deg, 
-      var(--accent-500) 0%, 
-      var(--accent-600) 25%, 
-      var(--secondary-500) 50%, 
-      var(--secondary-600) 75%, 
-      var(--accent-500) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    position: relative;
-    background-size: 200% 200%;
-    animation: gradient-shift 4s ease-in-out infinite;
-  }
-
-  @keyframes gradient-shift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-
-  .commitment-section__subtitle {
-    font-size: 1.125rem;
-    color: var(--neutral-600);
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .commitment-section__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* ===== COMMITMENT CARDS ===== */
-  .commitment-card {
-    background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.95) 0%, 
-      rgba(255, 255, 255, 0.85) 100%
-    );
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 2rem;
-    padding: 2.5rem;
-    transition: all var(--transition-smooth);
-    position: relative;
-    overflow: hidden;
-    box-shadow: 
-      0 20px 40px rgba(0, 0, 0, 0.05),
-      0 8px 16px rgba(var(--primary-rgb), 0.05),
-      inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  }
-
-  .commitment-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, 
-      rgba(var(--accent-rgb), 0.03) 0%, 
-      rgba(var(--primary-rgb), 0.02) 50%, 
-      rgba(var(--secondary-rgb), 0.03) 100%
-    );
-    opacity: 0;
-    transition: opacity var(--transition-smooth);
-    pointer-events: none;
-  }
-
-  .commitment-card::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(135deg, 
-      var(--accent-400) 0%, 
-      var(--primary-400) 25%, 
-      var(--secondary-400) 50%, 
-      var(--accent-400) 75%, 
-      var(--primary-400) 100%
-    );
-    border-radius: 2rem;
-    opacity: 0;
-    z-index: -1;
-    transition: opacity var(--transition-smooth);
-    background-size: 300% 300%;
-    animation: border-flow 6s ease-in-out infinite;
-  }
-
-  @keyframes border-flow {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-
-  .commitment-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 
-      0 40px 80px rgba(0, 0, 0, 0.12),
-      0 20px 40px rgba(var(--accent-rgb), 0.15),
-      0 8px 32px rgba(var(--primary-rgb), 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    border-color: rgba(var(--accent-rgb), 0.5);
-  }
-
-  .commitment-card:hover::before {
-    opacity: 1;
-  }
-
-  .commitment-card:hover::after {
-    opacity: 0.6;
-  }
-
-  .commitment-card__header {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .commitment-card__icon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 1.25rem;
-    position: relative;
-    flex-shrink: 0;
-    box-shadow: 
-      0 12px 24px rgba(0, 0, 0, 0.1),
-      0 4px 8px rgba(0, 0, 0, 0.05),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    transition: all var(--transition-smooth);
-  }
-
-  .commitment-card__icon-container::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 1.4rem;
-    background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.3) 0%, 
-      transparent 50%, 
-      rgba(255, 255, 255, 0.1) 100%
-    );
-    z-index: -1;
-  }
-
-  .commitment-card:hover .commitment-card__icon-container {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 
-      0 16px 32px rgba(0, 0, 0, 0.15),
-      0 8px 16px rgba(0, 0, 0, 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  }
-
-  .commitment-card__icon-container--trial {
-    background: linear-gradient(135deg, #10B981 0%, #059669 50%, #047857 100%);
-    box-shadow: 
-      0 12px 24px rgba(16, 185, 129, 0.3),
-      0 4px 8px rgba(16, 185, 129, 0.2),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  }
-
-  .commitment-card__icon-container--guarantee {
-    background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
-    box-shadow: 
-      0 12px 24px rgba(245, 158, 11, 0.3),
-      0 4px 8px rgba(245, 158, 11, 0.2),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  }
-
-  .commitment-card__icon-container--support {
-    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 50%, #6D28D9 100%);
-    box-shadow: 
-      0 12px 24px rgba(139, 92, 246, 0.3),
-      0 4px 8px rgba(139, 92, 246, 0.2),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  }
-
-  .commitment-card__number {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: white;
-    line-height: 1;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 1) 0%, 
-      rgba(255, 255, 255, 0.9) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
-
-  .commitment-card__unit {
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.95);
-    line-height: 1;
-    margin-top: -2px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    letter-spacing: 0.5px;
-  }
-
-  .commitment-card__header-content {
-    flex: 1;
-  }
-
-  .commitment-card__title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--primary-900);
-    margin-bottom: 0.25rem;
-    line-height: 1.3;
-  }
-
-  .commitment-card__category {
-    font-size: 0.875rem;
-    color: var(--neutral-600);
-    font-weight: 500;
-  }
-
-  .commitment-card__badge {
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-    padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, 
-      rgba(var(--accent-rgb), 0.15) 0%, 
-      rgba(var(--secondary-rgb), 0.1) 100%
-    );
-    color: var(--accent-700);
-    border-radius: 2rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    border: 1px solid rgba(var(--accent-rgb), 0.3);
-    white-space: nowrap;
-    backdrop-filter: blur(8px);
-    box-shadow: 
-      0 4px 12px rgba(var(--accent-rgb), 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .commitment-card__badge::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-      transparent 0%, 
-      rgba(255, 255, 255, 0.3) 50%, 
-      transparent 100%
-    );
-    animation: badge-sweep 2s ease-in-out infinite;
-  }
-
-  @keyframes badge-sweep {
-    0% { left: -100%; }
-    100% { left: 100%; }
-  }
-
-  .commitment-card__content {
-    margin-bottom: 1.5rem;
-  }
-
-  .commitment-card__description {
-    font-size: 1rem;
-    color: var(--neutral-700);
-    line-height: 1.6;
-    margin-bottom: 1.25rem;
-  }
-
-  .commitment-card__features {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .commitment-card__feature {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.875rem;
-    color: var(--neutral-700);
-    font-weight: 500;
-  }
-
-  .commitment-card__feature-icon {
-    width: 1rem;
-    height: 1rem;
-    color: var(--accent-500);
-    flex-shrink: 0;
-  }
-
-  /* ===== CTA SECTION ===== */
-  .cta-section {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 25%, var(--accent-600) 100%);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 50%, rgba(var(--accent-rgb), 0.3) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(var(--secondary-rgb), 0.2) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .cta-section__header {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 4rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .cta-section__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.15);
-    color: white;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(8px);
-  }
-
-  .cta-section__title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    font-weight: 800;
-    line-height: 1.1;
-    color: white;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
-  }
-
-  .cta-section__title-accent {
-    background: linear-gradient(135deg, var(--accent-300), var(--secondary-300));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
-
-  .cta-section__subtitle {
-    font-size: 1.125rem;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .cta-section__content {
-    position: relative;
-    z-index: 1;
-  }
-
-  .cta-section__actions {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  /* ===== CTA ACTION CARDS ===== */
-  .cta-action-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 1.5rem;
-    padding: 2rem;
-    transition: all var(--transition-smooth);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-action-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.03) 0%, rgba(var(--primary-rgb), 0.03) 100%);
-    opacity: 0;
-    transition: opacity var(--transition-smooth);
-    pointer-events: none;
-  }
-
-  .cta-action-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 
-      0 32px 64px rgba(0, 0, 0, 0.2),
-      0 16px 32px rgba(var(--accent-rgb), 0.2);
-    border-color: rgba(var(--accent-rgb), 0.4);
-  }
-
-  .cta-action-card:hover::before {
-    opacity: 1;
-  }
-
-  .cta-action-card--primary {
-    border-left: 4px solid var(--accent-500);
-  }
-
-  .cta-action-card--secondary {
-    border-left: 4px solid var(--secondary-500);
-  }
-
-  .cta-action-card__header {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .cta-action-card__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 0.75rem;
-    flex-shrink: 0;
-  }
-
-  .cta-action-card--primary .cta-action-card__icon {
-    background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
-    color: white;
-  }
-
-  .cta-action-card--secondary .cta-action-card__icon {
-    background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
-    color: white;
-  }
-
-  .cta-action-card__content {
-    flex: 1;
-  }
-
-  .cta-action-card__title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--primary-900);
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-  }
-
-  .cta-action-card__description {
-    font-size: 0.875rem;
-    color: var(--neutral-600);
-    line-height: 1.5;
-  }
-
-  .cta-action-card__badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.375rem 0.75rem;
-    background: rgba(var(--accent-rgb), 0.1);
-    color: var(--accent-600);
-    border-radius: 1rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    border: 1px solid rgba(var(--accent-rgb), 0.2);
-    white-space: nowrap;
-    align-self: flex-start;
-  }
-
-  .cta-action-card__features {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .cta-action-card__feature {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.875rem;
-    color: var(--neutral-700);
-    font-weight: 500;
-  }
-
-  .cta-action-card__feature-icon {
-    width: 1rem;
-    height: 1rem;
-    color: var(--accent-500);
-    flex-shrink: 0;
-  }
-
-  .cta-action-card__footer {
-    margin-top: auto;
-  }
-
-  .cta-action-card__button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.875rem 1.5rem;
-    border-radius: 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all var(--transition-base);
-    width: 100%;
-    justify-content: center;
-  }
-
-  .cta-action-card__button--primary {
-    background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
-    color: white;
-    box-shadow: 0 4px 16px rgba(var(--accent-rgb), 0.3);
-  }
-
-  .cta-action-card__button--primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.4);
-    background: linear-gradient(135deg, var(--accent-600), var(--accent-700));
-  }
-
-  .cta-action-card__button--secondary {
-    background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
-    color: white;
-    box-shadow: 0 4px 16px rgba(var(--secondary-rgb), 0.3);
-  }
-
-  .cta-action-card__button--secondary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(var(--secondary-rgb), 0.4);
-    background: linear-gradient(135deg, var(--secondary-600), var(--secondary-700));
-  }
-
-  /* ===== CTA TRUST INDICATORS ===== */
-  .cta-section__trust {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .cta-trust-indicator {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: white;
-  }
-
-  .cta-trust-indicator__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 0.5rem;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    flex-shrink: 0;
-  }
-
-  .cta-trust-indicator__content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .cta-trust-indicator__title {
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  .cta-trust-indicator__subtitle {
-    font-size: 0.75rem;
-    opacity: 0.8;
-    line-height: 1.2;
-  }
-
-  @media (max-width: 768px) {
-    .cta-section__actions {
+    
+    .services-preview__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+    
+    .eureka-steps {
       grid-template-columns: 1fr;
     }
     
-    .cta-section__trust {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-  }
-  
-  .service-card__icon-svg {
-    width: 1.75rem;
-    height: 1.75rem;
-    color: white;
-    transition: all var(--transition-base);
-  }
-  
-  .service-card--enhanced:hover .service-card__icon-container {
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 229, 160, 0.3);
-  }
-  
-  .service-card--enhanced:hover .service-card__icon-svg {
-    transform: rotate(5deg);
-  }
-  
-  .service-card__header-content {
-    flex: 1;
-    margin-left: 1rem;
-  }
-  
-  .service-card__title {
-    font-size: var(--text-xl);
-    font-weight: var(--font-semibold);
-    color: var(--text-primary);
-    margin-bottom: 0.25rem;
-  }
-  
-  .service-card__category {
-    font-size: var(--text-sm);
-    color: var(--text-secondary);
-    font-weight: var(--font-medium);
-  }
-  
-  .service-card__metric {
-    text-align: right;
-    flex-shrink: 0;
-  }
-  
-  .service-card__metric-value {
-    font-size: var(--text-2xl);
-    font-weight: var(--font-bold);
-    color: var(--accent-500);
-    display: block;
-    margin-bottom: 0.125rem;
-  }
-  
-  .service-card__metric-label {
-    font-size: var(--text-xs);
-    color: var(--text-secondary);
-    font-weight: var(--font-medium);
-    line-height: var(--leading-tight);
-  }
-  
-  /* Content Section */
-  .service-card__content {
-    padding: 2rem;
-  }
-  
-  .service-card__description {
-    font-size: var(--text-base);
-    color: var(--text-secondary);
-    line-height: var(--leading-relaxed);
-    margin-bottom: 2rem;
-  }
-  
-  /* Features List */
-  .service-card__features {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  
-  .service-card__feature {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem;
-    background: rgba(0, 229, 160, 0.05);
-    border-radius: var(--radius-md);
-    border: 1px solid rgba(0, 229, 160, 0.1);
-    transition: all var(--transition-base);
-  }
-  
-  .service-card__feature:hover {
-    background: rgba(0, 229, 160, 0.1);
-    border-color: rgba(0, 229, 160, 0.2);
-    transform: translateX(4px);
-  }
-  
-  .service-card__feature-icon {
-    width: 1rem;
-    height: 1rem;
-    color: var(--accent-500);
-    flex-shrink: 0;
-  }
-  
-  .service-card__feature span {
-    font-size: var(--text-sm);
-    color: var(--text-primary);
-    font-weight: var(--font-medium);
-  }
-  
-  /* Footer with CTA */
-  .service-card__footer {
-    padding: 1.5rem 2rem 2rem;
-  }
-  
-  .service-card__cta {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
-    color: var(--text-inverse);
-    padding: 0.875rem 1.5rem;
-    border-radius: var(--radius-lg);
-    border: none;
-    font-size: var(--text-base);
-    font-weight: var(--font-semibold);
-    cursor: pointer;
-    transition: all var(--transition-base);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .service-card__cta::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-  }
-  
-  .service-card__cta:hover {
-    background: linear-gradient(135deg, var(--accent-600), var(--accent-500));
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 229, 160, 0.4);
-  }
-  
-  .service-card__cta:hover::before {
-    left: 100%;
-  }
-  
-  .service-card__cta svg {
-    transition: transform var(--transition-base);
-  }
-  
-  .service-card__cta:hover svg {
-    transform: translateX(4px);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .services-section__grid {
+    .final-cta__guarantees {
       grid-template-columns: 1fr;
-      max-width: 600px;
     }
   }
-  
-  @media (max-width: 768px) {
-    .services-section {
-      padding: 4rem 0;
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: all var(--transition-base);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    .home-hero__orb,
+    .animate-fade-in,
+    .animate-slide-up,
+    .animate-scale-in,
+    .hover-lift {
+      animation: none;
+      transition: none;
     }
     
-    .services-section__grid {
-      gap: 1.5rem;
-    }
-    
-    .service-card__header-enhanced {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1.5rem 1.5rem 1rem;
-    }
-    
-    .service-card__header-content {
-      margin-left: 0;
-    }
-    
-    .service-card__metric {
-      text-align: left;
-      width: 100%;
-    }
-    
-    .service-card__content {
-      padding: 1.5rem;
-    }
-    
-    .service-card__footer {
-      padding: 1rem 1.5rem 1.5rem;
+    .home-hero__trust-item:hover,
+    .problem-item:hover,
+    .service-preview-card:hover,
+    .hover-lift:hover {
+      transform: none;
     }
   }
 </style>

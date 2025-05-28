@@ -1,393 +1,556 @@
 ---
-import OptimizedLayout from '@/layouts/OptimizedLayout.astro';
+import OptimizedLayout from '../layouts/OptimizedLayout.astro';
+import TripleGuaranteeSection from '../components/TripleGuaranteeSection.astro';
 ---
 
 <OptimizedLayout 
-  title="Sobre Nosotros - Eureka ArchiTech"
+  title="Sobre Nosotros | EurekaArchiTech"
   description="Conoce nuestro equipo de expertos y la metodología que nos convierte en el socio estratégico digital ideal para tu organización."
+  type="article"
 >
-  <!-- Hero Section -->
-  <section class="py-24 bg-gradient-to-br from-primary-900 to-primary-800">
-    <div class="container text-center">
-      <h1 class="text-display text-primary mb-6">
-        Sobre <span class="text-accent">Nosotros</span>
-      </h1>
-      <p class="text-body-large text-secondary max-w-3xl mx-auto">
-        Transformando el futuro digital desde 2024 con un enfoque estratégico y excelencia operacional
-      </p>
+  <!-- Enhanced Hero Section -->
+  <section class="hero-section">
+    <div class="hero-background"></div>
+    
+    <div class="container relative z-10">
+      <div class="hero-content">
+        <!-- Enhanced Badge -->
+        <div class="hero-badge animate-fade-in">
+          <div class="badge-icon">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <span class="badge-text">Sobre Nosotros</span>
+        </div>
+        
+        <!-- Enhanced Title -->
+        <h1 class="hero-title animate-slide-up" style="animation-delay: 0.2s">
+          Pioneros en 
+          <span class="title-gradient">Transformación Digital</span>
+          empresarial
+        </h1>
+        
+        <!-- Enhanced Description -->
+        <p class="hero-description animate-slide-up" style="animation-delay: 0.4s">
+          Un enfoque estratégico, excelencia operacional y un equipo de expertos comprometidos 
+          con el éxito de tu organización en la era digital.
+        </p>
+        
+        <!-- Enhanced Trust Indicators -->
+        <div class="trust-indicators animate-scale-in" style="animation-delay: 0.6s">
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <div class="trust-content">
+              <span class="trust-value">40+</span>
+              <span class="trust-label">Especialistas</span>
+            </div>
+          </div>
+          
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="trust-content">
+              <span class="trust-value">95%</span>
+              <span class="trust-label">Éxito Proyectos</span>
+            </div>
+          </div>
+          
+          <div class="trust-card">
+            <div class="trust-icon">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <div class="trust-content">
+              <span class="trust-value">2024</span>
+              <span class="trust-label">Fundación</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Misión y Visión -->
-  <section class="py-20">
+  <!-- Company Overview Section -->
+  <section class="company-overview-section">
     <div class="container">
-      <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
-        <!-- Misión -->
-        <div class="card card-premium">
-          <div class="w-12 h-12 bg-accent-500 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
-          </div>
-          <h2 class="text-title text-primary mb-4">Nuestra Misión</h2>
-          <p class="text-body text-secondary">
-            Empoderar a las organizaciones en su transformación digital mediante soluciones innovadoras, 
-            liderazgo estratégico y excelencia operacional.
-          </p>
+      <!-- Enhanced Section Header -->
+      <header class="section-header animate-fade-in">
+        <div class="section-badge">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+          <span>Información de la Empresa</span>
         </div>
         
-        <!-- Visión -->
-        <div class="card card-premium">
-          <div class="w-12 h-12 bg-secondary-500 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-            </svg>
-          </div>
-          <h2 class="text-title text-primary mb-4">Nuestra Visión</h2>
-          <p class="text-body text-secondary">
-            Ser el socio estratégico digital, reconocidos por crear valor sostenible y desarrollar el talento del futuro.
-          </p>
-        </div>
-      </div>
-
-      <!-- Timeline -->
-      <div class="mb-20">
-        <div class="text-center mb-12">
-          <h2 class="text-headline text-primary mb-4">
-            Transformando el Futuro Digital desde 2024
-          </h2>
-        </div>
+        <h2 class="section-title">
+          Nuestra <span class="title-gradient">Esencia</span>
+        </h2>
         
-        <div class="grid md:grid-cols-4 gap-8">
-          <!-- Q1 2024 -->
-          <div class="text-center">
-            <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-primary-900 font-bold text-lg">Q1</span>
+        <p class="section-description">
+          Conoce los pilares fundamentales que definen nuestra identidad y compromiso 
+          con la excelencia en transformación digital empresarial.
+        </p>
+      </header>
+      
+      <!-- Company Cards Grid -->
+      <div class="company-cards-grid">
+        <!-- Mission Card -->
+        <article class="company-card company-card--primary animate-slide-up" style="animation-delay: 0.1s">
+          <header class="company-card__header">
+            <div class="company-card__icon-wrapper">
+              <div class="company-card__icon company-card__icon--primary">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
             </div>
-            <h3 class="text-title text-primary mb-2">Q1 2024</h3>
-            <h4 class="text-body text-accent font-semibold mb-3">Fundación</h4>
-            <p class="text-body-small text-secondary">
-              Equipo fundador de 5 expertos senior con +10 años en TI y consultoría
+            
+            <div class="company-card__meta">
+              <span class="company-card__category">Propósito</span>
+              <h3 class="company-card__title">Nuestra Misión</h3>
+            </div>
+            
+            <div class="company-card__metric">
+              <span class="metric__value">100%</span>
+              <span class="metric__label">Compromiso</span>
+            </div>
+          </header>
+          
+          <div class="company-card__content">
+            <p class="company-card__description">
+              Empoderar a las organizaciones en su transformación digital mediante soluciones innovadoras, 
+              liderazgo estratégico y excelencia operacional que garantizan resultados medibles y sostenibles.
             </p>
-          </div>
-          
-          <!-- Q2 2024 -->
-          <div class="text-center">
-            <div class="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-white font-bold text-lg">Q2</span>
-            </div>
-            <h3 class="text-title text-primary mb-2">Q2 2024</h3>
-            <h4 class="text-body text-secondary-color font-semibold mb-3">Primer Cliente</h4>
-            <div class="text-body-small text-secondary space-y-1">
-              <p><strong>Cliente:</strong> Hergon – Systems Solution</p>
-              <p><strong>Proyecto:</strong> Arquitectura de Sistema Contable</p>
-              <p>• Diseño cloud-nativo</p>
-              <p>• Cumplimiento CONSAR</p>
-              <p>• 40% reducción tiempo</p>
-            </div>
-          </div>
-          
-          <!-- Q3 2024 -->
-          <div class="text-center">
-            <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-primary-900 font-bold text-lg">Q3</span>
-            </div>
-            <h3 class="text-title text-primary mb-2">Q3 2024</h3>
-            <h4 class="text-body text-accent font-semibold mb-3">Especialización en Seguridad</h4>
-            <div class="text-body-small text-secondary space-y-1">
-              <p><strong>Proyecto:</strong> Evaluación y Fortalecimiento de Seguridad</p>
-              <p>• Desarrollo SOC</p>
-              <p>• 0 incidentes críticos</p>
-              <p>• Preparación ISO 27001</p>
-              <p>• Frameworks: NIST, PCI-DSS</p>
-            </div>
-          </div>
-          
-          <!-- Q1 2025 -->
-          <div class="text-center">
-            <div class="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-white font-bold text-lg">Q1</span>
-            </div>
-            <h3 class="text-title text-primary mb-2">Q1 2025</h3>
-            <h4 class="text-body text-secondary-color font-semibold mb-3">Transformación Integral</h4>
-            <div class="text-body-small text-secondary space-y-1">
-              <p><strong>Proyecto:</strong> Plataforma PaaS</p>
-              <p>• Plataforma cloud "ready-to-use"</p>
-              <p>• DevSecOps completo</p>
-              <p>• Programa mentoría</p>
-              <p>• Framework C-Suite</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Equipo -->
-  <section class="py-20 bg-primary-800">
-    <div class="container">
-      <div class="text-center mb-16">
-        <h2 class="text-headline text-primary mb-4">
-          Nuestro Equipo
-        </h2>
-        <p class="text-body-large text-secondary max-w-3xl mx-auto">
-          Líderes experimentados con expertise comprobado en transformación digital
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <!-- Jorge Alberto Virgen Montesinos -->
-        <div class="card hover-lift">
-          <div class="text-center mb-6">
-            <div class="w-20 h-20 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-primary-900 font-bold text-xl">JV</span>
-            </div>
-            <h3 class="text-title text-primary mb-2">Jorge Alberto Virgen Montesinos</h3>
-            <p class="text-body-small text-accent font-medium">Director de Arquitectura Empresarial</p>
-          </div>
-          <div class="space-y-2 text-body-small text-secondary">
-            <p>• 21 años de experiencia</p>
-            <p>• Ex-Subdirector Arquitectura en servicios financieros</p>
-            <p>• Cloud Specialist & Cloud Architect</p>
-            <p>• Tech Lead sector financiero</p>
-          </div>
-        </div>
-        
-        <!-- Joaquín García Santiago -->
-        <div class="card hover-lift">
-          <div class="text-center mb-6">
-            <div class="w-20 h-20 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-white font-bold text-xl">JG</span>
-            </div>
-            <h3 class="text-title text-primary mb-2">Joaquín García Santiago</h3>
-            <p class="text-body-small text-secondary-color font-medium">Director de Innovación</p>
-          </div>
-          <div class="space-y-2 text-body-small text-secondary">
-            <p>• Especialista en innovación tecnológica</p>
-            <p>• Estratega de transformación digital</p>
-            <p>• Experto en nuevas tecnologías</p>
-            <p>• Liderazgo en proyectos disruptivos</p>
-          </div>
-        </div>
-        
-        <!-- Arnold Israel Muñoz Hernández -->
-        <div class="card hover-lift">
-          <div class="text-center mb-6">
-            <div class="w-20 h-20 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-primary-900 font-bold text-xl">AM</span>
-            </div>
-            <h3 class="text-title text-primary mb-2">Arnold Israel Muñoz Hernández</h3>
-            <p class="text-body-small text-accent font-medium">Director de Desarrollo de Talento y Staffing</p>
-          </div>
-          <div class="space-y-2 text-body-small text-secondary">
-            <p>• Cloud Architect especializado</p>
-            <p>• Creador programa capacitación tech</p>
-            <p>• 100+ graduados en programas</p>
-            <p>• Experto en desarrollo de talento</p>
-          </div>
-        </div>
-        
-        <!-- Oscar Valois Martínez -->
-        <div class="card hover-lift">
-          <div class="text-center mb-6">
-            <div class="w-20 h-20 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-white font-bold text-xl">OV</span>
-            </div>
-            <h3 class="text-title text-primary mb-2">Oscar Valois Martínez</h3>
-            <p class="text-body-small text-secondary-color font-medium">Director de Tecnología</p>
-          </div>
-          <div class="space-y-2 text-body-small text-secondary">
-            <p>• Solutions Architect</p>
-            <p>• Estratega transformación digital</p>
-            <p>• Seguridad y sin fricciones</p>
-            <p>• Liderazgo técnico senior</p>
-          </div>
-        </div>
-        
-        <!-- Omar Tzompantzi Coyotzi -->
-        <div class="card hover-lift">
-          <div class="text-center mb-6">
-            <div class="w-20 h-20 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-primary-900 font-bold text-xl">OT</span>
-            </div>
-            <h3 class="text-title text-primary mb-2">Omar Tzompantzi Coyotzi</h3>
-            <p class="text-body-small text-accent font-medium">Director de Servicios de Transformación Digital</p>
-          </div>
-          <div class="space-y-2 text-body-small text-secondary">
-            <p>• Cloud Architect en Edenred</p>
-            <p>• 8 años servicios financieros</p>
-            <p>• Especialista en transformación</p>
-            <p>• Experiencia en implementación</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Red de Especialistas -->
-      <div class="card card-premium max-w-4xl mx-auto">
-        <div class="text-center mb-8">
-          <h3 class="text-title text-accent mb-4">Red de +40 Especialistas</h3>
-          <p class="text-body text-secondary">
-            Contamos con una red exclusiva de profesionales senior en México y LATAM
-          </p>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="text-center p-4 bg-primary-900 rounded-lg">
-            <div class="text-2xl font-bold text-accent mb-2">23</div>
-            <div class="text-body-small text-secondary mb-3">Tecnología Core</div>
-            <div class="space-y-1 text-body-small text-muted">
-              <p>Cloud & Infraestructura: 10</p>
-              <p>Arquitectura Empresarial: 5</p>
-              <p>Seguridad & DevSecOps: 8</p>
-            </div>
-          </div>
-          
-          <div class="text-center p-4 bg-primary-900 rounded-lg">
-            <div class="text-2xl font-bold text-secondary-color mb-2">15</div>
-            <div class="text-body-small text-secondary mb-3">Transformación & Consultoría</div>
-            <div class="space-y-1 text-body-small text-muted">
-              <p>Transformación Digital: 9</p>
-              <p>Gestión de Cambio: 3</p>
-              <p>Agilidad Empresarial: 3</p>
-            </div>
-          </div>
-          
-          <div class="text-center p-4 bg-primary-900 rounded-lg">
-            <div class="text-2xl font-bold text-accent mb-2">5</div>
-            <div class="text-body-small text-secondary mb-3">Tecnologías Emergentes</div>
-            <div class="space-y-1 text-body-small text-muted">
-              <p>Inteligencia Artificial: 2</p>
-              <p>Blockchain: 1</p>
-              <p>IoT & Edge Computing: 2</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Metodología EUREKA -->
-  <section class="py-20">
-    <div class="container">
-      <div class="text-center mb-16">
-        <h2 class="text-headline text-primary mb-4">
-          Metodología <span class="text-accent">EUREKA</span>
-        </h2>
-        <p class="text-body-large text-secondary max-w-3xl mx-auto">
-          Transformación digital estructurada que convierte tus desafíos en ventajas competitivas
-        </p>
-      </div>
-      
-      <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
-        <div class="space-y-6">
-          <div class="flex items-start gap-4">
-            <div class="w-16 h-16 bg-accent-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <span class="text-primary-900 text-2xl font-bold">E</span>
-            </div>
-            <div>
-              <h3 class="text-title text-primary mb-2">Evaluación integral</h3>
-              <p class="text-body text-secondary">
-                Evaluación profunda del estado actual de tu organización, identificando fortalezas, debilidades y oportunidades de transformación digital.
-              </p>
-            </div>
-          </div>
-          
-          <div class="flex items-start gap-4">
-            <div class="w-16 h-16 bg-secondary-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <span class="text-white text-2xl font-bold">U</span>
-            </div>
-            <div>
-              <h3 class="text-title text-primary mb-2">Unificación de procesos</h3>
-              <p class="text-body text-secondary">
-                Integración y estandarización de procesos empresariales, eliminando silos y creando flujos de trabajo eficientes y coherentes.
-              </p>
-            </div>
-          </div>
-          
-          <div class="flex items-start gap-4">
-            <div class="w-16 h-16 bg-accent-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <span class="text-primary-900 text-2xl font-bold">R</span>
-            </div>
-            <div>
-              <h3 class="text-title text-primary mb-2">Rediseño estratégico</h3>
-              <p class="text-body text-secondary">
-                Reconceptualización de la arquitectura tecnológica y procesos de negocio para maximizar eficiencia y crear ventajas competitivas sostenibles.
-              </p>
-            </div>
-          </div>
-          
-          <div class="flex items-start gap-4">
-            <div class="w-16 h-16 bg-secondary-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <span class="text-white text-2xl font-bold">E</span>
-            </div>
-            <div>
-              <h3 class="text-title text-primary mb-2">Ejecución controlada</h3>
-              <p class="text-body text-secondary">
-                Implementación por fases con métricas claras de progreso, gestión proactiva de riesgos y aseguramiento de calidad continuo en cada etapa.
-              </p>
-            </div>
-          </div>
-          
-          <div class="flex items-start gap-4">
-            <div class="w-16 h-16 bg-accent-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <span class="text-primary-900 text-2xl font-bold">K</span>
-            </div>
-            <div>
-              <h3 class="text-title text-primary mb-2">Knowledge transfer</h3>
-              <p class="text-body text-secondary">
-                Transferencia sistemática de conocimientos y capacidades a tu equipo, asegurando la sostenibilidad de la transformación a largo plazo.
-              </p>
-            </div>
-          </div>
-          
-          <div class="flex items-start gap-4">
-            <div class="w-16 h-16 bg-secondary-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <span class="text-white text-2xl font-bold">A</span>
-            </div>
-            <div>
-              <h3 class="text-title text-primary mb-2">Autonomía garantizada</h3>
-              <p class="text-body text-secondary">
-                Transición gradual con soporte dedicado, minimizando disrupciones y garantizando que tu organización opere de forma autónoma y eficiente.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="card card-premium">
-          <h3 class="text-title text-accent mb-6">Compromiso Triple 30</h3>
-          <p class="text-body text-secondary mb-6">
-            Nuestra garantía única que demuestra la confianza en nuestros resultados:
-          </p>
-          
-          <div class="space-y-4">
-            <div class="flex items-center gap-3 p-3 bg-primary-900 rounded-lg">
-              <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center">
-                <span class="text-primary-900 font-bold text-lg">30</span>
+            
+            <!-- Enhanced Key Values -->
+            <div class="values-section">
+              <h4 class="values-section__title">Valores Clave</h4>
+              <div class="values-grid">
+                <div class="value-item">
+                  <div class="value-item__icon">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span>Innovación constante</span>
+                </div>
+                
+                <div class="value-item">
+                  <div class="value-item__icon">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span>Excelencia operacional</span>
+                </div>
+                
+                <div class="value-item">
+                  <div class="value-item__icon">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <span>Resultados medibles</span>
+                </div>
               </div>
-              <div>
-                <h4 class="text-body text-primary font-semibold">Días de Prueba Sin Riesgo</h4>
-                <p class="text-body-small text-secondary">Garantía completa de satisfacción</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Vision Card -->
+        <article class="company-card company-card--secondary animate-slide-up" style="animation-delay: 0.2s">
+          <header class="company-card__header">
+            <div class="company-card__icon-wrapper">
+              <div class="company-card__icon company-card__icon--secondary">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
               </div>
             </div>
             
-            <div class="flex items-center gap-3 p-3 bg-primary-900 rounded-lg">
-              <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center">
-                <span class="text-primary-900 font-bold text-lg">30%</span>
-              </div>
-              <div>
-                <h4 class="text-body text-primary font-semibold">Honorarios Retenidos</h4>
-                <p class="text-body-small text-secondary">Hasta cumplir todos los KPIs acordados</p>
-              </div>
+            <div class="company-card__meta">
+              <span class="company-card__category">Futuro</span>
+              <h3 class="company-card__title">Nuestra Visión</h3>
             </div>
             
-            <div class="flex items-center gap-3 p-3 bg-primary-900 rounded-lg">
-              <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center">
-                <span class="text-primary-900 font-bold text-lg">30</span>
+            <div class="company-card__metric company-card__metric--secondary">
+              <span class="metric__value">2030</span>
+              <span class="metric__label">Meta LATAM</span>
+            </div>
+          </header>
+          
+          <div class="company-card__content">
+            <p class="company-card__description">
+              Ser el socio estratégico digital líder en México y LATAM, reconocidos por crear valor sostenible 
+              y desarrollar el talento del futuro en transformación digital empresarial.
+            </p>
+            
+            <!-- Enhanced Goals */
+            <div class="goals-section">
+              <h4 class="goals-section__title">Objetivos 2025-2030</h4>
+              <div class="goals-timeline">
+                <div class="goal-item">
+                  <div class="goal-item__marker">
+                    <span class="goal-item__year">2025</span>
+                  </div>
+                  <div class="goal-item__content">
+                    <span class="goal-item__title">Líder Nacional</span>
+                    <span class="goal-item__description">Reconocimiento en México</span>
+                  </div>
+                </div>
+                
+                <div class="goal-item">
+                  <div class="goal-item__marker">
+                    <span class="goal-item__year">2027</span>
+                  </div>
+                  <div class="goal-item__content">
+                    <span class="goal-item__title">Expansión LATAM</span>
+                    <span class="goal-item__description">Presencia regional</span>
+                  </div>
+                </div>
+                
+                <div class="goal-item">
+                  <div class="goal-item__marker">
+                    <span class="goal-item__year">2030</span>
+                  </div>
+                  <div class="goal-item__content">
+                    <span class="goal-item__title">Referente Global</span>
+                    <span class="goal-item__description">Estándar de excelencia</span>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h4 class="text-body text-primary font-semibold">Días de Soporte Post-Proyecto</h4>
-                <p class="text-body-small text-secondary">Sin costo adicional garantizado</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <!-- Enhanced Section Header -->
+      <header class="section-header animate-fade-in">
+        <div class="section-badge">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+          </svg>
+          <span>Equipo Directivo</span>
+        </div>
+        
+        <h2 class="section-title">
+          Líderes con <span class="title-gradient">Experiencia Comprobada</span>
+        </h2>
+        
+        <p class="section-description">
+          Nuestro equipo directivo cuenta con más de 10 años de experiencia en transformación digital 
+          y arquitectura empresarial, liderando proyectos exitosos en diversas industrias.
+        </p>
+      </header>
+      
+      <!-- Team Grid -->
+      <div class="team-grid">
+        <!-- Team Member 1: Jorge Alberto Virgen -->
+        <article class="team-card animate-slide-up" style="animation-delay: 0.1s">
+          <div class="team-card__avatar">
+            <span class="team-card__initials team-card__initials--primary">JV</span>
+          </div>
+          <div class="team-card__content">
+            <h3 class="team-card__name">Jorge Alberto Virgen Montesinos</h3>
+            <p class="team-card__role">Director de Arquitectura Empresarial</p>
+            <div class="team-card__experience">
+              <div class="experience-metric">
+                <span class="experience-metric__value">21</span>
+                <span class="experience-metric__label">años experiencia</span>
+              </div>
+              <div class="experience-items">
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Ex-Subdirector Arquitectura en servicios financieros</span>
+                </div>
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Cloud Specialist & Cloud Architect certificado</span>
+                </div>
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Tech Lead en proyectos del sector financiero</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Team Member 2: Joaquín García -->
+        <article class="team-card animate-slide-up" style="animation-delay: 0.2s">
+          <div class="team-card__avatar">
+            <span class="team-card__initials team-card__initials--secondary">JG</span>
+          </div>
+          <div class="team-card__content">
+            <h3 class="team-card__name">Joaquín García Santiago</h3>
+            <p class="team-card__role">Director de Innovación</p>
+            <div class="team-card__experience">
+              <div class="experience-metric">
+                <span class="experience-metric__value">15+</span>
+                <span class="experience-metric__label">años experiencia</span>
+              </div>
+              <div class="experience-items">
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Especialista en innovación tecnológica</span>
+                </div>
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Estratega de transformación digital</span>
+                </div>
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Liderazgo en proyectos disruptivos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Team Member 3: Arnold Muñoz -->
+        <article class="team-card animate-slide-up" style="animation-delay: 0.3s">
+          <div class="team-card__avatar">
+            <span class="team-card__initials team-card__initials--primary">AM</span>
+          </div>
+          <div class="team-card__content">
+            <h3 class="team-card__name">Arnold Israel Muñoz Hernández</h3>
+            <p class="team-card__role">Director de Desarrollo de Talento</p>
+            <div class="team-card__experience">
+              <div class="experience-metric">
+                <span class="experience-metric__value">100+</span>
+                <span class="experience-metric__label">graduados formados</span>
+              </div>
+              <div class="experience-items">
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Cloud Architect especializado</span>
+                </div>
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Creador de programas de capacitación tech</span>
+                </div>
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Experto en desarrollo de talento tecnológico</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Team Member 4: Oscar Valois -->
+        <article class="team-card animate-slide-up" style="animation-delay: 0.4s">
+          <div class="team-card__avatar">
+            <span class="team-card__initials team-card__initials--secondary">OV</span>
+          </div>
+          <div class="team-card__content">
+            <h3 class="team-card__name">Oscar Valois Martínez</h3>
+            <p class="team-card__role">Director de Tecnología</p>
+            <div class="team-card__experience">
+              <div class="experience-metric">
+                <span class="experience-metric__value">12+</span>
+                <span class="experience-metric__label">años experiencia</span>
+              </div>
+              <div class="experience-items">
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Solutions Architect senior</span>
+                </div>
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Estratega en transformación digital</span>
+                </div>
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Especialista en seguridad empresarial</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Team Member 5: Omar Tzompantzi -->
+        <article class="team-card animate-slide-up" style="animation-delay: 0.5s">
+          <div class="team-card__avatar">
+            <span class="team-card__initials team-card__initials--primary">OT</span>
+          </div>
+          <div class="team-card__content">
+            <h3 class="team-card__name">Omar Tzompantzi Coyotzi</h3>
+            <p class="team-card__role">Director de Servicios de Transformación</p>
+            <div class="team-card__experience">
+              <div class="experience-metric">
+                <span class="experience-metric__value">8+</span>
+                <span class="experience-metric__label">años experiencia</span>
+              </div>
+              <div class="experience-items">
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Cloud Architect en Edenred</span>
+                </div>
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Experiencia en servicios financieros</span>
+                </div>
+                <div class="experience-item">
+                  <span class="experience-item__bullet"></span>
+                  <span>Especialista en transformación empresarial</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology EUREKA Section -->
+  <section class="methodology-section">
+    <div class="container">
+      <!-- Enhanced Section Header -->
+      <header class="section-header animate-fade-in">
+        <div class="section-badge">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+          <span>Metodología EUREKA</span>
+        </div>
+        
+        <h2 class="section-title">
+          Proceso de <span class="title-gradient">Transformación Estructurada</span>
+        </h2>
+        
+        <p class="section-description">
+          Nuestra metodología propietaria que estructura la transformación digital 
+          y convierte desafíos en ventajas competitivas sostenibles.
+        </p>
+      </header>
+      
+      <!-- Enhanced Methodology Grid */
+      <div class="methodology-grid">
+        <div class="methodology-step animate-slide-up" style="animation-delay: 0.1s">
+          <div class="methodology-step__icon methodology-step__icon--primary">
+            <span>E</span>
+          </div>
+          <div class="methodology-step__content">
+            <h3 class="methodology-step__title">Evaluación Integral</h3>
+            <p class="methodology-step__description">
+              Análisis profundo del estado actual de tu organización, identificando fortalezas, 
+              debilidades y oportunidades de transformación digital.
+            </p>
+            <div class="methodology-step__metrics">
+              <div class="step-metric">
+                <span class="step-metric__value">15-30</span>
+                <span class="step-metric__label">días análisis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="methodology-step animate-slide-up" style="animation-delay: 0.2s">
+          <div class="methodology-step__icon methodology-step__icon--secondary">
+            <span>U</span>
+          </div>
+          <div class="methodology-step__content">
+            <h3 class="methodology-step__title">Unificación de Procesos</h3>
+            <p class="methodology-step__description">
+              Integración y estandarización de procesos empresariales, eliminando silos 
+              y creando flujos de trabajo eficientes y coherentes.
+            </p>
+            <div class="methodology-step__metrics">
+              <div class="step-metric">
+                <span class="step-metric__value">40%</span>
+                <span class="step-metric__label">eficiencia promedio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="methodology-step animate-slide-up" style="animation-delay: 0.3s">
+          <div class="methodology-step__icon methodology-step__icon--primary">
+            <span>R</span>
+          </div>
+          <div class="methodology-step__content">
+            <h3 class="methodology-step__title">Rediseño Estratégico</h3>
+            <p class="methodology-step__description">
+              Reconceptualización de la arquitectura tecnológica y procesos de negocio 
+              para maximizar eficiencia y crear ventajas competitivas.
+            </p>
+            <div class="methodology-step__metrics">
+              <div class="step-metric">
+                <span class="step-metric__value">60%</span>
+                <span class="step-metric__label">reducción tiempo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="methodology-step animate-slide-up" style="animation-delay: 0.4s">
+          <div class="methodology-step__icon methodology-step__icon--secondary">
+            <span>E</span>
+          </div>
+          <div class="methodology-step__content">
+            <h3 class="methodology-step__title">Ejecución Controlada</h3>
+            <p class="methodology-step__description">
+              Implementación por fases con métricas claras de progreso, gestión proactiva 
+              de riesgos y aseguramiento de calidad continuo.
+            </p>
+            <div class="methodology-step__metrics">
+              <div class="step-metric">
+                <span class="step-metric__value">95%</span>
+                <span class="step-metric__label">éxito proyectos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="methodology-step animate-slide-up" style="animation-delay: 0.5s">
+          <div class="methodology-step__icon methodology-step__icon--primary">
+            <span>K</span>
+          </div>
+          <div class="methodology-step__content">
+            <h3 class="methodology-step__title">Knowledge Transfer</h3>
+            <p class="methodology-step__description">
+              Transferencia sistemática de conocimientos y capacidades a tu equipo, 
+              asegurando la sostenibilidad de la transformación.
+            </p>
+            <div class="methodology-step__metrics">
+              <div class="step-metric">
+                <span class="step-metric__value">85%</span>
+                <span class="step-metric__label">mejora capacidades</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="methodology-step animate-slide-up" style="animation-delay: 0.6s">
+          <div class="methodology-step__icon methodology-step__icon--secondary">
+            <span>A</span>
+          </div>
+          <div class="methodology-step__content">
+            <h3 class="methodology-step__title">Autonomía Garantizada</h3>
+            <p class="methodology-step__description">
+              Transición gradual con soporte dedicado, garantizando que tu organización 
+              opere de forma autónoma y eficiente.
+            </p>
+            <div class="methodology-step__metrics">
+              <div class="step-metric">
+                <span class="step-metric__value">30</span>
+                <span class="step-metric__label">días soporte</span>
               </div>
             </div>
           </div>
@@ -396,24 +559,955 @@ import OptimizedLayout from '@/layouts/OptimizedLayout.astro';
     </div>
   </section>
 
-  <!-- CTA Final -->
-  <section class="py-20 bg-primary-800">
-    <div class="container text-center">
-      <h2 class="text-headline text-primary mb-6">
-        ¿Listo para transformar tu organización?
-      </h2>
-      <p class="text-body-large text-secondary mb-8 max-w-2xl mx-auto">
-        Conoce cómo nuestro equipo y metodología pueden acelerar tu transformación digital
-      </p>
-      
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contacto" class="btn btn-primary btn-lg">
-          Diagnóstico Gratuito
-        </a>
-        <a href="/servicios" class="btn btn-secondary btn-lg">
-          Ver Nuestros Servicios
-        </a>
+  <!-- Triple Guarantee Section -->
+  <TripleGuaranteeSection />
+
+  <!-- Final CTA Section -->
+  <section class="final-cta-section">
+    <div class="container">
+      <div class="final-cta__content">
+        <div class="final-cta__header">
+          <h2 class="final-cta__title">
+            ¿Listo para <span class="final-cta__title-accent">Transformar</span> tu Empresa?
+          </h2>
+          <p class="final-cta__description">
+            Obtén tu diagnóstico digital gratuito y descubre las oportunidades específicas para tu organización.
+          </p>
+        </div>
+        
+        <div class="final-cta__actions">
+          <a href="/contacto" class="btn btn-primary btn-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Solicitar Diagnóstico Gratuito
+          </a>
+          <a href="/servicios" class="btn btn-secondary btn-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+            Explorar Servicios
+          </a>
+        </div>
+        
+        <div class="final-cta__guarantees">
+          <div class="final-cta__guarantee">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>100% Gratuito, sin compromiso</span>
+          </div>
+          <div class="final-cta__guarantee">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Respuesta en menos de 24 horas</span>
+          </div>
+          <div class="final-cta__guarantee">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Análisis personalizado por expertos</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </OptimizedLayout>
+
+<style>
+  /* ================================
+     ENHANCED ABOUT PAGE STYLES
+     ================================ */
+  
+  /* Enhanced Hero Section (consistent with other pages) */
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: var(--space-32) 0 var(--space-24);
+  }
+  
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(0, 229, 160, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 70% 80%, rgba(0, 128, 255, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  
+  .hero-content {
+    max-width: 56rem;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Enhanced Hero Badge (consistent with other pages) */
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    background: rgba(0, 229, 160, 0.1);
+    border: 1px solid rgba(0, 229, 160, 0.3);
+    border-radius: var(--radius-full);
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--accent-500);
+    margin-bottom: var(--space-10);
+    backdrop-filter: blur(12px);
+    transition: all var(--transition-base);
+  }
+  
+  .hero-badge:hover {
+    background: rgba(0, 229, 160, 0.15);
+    border-color: rgba(0, 229, 160, 0.4);
+    transform: translateY(-2px);
+  }
+  
+  .badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .badge-text {
+    letter-spacing: 0.025em;
+  }
+  
+  /* Enhanced Hero Title (consistent with other pages) */
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    color: var(--text-primary);
+    margin-bottom: var(--space-8);
+    letter-spacing: -0.025em;
+  }
+  
+  .title-gradient {
+    background: linear-gradient(135deg, var(--accent-500) 0%, var(--secondary-500) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Enhanced Hero Description */
+  .hero-description {
+    font-size: var(--text-xl);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-16);
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Enhanced Trust Indicators (consistent with other pages) */
+  .trust-indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-6);
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+  
+  .trust-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6) var(--space-5);
+    background: rgba(0, 229, 160, 0.05);
+    border: 1px solid rgba(0, 229, 160, 0.15);
+    border-radius: var(--radius-xl);
+    backdrop-filter: blur(12px);
+    transition: all var(--transition-base);
+  }
+  
+  .trust-card:hover {
+    transform: translateY(-4px);
+    background: rgba(0, 229, 160, 0.08);
+    border-color: rgba(0, 229, 160, 0.25);
+    box-shadow: 0 12px 32px rgba(0, 229, 160, 0.15);
+  }
+  
+  .trust-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 229, 160, 0.15);
+    border: 1px solid rgba(0, 229, 160, 0.3);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-500);
+  }
+  
+  .trust-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .trust-value {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--accent-500);
+    line-height: 1;
+  }
+  
+  .trust-label {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    font-weight: var(--font-medium);
+  }
+
+  /* Company Overview Section */
+  .company-overview-section {
+    padding: var(--space-32) 0;
+    background: var(--primary-800);
+    position: relative;
+  }
+  
+  /* Enhanced Section Header (consistent with other pages) */
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-20);
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: rgba(0, 128, 255, 0.1);
+    border: 1px solid rgba(0, 128, 255, 0.25);
+    border-radius: var(--radius-full);
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--secondary-500);
+    margin-bottom: var(--space-8);
+    backdrop-filter: blur(10px);
+  }
+  
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-6);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+  }
+  
+  .section-description {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+
+  /* Company Cards Grid */
+  .company-cards-grid {
+    display: grid;
+    gap: var(--space-10);
+    max-width: 68rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1024px) {
+    .company-cards-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Enhanced Company Cards (similar to service cards) */
+  .company-card {
+    background: linear-gradient(135deg, 
+      rgba(26, 26, 26, 0.95) 0%, 
+      rgba(42, 42, 42, 0.85) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-10);
+    backdrop-filter: blur(20px);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  
+  .company-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-500), var(--secondary-500));
+    opacity: 0;
+    transition: opacity var(--transition-base);
+  }
+  
+  .company-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 229, 160, 0.3);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 229, 160, 0.1);
+  }
+  
+  .company-card:hover::before {
+    opacity: 1;
+  }
+  
+  .company-card--secondary::before {
+    background: linear-gradient(90deg, var(--secondary-500), var(--accent-500));
+  }
+  
+  .company-card--secondary:hover {
+    border-color: rgba(0, 128, 255, 0.3);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 128, 255, 0.1);
+  }
+  
+  /* Enhanced Company Card Header (same as service cards) */
+  .company-card__header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-5);
+  }
+  
+  .company-card__icon-wrapper {
+    flex-shrink: 0;
+  }
+  
+  .company-card__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-base);
+  }
+  
+  .company-card__icon--primary {
+    background: linear-gradient(135deg, rgba(0, 229, 160, 0.15) 0%, rgba(0, 229, 160, 0.05) 100%);
+    border: 2px solid rgba(0, 229, 160, 0.3);
+    color: var(--accent-500);
+  }
+  
+  .company-card__icon--secondary {
+    background: linear-gradient(135deg, rgba(0, 128, 255, 0.15) 0%, rgba(0, 128, 255, 0.05) 100%);
+    border: 2px solid rgba(0, 128, 255, 0.3);
+    color: var(--secondary-500);
+  }
+  
+  .company-card:hover .company-card__icon {
+    transform: scale(1.05);
+  }
+  
+  .company-card__meta {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .company-card__category {
+    font-size: var(--text-xs);
+    font-weight: var(--font-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: var(--space-2);
+  }
+  
+  .company-card__title {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    line-height: var(--leading-snug);
+  }
+  
+  /* Enhanced Company Metrics (same as service cards) */
+  .company-card__metric {
+    text-align: right;
+    flex-shrink: 0;
+    padding: var(--space-3) var(--space-4);
+    background: rgba(0, 229, 160, 0.05);
+    border: 1px solid rgba(0, 229, 160, 0.15);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+  }
+  
+  .company-card__metric--secondary {
+    background: rgba(0, 128, 255, 0.05);
+    border-color: rgba(0, 128, 255, 0.15);
+  }
+  
+  .metric__value {
+    display: block;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--accent-500);
+    line-height: 1;
+    margin-bottom: var(--space-1);
+  }
+  
+  .company-card__metric--secondary .metric__value {
+    color: var(--secondary-500);
+  }
+  
+  .metric__label {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    font-weight: var(--font-medium);
+  }
+  
+  /* Enhanced Company Card Content */
+  .company-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    flex: 1;
+  }
+  
+  .company-card__description {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+
+  /* Values Section */
+  .values-section {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+  }
+  
+  .values-section__title {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--accent-500);
+    margin-bottom: var(--space-5);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .values-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .value-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    padding: var(--space-2) 0;
+  }
+  
+  .value-item__icon {
+    width: 20px;
+    height: 20px;
+    background: var(--accent-500);
+    color: var(--text-inverse);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* Goals Section */
+  .goals-section {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+  }
+  
+  .goals-section__title {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--secondary-500);
+    margin-bottom: var(--space-5);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .goals-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .goal-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-3);
+    background: var(--primary-900);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all var(--transition-base);
+  }
+  
+  .goal-item:hover {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .goal-item__marker {
+    width: 48px;
+    height: 32px;
+    background: var(--secondary-500);
+    color: var(--text-inverse);
+    border-radius: var(--radius-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .goal-item__year {
+    font-size: var(--text-xs);
+    font-weight: var(--font-bold);
+  }
+  
+  .goal-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  
+  .goal-item__title {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+  }
+  
+  .goal-item__description {
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+  }
+
+  /* Team Section */
+  .team-section {
+    padding: var(--space-32) 0;
+    background: var(--primary-900);
+    position: relative;
+  }
+  
+  /* Team Grid */
+  .team-grid {
+    display: grid;
+    gap: var(--space-8);
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .team-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+  }
+  
+  .team-card {
+    background: var(--primary-800);
+    border: 1px solid var(--primary-700);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-6);
+    transition: all var(--transition-base);
+  }
+  
+  .team-card:hover {
+    border-color: rgba(0, 229, 160, 0.3);
+    background: rgba(0, 229, 160, 0.03);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 229, 160, 0.1);
+  }
+  
+  .team-card__avatar {
+    flex-shrink: 0;
+  }
+  
+  .team-card__initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-xl);
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+  }
+  
+  .team-card__initials--primary {
+    background: var(--accent-500);
+    color: var(--primary-900);
+  }
+  
+  .team-card__initials--secondary {
+    background: var(--secondary-500);
+    color: var(--text-inverse);
+  }
+  
+  .team-card__content {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .team-card__name {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+  }
+  
+  .team-card__role {
+    font-size: var(--text-base);
+    color: var(--accent-500);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-4);
+  }
+  
+  .team-card__experience {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .experience-metric {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background: rgba(0, 229, 160, 0.05);
+    border: 1px solid rgba(0, 229, 160, 0.15);
+    border-radius: var(--radius-lg);
+    width: fit-content;
+  }
+  
+  .experience-metric__value {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: var(--accent-500);
+    line-height: 1;
+  }
+  
+  .experience-metric__label {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    font-weight: var(--font-medium);
+  }
+  
+  .experience-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .experience-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+  
+  .experience-item__bullet {
+    width: 6px;
+    height: 6px;
+    background: var(--accent-500);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* Methodology Section */
+  .methodology-section {
+    padding: var(--space-32) 0;
+    background: var(--primary-800);
+    position: relative;
+  }
+  
+  /* Methodology Grid */
+  .methodology-grid {
+    display: grid;
+    gap: var(--space-8);
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .methodology-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .methodology-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .methodology-step {
+    background: var(--primary-900);
+    border: 1px solid var(--primary-700);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .methodology-step:hover {
+    border-color: rgba(0, 229, 160, 0.3);
+    background: rgba(0, 229, 160, 0.03);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  .methodology-step__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-xl);
+    font-weight: var(--font-bold);
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-6);
+  }
+  
+  .methodology-step__icon--primary {
+    background: var(--accent-500);
+    color: var(--text-inverse);
+  }
+  
+  .methodology-step__icon--secondary {
+    background: var(--secondary-500);
+    color: var(--text-inverse);
+  }
+  
+  .methodology-step__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .methodology-step__title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+  }
+  
+  .methodology-step__description {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+  
+  .methodology-step__metrics {
+    margin-top: var(--space-4);
+  }
+  
+  .step-metric {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    width: fit-content;
+  }
+  
+  .step-metric__value {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: var(--accent-500);
+    line-height: 1;
+  }
+  
+  .step-metric__label {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    font-weight: var(--font-medium);
+  }
+
+  /* Final CTA Section (consistent with other pages) */
+  .final-cta-section {
+    padding: var(--space-32) 0;
+    background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+    position: relative;
+  }
+  
+  .final-cta__content {
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .final-cta__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-6);
+    line-height: var(--leading-tight);
+  }
+  
+  .final-cta__title-accent {
+    background: linear-gradient(135deg, var(--accent-500) 0%, var(--secondary-500) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .final-cta__description {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-12);
+  }
+  
+  .final-cta__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-12);
+  }
+  
+  @media (min-width: 768px) {
+    .final-cta__actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  
+  .final-cta__guarantees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-4);
+  }
+  
+  .final-cta__guarantee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--accent-500);
+    font-weight: var(--font-medium);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .company-cards-grid {
+      grid-template-columns: 1fr;
+      max-width: 36rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: var(--space-20) 0 var(--space-16);
+    }
+    
+    .trust-indicators {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    
+    .trust-card {
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .company-card {
+      padding: var(--space-8);
+      gap: var(--space-6);
+    }
+    
+    .company-card__header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-4);
+    }
+    
+    .company-card__metric {
+      text-align: center;
+    }
+    
+    .team-card {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+    
+    .methodology-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .final-cta__guarantees {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .company-card {
+      padding: var(--space-6);
+    }
+    
+    .hero-description {
+      font-size: var(--text-lg);
+    }
+  }
+  
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    .company-card,
+    .trust-card,
+    .hero-badge,
+    .team-card,
+    .methodology-step,
+    .animate-fade-in,
+    .animate-slide-up,
+    .animate-scale-in {
+      animation: none;
+      transition: none;
+    }
+    
+    .company-card:hover,
+    .trust-card:hover,
+    .team-card:hover,
+    .methodology-step:hover {
+      transform: none;
+    }
+  }
+</style>

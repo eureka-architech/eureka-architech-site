@@ -10,6 +10,9 @@ export interface Props {
   badgeIcon: string;
   variant: 'trial' | 'guarantee' | 'support';
   class?: string;
+  maturityLevel?: string;
+  experience?: string;
+  conditions?: string[];
 }
 
 const {
@@ -22,7 +25,10 @@ const {
   badgeText,
   badgeIcon,
   variant,
-  class: className = ''
+  class: className = '',
+  maturityLevel = '',
+  experience = '',
+  conditions = []
 } = Astro.props;
 
 const variantClasses = {
@@ -81,6 +87,34 @@ const colors = variantClasses[variant];
       {description}
     </p>
     
+    <!-- Experience and Maturity Level -->
+    {(experience || maturityLevel) && (
+      <div class="guarantee-card__extra-info">
+        {maturityLevel && (
+          <div class="guarantee-card__maturity">
+            <div class="guarantee-card__maturity-icon">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <span class="guarantee-card__maturity-text">Nivel de Madurez: <strong>{maturityLevel}</strong></span>
+          </div>
+        )}
+        
+        {experience && (
+          <div class="guarantee-card__experience">
+            <div class="guarantee-card__experience-icon">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+              </svg>
+            </div>
+            <span class="guarantee-card__experience-text">Experiencia: <strong>{experience}</strong></span>
+          </div>
+        )}
+      </div>
+    )}
+    
     <!-- Features List -->
     <ul class="guarantee-card__features" role="list">
       {features.map(feature => (
@@ -94,6 +128,25 @@ const colors = variantClasses[variant];
         </li>
       ))}
     </ul>
+    
+    <!-- Guarantee Conditions -->
+    {conditions.length > 0 && (
+      <div class="guarantee-card__conditions">
+        <h4 class="guarantee-card__conditions-title">Condiciones de Garantía:</h4>
+        <ul class="guarantee-card__conditions-list">
+          {conditions.map(condition => (
+            <li class="guarantee-card__condition">
+              <div class="guarantee-card__condition-icon">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="guarantee-card__condition-text">{condition}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
   </div>
   
   <!-- Interactive Hover Effect -->
@@ -271,6 +324,100 @@ const colors = variantClasses[variant];
     line-height: var(--leading-relaxed);
     color: var(--text-secondary);
     margin-bottom: var(--space-6);
+  }
+  
+  /* Experience and Maturity Level */
+  .guarantee-card__extra-info {
+    background: rgba(0, 229, 160, 0.05);
+    border: 1px solid rgba(0, 229, 160, 0.15);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+  
+  .guarantee-card__maturity,
+  .guarantee-card__experience {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+  }
+  
+  .guarantee-card__experience {
+    margin-bottom: 0;
+  }
+  
+  .guarantee-card__maturity-icon,
+  .guarantee-card__experience-icon {
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 229, 160, 0.2);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-500);
+    flex-shrink: 0;
+  }
+  
+  .guarantee-card__maturity-text,
+  .guarantee-card__experience-text {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+  
+  .guarantee-card__maturity-text strong,
+  .guarantee-card__experience-text strong {
+    color: var(--text-primary);
+    font-weight: var(--font-semibold);
+  }
+  
+  /* Conditions */
+  .guarantee-card__conditions {
+    margin-top: var(--space-6);
+    background: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.15);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+  }
+  
+  .guarantee-card__conditions-title {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--error-500);
+    margin-bottom: var(--space-3);
+  }
+  
+  .guarantee-card__conditions-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .guarantee-card__condition {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  
+  .guarantee-card__condition-icon {
+    width: 18px;
+    height: 18px;
+    background: rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--error-500);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  .guarantee-card__condition-text {
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
   }
   
   /* Features */
