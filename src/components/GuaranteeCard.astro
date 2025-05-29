@@ -10,6 +10,7 @@ export interface Props {
   badgeIcon: string;
   variant: 'trial' | 'guarantee' | 'support';
   class?: string;
+  style?: string;
   maturityLevel?: string;
   experience?: string;
   conditions?: string[];
@@ -26,6 +27,7 @@ const {
   badgeIcon,
   variant,
   class: className = '',
+  style: inlineStyle = '',
   maturityLevel = '',
   experience = '',
   conditions = []
@@ -52,7 +54,7 @@ const variantClasses = {
 const colors = variantClasses[variant];
 ---
 
-<div class={`guarantee-card ${className}`}>
+<div class={`guarantee-card ${className}`} style={inlineStyle}>
   <!-- Icon Container with Number -->
   <div class={`guarantee-card__icon-container bg-gradient-to-br ${colors.gradient}`}>
     <div class="guarantee-card__number-display">

@@ -35,6 +35,9 @@ export default {
           900: '#0D0D0D',
         },
         
+        'eureka-dark': '#1A1A1A',
+        'eureka-green': '#00E5A0',
+        
         accent: {
           300: '#33EDB3',
           400: '#1AE9A9',
