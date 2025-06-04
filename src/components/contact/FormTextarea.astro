@@ -1,0 +1,68 @@
+---
+export interface Props {
+  label: string;
+  name: string;
+  placeholder?: string;
+  required?: boolean;
+  rows?: number;
+}
+
+const { label, name, placeholder, required = false, rows = 5 } = Astro.props;
+---
+
+<div class="form-group">
+  <label for={name} class="form-label">
+    {label}
+    {required && <span class="required">*</span>}
+  </label>
+  <textarea
+    id={name}
+    name={name}
+    class="form-textarea"
+    placeholder={placeholder}
+    required={required}
+    rows={rows}
+  ></textarea>
+</div>
+
+<style>
+  .form-group {
+    margin-bottom: var(--space-4);
+  }
+
+  .form-label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  .required {
+    color: var(--accent-primary);
+  }
+
+  .form-textarea {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-base);
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+  }
+
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  }
+
+  .form-textarea::placeholder {
+    color: var(--text-tertiary);
+  }
+</style>

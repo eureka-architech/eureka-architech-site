@@ -1,0 +1,81 @@
+---
+export interface Props {
+  label: string;
+  name: string;
+  value: string;
+  emoji?: string;
+}
+
+const { label, name, value, emoji } = Astro.props;
+---
+
+<label class="checkbox-item">
+  <input
+    type="checkbox"
+    name={name}
+    value={value}
+    class="checkbox-input"
+  />
+  <span class="checkbox-content">
+    {emoji && <span class="checkbox-emoji">{emoji}</span>}
+    <span class="checkbox-label">{label}</span>
+  </span>
+</label>
+
+<style>
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: var(--space-4);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .checkbox-item:hover {
+    border-color: var(--accent-primary);
+    background: var(--bg-secondary);
+  }
+
+  .checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkbox-input:checked + .checkbox-content {
+    color: var(--accent-primary);
+  }
+
+  .checkbox-input:checked ~ .checkbox-content::before {
+    content: '✓';
+    position: absolute;
+    left: var(--space-2);
+    color: var(--accent-primary);
+    font-weight: bold;
+  }
+
+  .checkbox-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    position: relative;
+    padding-left: var(--space-6);
+  }
+
+  .checkbox-emoji {
+    font-size: 1.2rem;
+  }
+
+  .checkbox-label {
+    font-size: var(--text-base);
+    color: var(--text-primary);
+  }
+
+  .checkbox-item:has(.checkbox-input:checked) {
+    background: rgba(99, 102, 241, 0.05);
+    border-color: var(--accent-primary);
+  }
+</style>
